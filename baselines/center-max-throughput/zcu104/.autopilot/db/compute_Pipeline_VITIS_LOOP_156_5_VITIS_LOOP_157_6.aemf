@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1668897918053">
+  <ports id="1" name="reg_file_4_1" type="PortType" coreName="RAM_T2P_BRAM" coreId="543517801" bitwidth="16" iftype="IfTypeRegister" arraysize="2048">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="reg_file_4_0" type="PortType" coreName="RAM_T2P_BRAM" coreId="1314013527" bitwidth="16" iftype="IfTypeRegister" arraysize="2048">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="reg_file_2_1" type="PortType" coreName="RAM_T2P_BRAM" coreId="0" bitwidth="16" direction="DirInOut" iftype="IfTypeRegister" arraysize="2048">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="4" name="reg_file_2_0" type="PortType" coreName="RAM_T2P_BRAM" coreId="54" bitwidth="16" direction="DirInOut" iftype="IfTypeRegister" arraysize="2048">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="74" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="75" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="84" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="115" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="120" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="133" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="137" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="158" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="205" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="208" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="209" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="210" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="211" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="212" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="213" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="214" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="215" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="216" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="217" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="218" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="219" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="-115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@ports.3"/>
+  <edges id="-133" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@ports.2"/>
+  <blocks id="16" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc55</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="j_6" originalName="j" coreId="1507174896" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_6" originalName="i" coreId="1507174896" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="indvar_flatten6" coreId="1507174896" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="indvar_flatten6_write_ln0" coreId="1507174896" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_6_write_ln0" coreId="1507174896" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="j_6_write_ln0" coreId="1507174896" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln0" coreId="1507174896" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc55</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="62" name="for.end60.exitStub" type="BlockType">
+    <controlInputObjs>for.inc55</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="_ln0" coreId="1507174896" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="233" pipe_depth="4" RegionName="VITIS_LOOP_156_5_VITIS_LOOP_157_6">
+    <basic_blocks id="21" name="for.inc55" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc58</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end60.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc58</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="indvar_flatten6_load" lineNumber="156" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1634545010" contextFuncName="compute" bitwidth="12" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="156" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln156" lineNumber="156" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="icmp_ln156_fu_162_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="compute" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="156" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="add_ln156" lineNumber="156" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="add_ln156_fu_168_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="compute" bitwidth="12" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="156" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln156" lineNumber="156" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="2942566214" contextFuncName="compute" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="156" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc58</controlInputObjs>
+        <controlInputObjs>for.end60.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="center-max-throughput/src/correlation.cpp">
+        <validLinenumbers>156</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="60" name="for.inc58" type="BlockType">
+      <controlInputObjs>for.inc55</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc55</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="j_6_load" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1507110400" contextFuncName="compute" bitwidth="7" opcode="load" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i_6_load" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1507110400" contextFuncName="compute" bitwidth="7" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="tmp_reg_316" coreId="2894217550" contextFuncName="compute" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="select_ln161" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="select_ln161_fu_185_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="compute" bitwidth="7" opcode="select" m_display="0" m_delay="0.36" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="add_ln156_1" lineNumber="156" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="add_ln156_1_fu_228_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="compute" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.77" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="156" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="select_ln161_1" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="select_ln161_1_fu_234_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="compute" bitwidth="7" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.36" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="lshr_ln9" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="lshr_ln9_reg_321" coreId="2894226152" contextFuncName="compute" bitwidth="5" opcode="partselect" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln161" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="zext_ln161_fu_203_p1" coreId="1508498128" contextFuncName="compute" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="trunc_ln161" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="trunc_ln161_fu_241_p1" coreId="1511551696" contextFuncName="compute" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln1" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="add_ln1_fu_245_p3" coreId="1508511712" contextFuncName="compute" bitwidth="11" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="zext_ln161_1" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="zext_ln161_1_fu_252_p1" coreId="2941928321" contextFuncName="compute" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="reg_file_2_0_addr" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1510762784" contextFuncName="compute" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>reg_file_2_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>reg_file_2_0</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="val1" lineNumber="161" originalName="val1" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.23" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>hadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="reg_file_4_0_addr" lineNumber="162" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1509475008" contextFuncName="compute" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="162" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>reg_file_4_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="reg_file_4_0_load" lineNumber="162" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" bitwidth="16" opcode="load" nodeLatency="1" m_display="0" m_delay="1.23" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="162" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="bitcast_ln115" lineNumber="115" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="bitcast_ln115_fu_263_p1" coreId="1509787632" contextFuncName="minus" bitwidth="16" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="115" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="minus"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="xor_ln1498" lineNumber="1498" fileName="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln1498_fu_266_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_or_32_true_32_true" bitwidth="16" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.18" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1498" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="operator|&amp;lt;32, true, 32, true&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="val2" lineNumber="117" originalName="val2" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="val2_fu_272_p1" coreId="1511319120" contextFuncName="minus" bitwidth="16" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="117" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="minus"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>hadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="add1" lineNumber="163" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="HAddSub_fulldsp" implIndex="fulldsp" control="no" opType="hadd" coreId="55" contextFuncName="compute" bitwidth="16" opcode="hadd" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="5.9" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="163" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="reg_file_2_0_addr_write_ln163" lineNumber="163" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="163" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>hadd</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="reg_file_2_1_addr" lineNumber="161" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1507968496" contextFuncName="compute" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>reg_file_2_1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>reg_file_2_1</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="val1_1" lineNumber="161" originalName="val1" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.23" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="161" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>hadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="reg_file_4_1_addr" lineNumber="162" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1511894992" contextFuncName="compute" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="162" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>reg_file_4_1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="reg_file_4_1_load" lineNumber="162" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" bitwidth="16" opcode="load" nodeLatency="1" m_display="0" m_delay="1.23" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="162" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="bitcast_ln115_1" lineNumber="115" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="bitcast_ln115_1_fu_277_p1" coreId="1506556992" contextFuncName="minus" bitwidth="16" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="115" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="minus"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="xor_ln1498_1" lineNumber="1498" fileName="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln1498_1_fu_280_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_or_32_true_32_true" bitwidth="16" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.18" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1498" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="operator|&amp;lt;32, true, 32, true&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="val2_1" lineNumber="117" originalName="val2" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="val2_1_fu_286_p1" coreId="1511056720" contextFuncName="minus" bitwidth="16" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="117" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="minus"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>hadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add50_1" lineNumber="163" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="HAddSub_fulldsp" implIndex="fulldsp" control="no" opType="hadd" coreId="55" contextFuncName="compute" bitwidth="16" opcode="hadd" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="5.9" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="163" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="reg_file_2_1_addr_write_ln163" lineNumber="163" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreName="RAM_T2P_BRAM" implIndex="bram" control="no" opType="ram_t2p" coreId="99" contextFuncName="compute" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="163" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>hadd</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="add_ln157" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." rtlName="add_ln157_fu_209_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="compute" bitwidth="7" opcode="add" m_display="0" m_delay="0.77" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="indvar_flatten6_write_ln157" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1506818912" contextFuncName="compute" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="i_6_write_ln157" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1511585552" contextFuncName="compute" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="j_6_write_ln157" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="2895818047" contextFuncName="compute" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln157" lineNumber="157" fileName="center-max-throughput/src/correlation.cpp" fileDirectory=".." coreId="1512631424" contextFuncName="compute" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="center-max-throughput/src/correlation.cpp" linenumber="157" fileDirectory="/home/derumigny/FPGA/data/zcu104/2023-Dac" functionName="compute"/>
+        <controlInputObjs>for.inc55</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="center-max-throughput/src/correlation.cpp">
+        <validLinenumbers>161</validLinenumbers>
+        <validLinenumbers>157</validLinenumbers>
+        <validLinenumbers>156</validLinenumbers>
+        <validLinenumbers>162</validLinenumbers>
+        <validLinenumbers>115</validLinenumbers>
+        <validLinenumbers>117</validLinenumbers>
+        <validLinenumbers>163</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>1498</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="reg_file_2_1_addr_reg_347">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="i_6_reg_298">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln156_reg_312">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_file_2_0_addr_reg_336">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="j_6_reg_291">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_file_4_0_addr_reg_326">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_file_4_0_load_reg_342">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_file_4_1_load_reg_353">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="val1_1_reg_368">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="lshr_ln9_reg_321">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="val2_1_reg_373">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_316">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="val1_reg_358">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten6_reg_305">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="val2_reg_363">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_file_4_1_addr_reg_331">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp_fu_177">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln161_1_fu_252">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln115_fu_263">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln156_1_fu_228">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln9_fu_193">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln161_fu_241">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="val2_fu_272">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln115_1_fu_277">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reg_file_4_0_addr_gep_fu_72">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln1_fu_245">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln161_fu_185">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_6_fu_60">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten6_fu_68">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_6_fu_64">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln161_1_fu_234">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln161_fu_203">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln1498_fu_266">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reg_file_2_1_addr_gep_fu_115">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reg_file_2_0_addr_gep_fu_98">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln156_fu_168">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reg_file_4_1_addr_gep_fu_85">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln156_fu_162">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="val2_1_fu_286">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln1498_1_fu_280">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln157_fu_209">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_138">
+    <nodeIds>53</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_132">
+    <nodeIds>44</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln0_store_fu_154">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln157_store_fu_215">
+    <nodeIds>56</nodeIds>
+  </ioNodes>
+  <ioNodes realName="j_6_load_load_fu_174">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_144">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln157_store_fu_220">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_6_load_load_fu_225">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln157_store_fu_258">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten6_load_load_fu_159">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_149">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="reg_file_2_0">
+    <nodeIds>45</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="reg_file_2_0" portID="1">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="reg_file_2_1">
+    <nodeIds>54</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="reg_file_2_1" portID="1">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="reg_file_4_0">
+    <nodeIds>40</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="reg_file_4_1">
+    <nodeIds>49</nodeIds>
+  </memoryPorts>
+  <ioPorts name="reg_file_2_0(p0)">
+    <contents name="store">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reg_file_2_0(p1)">
+    <contents name="load">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reg_file_2_1(p0)">
+    <contents name="store">
+      <nodeIds>54</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reg_file_2_1(p1)">
+    <contents name="load">
+      <nodeIds>47</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reg_file_4_0(p0)">
+    <contents name="load">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reg_file_4_1(p0)">
+    <contents name="load">
+      <nodeIds>49</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="2" latency="2"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="2" latency="2"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="2" latency="2"/>
+      <operations id="40" stage="1" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="2" latency="2"/>
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="2" latency="2"/>
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="2" latency="2"/>
+      <operations id="61" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="2"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="2"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="compute_Pipeline_VITIS_LOOP_156_5_VITIS_LOOP_157_6" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2052" mMaxLatency="2052">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_156_5_VITIS_LOOP_157_6" mII="1" mDepth="4" mMinTripCount="2048" mMaxTripCount="2048" mMinLatency="2050" mMaxLatency="2050" mType="1">
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>62</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

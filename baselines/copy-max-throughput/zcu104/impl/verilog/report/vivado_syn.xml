@@ -1,0 +1,196 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>1.813</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>1.813</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>1.813</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>8.187</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>8.187</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>8.187</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>8.187</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>36</BRAM>
+    <CLB>0</CLB>
+    <DSP>0</DSP>
+    <FF>2702</FF>
+    <LATCH>0</LATCH>
+    <LUT>1789</LUT>
+    <SRL>269</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>624</BRAM>
+    <CLB>0</CLB>
+    <DSP>1728</DSP>
+    <FF>460800</FF>
+    <LUT>230400</LUT>
+    <URAM>96</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="corr_accel" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="21">control_s_axi_U data_m_axi_U grp_compute_fu_208 grp_recv_data_burst_fu_185 grp_send_data_burst_fu_216 reg_file_10_U reg_file_11_U reg_file_12_U reg_file_13_U reg_file_14_U reg_file_15_U reg_file_1_U reg_file_2_U reg_file_3_U reg_file_4_U reg_file_5_U reg_file_6_U reg_file_7_U reg_file_8_U reg_file_9_U reg_file_U</SubModules>
+    <Resources BRAM="36" FF="2702" LUT="1789" LogicLUT="1520" RAMB36="18" SRL="269"/>
+    <LocalResources FF="262" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="corr_accel_control_s_axi" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_control_s_axi">
+    <Resources FF="312" LUT="201" LogicLUT="201"/>
+  </RtlModule>
+  <RtlModule CELL="inst/data_m_axi_U" BINDMODULE="corr_accel_data_m_axi" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_data_m_axi">
+    <Resources BRAM="4" FF="1752" LUT="1240" LogicLUT="971" RAMB36="2" SRL="269"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_compute">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="14" LUT="16" LogicLUT="16"/>
+    <LocalResources FF="12" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="corr_accel_compute.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_recv_data_burst">
+    <SubModules count="1">grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87</SubModules>
+    <Resources FF="178" LUT="110" LogicLUT="110"/>
+    <LocalResources FF="10" LUT="33" LogicLUT="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87" DEPTH="2" FILE_NAME="corr_accel_recv_data_burst.v" ORIG_REF_NAME="corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="168" LUT="77" LogicLUT="77"/>
+    <LocalResources FF="166" LUT="45" LogicLUT="45"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_216" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_send_data_burst">
+    <SubModules count="1">grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90</SubModules>
+    <Resources FF="184" LUT="205" LogicLUT="205"/>
+    <LocalResources FF="9" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_216/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90" DEPTH="2" FILE_NAME="corr_accel_send_data_burst.v" ORIG_REF_NAME="corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="175" LUT="199" LogicLUT="199"/>
+    <LocalResources FF="173" LUT="192" LogicLUT="192"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_216/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_10_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_11_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_12_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_13_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_14_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_15_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_1_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_2_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_3_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_4_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" LUT="8" LogicLUT="8" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_5_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" LUT="8" LogicLUT="8" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_6_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_7_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_8_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_9_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="1.708" DATAPATH_LOGIC_DELAY="0.441" DATAPATH_NET_DELAY="1.267" ENDPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[10]/CE" LOGIC_LEVELS="5" MAX_FANOUT="182" SLACK="8.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1530"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/sect_len_buf[8]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/start_addr[63]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1[95]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="2481"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.708" DATAPATH_LOGIC_DELAY="0.441" DATAPATH_NET_DELAY="1.267" ENDPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[11]/CE" LOGIC_LEVELS="5" MAX_FANOUT="182" SLACK="8.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1530"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/sect_len_buf[8]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/start_addr[63]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1[95]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="2481"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.708" DATAPATH_LOGIC_DELAY="0.441" DATAPATH_NET_DELAY="1.267" ENDPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[12]/CE" LOGIC_LEVELS="5" MAX_FANOUT="182" SLACK="8.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1530"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/sect_len_buf[8]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/start_addr[63]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1[95]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="2481"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.708" DATAPATH_LOGIC_DELAY="0.441" DATAPATH_NET_DELAY="1.267" ENDPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[13]/CE" LOGIC_LEVELS="5" MAX_FANOUT="182" SLACK="8.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1530"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/sect_len_buf[8]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/start_addr[63]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1[95]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="2481"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.708" DATAPATH_LOGIC_DELAY="0.441" DATAPATH_NET_DELAY="1.267" ENDPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[14]/CE" LOGIC_LEVELS="5" MAX_FANOUT="182" SLACK="8.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/sect_len_buf_reg[8]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1530"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/could_multi_bursts.arlen_buf[3]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/sect_len_buf[8]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/fifo_rctl/start_addr[63]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1[95]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="446"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/data_m_axi_U/bus_read/rs_rreq/data_p1_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="2481"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/corr_accel_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/corr_accel_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/corr_accel_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/corr_accel_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/corr_accel_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/corr_accel_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

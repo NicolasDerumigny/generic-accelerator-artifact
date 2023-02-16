@@ -1,0 +1,421 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 51, 
+                   Column: 20 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'access(int, int)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 15, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 56, 
+                   Column: 24 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cast_half(ap_uint<64>)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 20, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 55, 
+                   Column: 24 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cast_half(ap_uint<64>)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 20, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 54, 
+                   Column: 24 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cast_half(ap_uint<64>)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 20, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 53, 
+                   Column: 24 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cast_half(ap_uint<64>)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 20, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 144, 
+                   Column: 33 }
+Function:        _Z7computePA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'access(int, int)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 15, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 125, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 147, 
+                   Column: 17 }
+Function:        _Z7computePA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'access(int, int)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 15, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 125, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 93, 
+                   Column: 13 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'access(int, int)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 15, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'send_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 81, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 104, 
+                   Column: 13 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cast_dma_type(half, half, half, half)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 25, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'send_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 81, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 125, 
+                   Column: 0 }
+Function:        _Z7computePA4096_Dh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'do_abs(half)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 9, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 125, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 162, 
+                   Column: 7 }
+Function:        _Z10corr_accelP7ap_uintILi64EES1_PVS0_S1_S1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          reg_file
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 46, 
+                   Column: 22 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body.load.42
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        data_inseq
+  - String:          ' '
+  - ArrayName:       data_in
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:46:22'
+  - String:          ' '
+  - Function:        'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 91, 
+                   Column: 22 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body.store.236
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        data_outseq
+  - String:          ' '
+  - ArrayName:       data_out
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:91:22'
+  - String:          ' '
+  - Function:        'send_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 81, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 46, 
+                   Column: 22 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        data_inseq
+  - String:          ' '
+  - ArrayName:       data_in
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:46:22'
+  - String:          ' '
+  - Function:        'recv_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 91, 
+                   Column: 22 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        data_outseq
+  - String:          ' '
+  - ArrayName:       data_out
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:91:22'
+  - String:          ' '
+  - Function:        'send_data_burst(ap_uint<64>*, half (*) [4096])'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 81, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 46, 
+                   Column: 22 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:46:22'
+  - String:          ' '
+  - Function:        'recv_data_burst(ap_uint<64>*, half (*) [4096]) (.1)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 36, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 46, 
+                   Column: 22 }
+Function:        _ZL15recv_data_burstP7ap_uintILi64EEPA4096_Dh.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_46_1
+  - String:          '''('
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:46:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      data
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 91, 
+                   Column: 22 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      data
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:91:22'
+  - String:          ' '
+  - Function:        'send_data_burst(ap_uint<64>*, half (*) [4096]) (.1)'
+    DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 81, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: asum-max-sharing/src/correlation.cpp, Line: 91, 
+                   Column: 22 }
+Function:        _ZL15send_data_burstP7ap_uintILi64EEPA4096_Dh.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          '''('
+  - LoopLoc:         'asum-max-sharing/src/correlation.cpp:91:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      data
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

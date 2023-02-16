@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_Pipeline_VITIS_LOOP_133_1_VITIS_LOOP_134_2'
+================================================================
+* Date:           Sun Nov 20 09:08:37 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sscale-max-throughput
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.141 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2053|     2053|  20.530 us|  20.530 us|  2053|  2053|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_133_1_VITIS_LOOP_134_2  |     2051|     2051|         5|          1|          1|  2048|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.37>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 8 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 9 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_3_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_3_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%reg_file_0_0_load_read = read i16 @_ssdm_op_Read.ap_auto.half, i16 %reg_file_0_0_load"   --->   Operation 15 'read' 'reg_file_0_0_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %i"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %j"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 19 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i12 %indvar_flatten" [sscale-max-throughput/src/correlation.cpp:133]   --->   Operation 20 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.97ns)   --->   "%icmp_ln133 = icmp_eq  i12 %indvar_flatten_load, i12 2048" [sscale-max-throughput/src/correlation.cpp:133]   --->   Operation 21 'icmp' 'icmp_ln133' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.80ns)   --->   "%add_ln133 = add i12 %indvar_flatten_load, i12 1" [sscale-max-throughput/src/correlation.cpp:133]   --->   Operation 22 'add' 'add_ln133' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln133 = br i1 %icmp_ln133, void %for.inc15, void %for.end17.exitStub" [sscale-max-throughput/src/correlation.cpp:133]   --->   Operation 23 'br' 'br_ln133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%j_load = load i7 %j" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 24 'load' 'j_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%i_load = load i7 %i" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 25 'load' 'i_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i7.i32, i7 %j_load, i32 6" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 26 'bitselect' 'tmp' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.36ns)   --->   "%select_ln137 = select i1 %tmp, i7 0, i7 %j_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 27 'select' 'select_ln137' <Predicate = (!icmp_ln133)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.77ns)   --->   "%add_ln133_1 = add i7 %i_load, i7 1" [sscale-max-throughput/src/correlation.cpp:133]   --->   Operation 28 'add' 'add_ln133_1' <Predicate = (!icmp_ln133)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.36ns)   --->   "%select_ln137_1 = select i1 %tmp, i7 %add_ln133_1, i7 %i_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 29 'select' 'select_ln137_1' <Predicate = (!icmp_ln133)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %select_ln137, i32 1, i32 5" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 30 'partselect' 'lshr_ln' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln137 = trunc i7 %select_ln137_1" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 31 'trunc' 'trunc_ln137' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%add_ln = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i6.i5, i6 %trunc_ln137, i5 %lshr_ln" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 32 'bitconcatenate' 'add_ln' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln137 = zext i11 %add_ln" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 33 'zext' 'zext_ln137' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%reg_file_2_0_addr = getelementptr i16 %reg_file_2_0, i64 0, i64 %zext_ln137" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 34 'getelementptr' 'reg_file_2_0_addr' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 35 'load' 'reg_file_2_0_load' <Predicate = (!icmp_ln133)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%reg_file_2_1_addr = getelementptr i16 %reg_file_2_1, i64 0, i64 %zext_ln137" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 36 'getelementptr' 'reg_file_2_1_addr' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 37 'load' 'reg_file_2_1_load' <Predicate = (!icmp_ln133)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 38 [1/1] (0.77ns)   --->   "%add_ln134 = add i7 %select_ln137, i7 2" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 38 'add' 'add_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.42ns)   --->   "%store_ln134 = store i12 %add_ln133, i12 %indvar_flatten" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 39 'store' 'store_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.42>
+ST_1 : Operation 40 [1/1] (0.42ns)   --->   "%store_ln134 = store i7 %select_ln137_1, i7 %i" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 40 'store' 'store_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.42>
+ST_1 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln134 = store i7 %add_ln134, i7 %j" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 41 'store' 'store_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 5.96>
+ST_2 : Operation 42 [1/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 42 'load' 'reg_file_2_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 43 [2/2] (4.72ns)   --->   "%val1 = hmul i16 %reg_file_0_0_load_read, i16 %reg_file_2_0_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 43 'hmul' 'val1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 44 'load' 'reg_file_2_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 45 [2/2] (4.72ns)   --->   "%val1_1 = hmul i16 %reg_file_0_0_load_read, i16 %reg_file_2_1_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 45 'hmul' 'val1_1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.72>
+ST_3 : Operation 46 [1/2] (4.72ns)   --->   "%val1 = hmul i16 %reg_file_0_0_load_read, i16 %reg_file_2_0_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 46 'hmul' 'val1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%reg_file_3_0_addr = getelementptr i16 %reg_file_3_0, i64 0, i64 %zext_ln137" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 47 'getelementptr' 'reg_file_3_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [2/2] (1.23ns)   --->   "%val2 = load i11 %reg_file_3_0_addr" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 48 'load' 'val2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 49 [1/2] (4.72ns)   --->   "%val1_1 = hmul i16 %reg_file_0_0_load_read, i16 %reg_file_2_1_load" [sscale-max-throughput/src/correlation.cpp:137]   --->   Operation 49 'hmul' 'val1_1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%reg_file_3_1_addr = getelementptr i16 %reg_file_3_1, i64 0, i64 %zext_ln137" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 50 'getelementptr' 'reg_file_3_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (1.23ns)   --->   "%val2_1 = load i11 %reg_file_3_1_addr" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 51 'load' 'val2_1' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+
+State 4 <SV = 3> <Delay = 7.14>
+ST_4 : Operation 52 [1/2] (1.23ns)   --->   "%val2 = load i11 %reg_file_3_0_addr" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 52 'load' 'val2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_4 : Operation 53 [2/2] (5.90ns)   --->   "%add = hadd i16 %val1, i16 %val2" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 53 'hadd' 'add' <Predicate = true> <Delay = 5.90> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 5.90> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 54 [1/2] (1.23ns)   --->   "%val2_1 = load i11 %reg_file_3_1_addr" [sscale-max-throughput/src/correlation.cpp:138]   --->   Operation 54 'load' 'val2_1' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_4 : Operation 55 [2/2] (5.90ns)   --->   "%add_1 = hadd i16 %val1_1, i16 %val2_1" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 55 'hadd' 'add_1' <Predicate = true> <Delay = 5.90> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 5.90> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 65 'ret' 'ret_ln0' <Predicate = (icmp_ln133)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 7.14>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_133_1_VITIS_LOOP_134_2_str"   --->   Operation 56 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2048, i64 2048, i64 2048"   --->   Operation 57 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%specpipeline_ln135 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [sscale-max-throughput/src/correlation.cpp:135]   --->   Operation 58 'specpipeline' 'specpipeline_ln135' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%specloopname_ln131 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [sscale-max-throughput/src/correlation.cpp:131]   --->   Operation 59 'specloopname' 'specloopname_ln131' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [1/2] (5.90ns)   --->   "%add = hadd i16 %val1, i16 %val2" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 60 'hadd' 'add' <Predicate = true> <Delay = 5.90> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 5.90> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (1.23ns)   --->   "%store_ln139 = store i16 %add, i11 %reg_file_2_0_addr" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 61 'store' 'store_ln139' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_5 : Operation 62 [1/2] (5.90ns)   --->   "%add_1 = hadd i16 %val1_1, i16 %val2_1" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 62 'hadd' 'add_1' <Predicate = true> <Delay = 5.90> <CoreInst = "HAddSub_fulldsp">   --->   Core 55 'HAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 5.90> <FuncUnit> <Opcode : 'hadd' 'hsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 63 [1/1] (1.23ns)   --->   "%store_ln139 = store i16 %add_1, i11 %reg_file_2_1_addr" [sscale-max-throughput/src/correlation.cpp:139]   --->   Operation 63 'store' 'store_ln139' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%br_ln134 = br void %for.inc" [sscale-max-throughput/src/correlation.cpp:134]   --->   Operation 64 'br' 'br_ln134' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.37ns
+The critical path consists of the following:
+	'alloca' operation ('i') [7]  (0 ns)
+	'load' operation ('i_load', sscale-max-throughput/src/correlation.cpp:137) on local variable 'i' [25]  (0 ns)
+	'add' operation ('add_ln133_1', sscale-max-throughput/src/correlation.cpp:133) [30]  (0.773 ns)
+	'select' operation ('select_ln137_1', sscale-max-throughput/src/correlation.cpp:137) [31]  (0.36 ns)
+	'getelementptr' operation ('reg_file_2_0_addr', sscale-max-throughput/src/correlation.cpp:137) [38]  (0 ns)
+	'load' operation ('reg_file_2_0_load', sscale-max-throughput/src/correlation.cpp:137) on array 'reg_file_2_0' [39]  (1.24 ns)
+
+ <State 2>: 5.96ns
+The critical path consists of the following:
+	'load' operation ('reg_file_2_0_load', sscale-max-throughput/src/correlation.cpp:137) on array 'reg_file_2_0' [39]  (1.24 ns)
+	'hmul' operation ('val1', sscale-max-throughput/src/correlation.cpp:137) [40]  (4.72 ns)
+
+ <State 3>: 4.72ns
+The critical path consists of the following:
+	'hmul' operation ('val1', sscale-max-throughput/src/correlation.cpp:137) [40]  (4.72 ns)
+
+ <State 4>: 7.14ns
+The critical path consists of the following:
+	'load' operation ('val2', sscale-max-throughput/src/correlation.cpp:138) on array 'reg_file_3_0' [42]  (1.24 ns)
+	'hadd' operation ('add', sscale-max-throughput/src/correlation.cpp:139) [43]  (5.9 ns)
+
+ <State 5>: 7.14ns
+The critical path consists of the following:
+	'hadd' operation ('add', sscale-max-throughput/src/correlation.cpp:139) [43]  (5.9 ns)
+	'store' operation ('store_ln139', sscale-max-throughput/src/correlation.cpp:139) of variable 'add', sscale-max-throughput/src/correlation.cpp:139 on array 'reg_file_2_0' [44]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_Pipeline_VITIS_LOOP_265_20_VITIS_LOOP_266_21'
+================================================================
+* Date:           Fri Nov 18 15:03:27 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        correlation-max-sharing
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.901 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4098|     4098|  40.980 us|  40.980 us|  4098|  4098|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |               Loop Name               |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_265_20_VITIS_LOOP_266_21  |     4096|     4096|         2|          1|          1|  4096|       yes|
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.41>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 5 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvar_flatten41 = alloca i32 1"   --->   Operation 7 'alloca' 'indvar_flatten41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln0 = store i13 0, i13 %indvar_flatten41"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %i"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %j"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc230"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indvar_flatten41_load = load i13 %indvar_flatten41" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 16 'load' 'indvar_flatten41_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.00ns)   --->   "%icmp_ln265 = icmp_eq  i13 %indvar_flatten41_load, i13 4096" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 17 'icmp' 'icmp_ln265' <Predicate = true> <Delay = 1.00> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.82ns)   --->   "%add_ln265 = add i13 %indvar_flatten41_load, i13 1" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 18 'add' 'add_ln265' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln265 = br i1 %icmp_ln265, void %fpga_resource_limit_hint.for.inc230.7_begin, void %for.body244.preheader.exitStub" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 19 'br' 'br_ln265' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%j_load = load i7 %j" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 20 'load' 'j_load' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%i_load = load i7 %i" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 21 'load' 'i_load' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.81ns)   --->   "%icmp_ln266 = icmp_eq  i7 %j_load, i7 64" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 22 'icmp' 'icmp_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.36ns)   --->   "%select_ln265 = select i1 %icmp_ln266, i7 0, i7 %j_load" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 23 'select' 'select_ln265' <Predicate = (!icmp_ln265)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.77ns)   --->   "%add_ln265_1 = add i7 %i_load, i7 1" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 24 'add' 'add_ln265_1' <Predicate = (!icmp_ln265)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.36ns)   --->   "%select_ln265_1 = select i1 %icmp_ln266, i7 %add_ln265_1, i7 %i_load" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 25 'select' 'select_ln265_1' <Predicate = (!icmp_ln265)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%indvars_iv114_udiv_mid2 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %select_ln265_1, i32 1, i32 5" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 26 'partselect' 'indvars_iv114_udiv_mid2' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln265 = trunc i7 %select_ln265_1" [correlation-max-sharing/src/correlation.cpp:265]   --->   Operation 27 'trunc' 'trunc_ln265' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_11" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 28 'specregionbegin' 'rbegin' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%rbegin3 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_78" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 29 'specregionbegin' 'rbegin3' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%rbegin4 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_12" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 30 'specregionbegin' 'rbegin4' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln272 = trunc i7 %select_ln265" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 31 'trunc' 'trunc_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%add_ln6 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i6.i5, i6 %trunc_ln272, i5 %indvars_iv114_udiv_mid2" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 32 'bitconcatenate' 'add_ln6' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln272 = zext i11 %add_ln6" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 33 'zext' 'zext_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%reg_file_2_0_addr = getelementptr i16 %reg_file_2_0, i64 0, i64 %zext_ln272" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 34 'getelementptr' 'reg_file_2_0_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%reg_file_2_1_addr = getelementptr i16 %reg_file_2_1, i64 0, i64 %zext_ln272" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 35 'getelementptr' 'reg_file_2_1_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 36 [2/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 36 'load' 'reg_file_2_0_load' <Predicate = (!icmp_ln265)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 37 [2/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 37 'load' 'reg_file_2_1_load' <Predicate = (!icmp_ln265)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %select_ln265, i32 1, i32 5" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 38 'partselect' 'lshr_ln' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln272_1 = trunc i7 %select_ln265_1" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 39 'trunc' 'trunc_ln272_1' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln272_2 = trunc i7 %select_ln265" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 40 'trunc' 'trunc_ln272_2' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln272 = br i1 %trunc_ln272_2, void %arrayidx229723.case.0, void %arrayidx229723.case.1" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 41 'br' 'br_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%specresourcelimit_ln272 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_32, void @empty_28, void @empty_28, void @empty_28" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 42 'specresourcelimit' 'specresourcelimit_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%rend64 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_12, i32 %rbegin4" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 43 'specregionend' 'rend64' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specresourcelimit_ln272 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_19, void @empty_28, void @empty_28, void @empty_28" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 44 'specresourcelimit' 'specresourcelimit_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%rend62 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_78, i32 %rbegin3" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 45 'specregionend' 'rend62' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%specresourcelimit_ln272 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_20, void @empty_28, void @empty_28, void @empty_28" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 46 'specresourcelimit' 'specresourcelimit_ln272' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%rend60 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_11, i32 %rbegin" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 47 'specregionend' 'rend60' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.77ns)   --->   "%add_ln266 = add i7 %select_ln265, i7 1" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 48 'add' 'add_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln266 = store i13 %add_ln265, i13 %indvar_flatten41" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 49 'store' 'store_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.42>
+ST_1 : Operation 50 [1/1] (0.42ns)   --->   "%store_ln266 = store i7 %select_ln265_1, i7 %i" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 50 'store' 'store_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.42>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln266 = store i7 %add_ln266, i7 %j" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 51 'store' 'store_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.42>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln266 = br void %for.inc230" [correlation-max-sharing/src/correlation.cpp:266]   --->   Operation 52 'br' 'br_ln266' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 68 'ret' 'ret_ln0' <Predicate = (icmp_ln265)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.90>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_265_20_VITIS_LOOP_266_21_str"   --->   Operation 53 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4096, i64 4096, i64 4096"   --->   Operation 54 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%specpipeline_ln271 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_28" [correlation-max-sharing/src/correlation.cpp:271]   --->   Operation 55 'specpipeline' 'specpipeline_ln271' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%specloopname_ln132 = specloopname void @_ssdm_op_SpecLoopName, void @empty_50" [correlation-max-sharing/src/correlation.cpp:132]   --->   Operation 56 'specloopname' 'specloopname_ln132' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 57 'load' 'reg_file_2_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 58 [1/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 58 'load' 'reg_file_2_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 59 [1/1] (0.42ns)   --->   "%tmp_s = mux i16 @_ssdm_op_Mux.ap_auto.2f16.i1, i16 %reg_file_2_0_load, i16 %reg_file_2_1_load, i1 %trunc_ln265" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 59 'mux' 'tmp_s' <Predicate = true> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%add_ln272_1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i6.i5, i6 %trunc_ln272_1, i5 %lshr_ln" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 60 'bitconcatenate' 'add_ln272_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln272_1 = zext i11 %add_ln272_1" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 61 'zext' 'zext_ln272_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%reg_file_6_0_addr = getelementptr i16 %reg_file_6_0, i64 0, i64 %zext_ln272_1" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 62 'getelementptr' 'reg_file_6_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%reg_file_6_1_addr = getelementptr i16 %reg_file_6_1, i64 0, i64 %zext_ln272_1" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 63 'getelementptr' 'reg_file_6_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (1.23ns)   --->   "%store_ln272 = store i16 %tmp_s, i11 %reg_file_6_0_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 64 'store' 'store_ln272' <Predicate = (!trunc_ln272_2)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln272 = br void %fpga_resource_limit_hint.for.inc230.9_end" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 65 'br' 'br_ln272' <Predicate = (!trunc_ln272_2)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (1.23ns)   --->   "%store_ln272 = store i16 %tmp_s, i11 %reg_file_6_1_addr" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 66 'store' 'store_ln272' <Predicate = (trunc_ln272_2)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln272 = br void %fpga_resource_limit_hint.for.inc230.9_end" [correlation-max-sharing/src/correlation.cpp:272]   --->   Operation 67 'br' 'br_ln272' <Predicate = (trunc_ln272_2)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.41ns
+The critical path consists of the following:
+	'alloca' operation ('j') [5]  (0 ns)
+	'load' operation ('j_load', correlation-max-sharing/src/correlation.cpp:266) on local variable 'j' [22]  (0 ns)
+	'icmp' operation ('icmp_ln266', correlation-max-sharing/src/correlation.cpp:266) [26]  (0.817 ns)
+	'select' operation ('select_ln265_1', correlation-max-sharing/src/correlation.cpp:265) [29]  (0.36 ns)
+	'getelementptr' operation ('reg_file_2_0_addr', correlation-max-sharing/src/correlation.cpp:272) [40]  (0 ns)
+	'load' operation ('reg_file_2_0_load', correlation-max-sharing/src/correlation.cpp:272) on array 'reg_file_2_0' [42]  (1.24 ns)
+
+ <State 2>: 2.9ns
+The critical path consists of the following:
+	'load' operation ('reg_file_2_0_load', correlation-max-sharing/src/correlation.cpp:272) on array 'reg_file_2_0' [42]  (1.24 ns)
+	'mux' operation ('tmp_s', correlation-max-sharing/src/correlation.cpp:272) [44]  (0.427 ns)
+	'store' operation ('store_ln272', correlation-max-sharing/src/correlation.cpp:272) of variable 'tmp_s', correlation-max-sharing/src/correlation.cpp:272 on array 'reg_file_6_1' [57]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

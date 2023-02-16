@@ -1,0 +1,1345 @@
+---
+MainSourceFile:  /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          58007
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          265051
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          265490
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          265930
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          527690
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      117
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      118
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      119
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      120
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      121
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      151
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      152
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      153
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      154
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      155
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      156
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      157
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      158
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      159
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      160
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      210
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      211
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      212
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      239
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      240
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      241
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      242
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      243
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      244
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      280
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      281
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1159070
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1159882
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_1:  '
+    FileOffset:      315
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1162527
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_475_1:  '
+    FileOffset:      475
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1165248
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_475_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_655_1:  '
+    FileOffset:      655
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1168409
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_655_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_659_2:  '
+    FileOffset:      659
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1168490
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_659_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_769_1:  '
+    FileOffset:      769
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1170799
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_769_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_866_1:  '
+    FileOffset:      866
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1172291
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_866_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_885_2:  '
+    FileOffset:      885
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1172521
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_885_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1199_1:  '
+    FileOffset:      1199
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1178699
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1282_1:  '
+    FileOffset:      1282
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1180302
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1282_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_1:  '
+    FileOffset:      94
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1188147
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_2:  '
+    FileOffset:      100
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1188297
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_3:  '
+    FileOffset:      104
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1188394
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_4:  '
+    FileOffset:      171
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1190252
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_5:  '
+    FileOffset:      177
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1190402
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_6:  '
+    FileOffset:      181
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1190499
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_196_7:  '
+    FileOffset:      196
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1190880
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_196_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_8:  '
+    FileOffset:      204
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1191111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_9:  '
+    FileOffset:      269
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1194558
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_275_10:  '
+    FileOffset:      275
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1194710
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_275_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_279_11:  '
+    FileOffset:      279
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1194810
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_279_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_12:  '
+    FileOffset:      294
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1195192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_302_13:  '
+    FileOffset:      302
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1195430
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_302_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_531_14:  '
+    FileOffset:      531
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1210985
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_531_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_537_15:  '
+    FileOffset:      537
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1211137
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_537_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_541_16:  '
+    FileOffset:      541
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1211236
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_541_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_551_17:  '
+    FileOffset:      551
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1211413
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_551_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_555_18:  '
+    FileOffset:      555
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1211511
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_555_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_565_19:  '
+    FileOffset:      565
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1211796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_565_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_573_20:  '
+    FileOffset:      573
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1212051
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_573_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_934_21:  '
+    FileOffset:      934
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1244290
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_934_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_940_22:  '
+    FileOffset:      940
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1244442
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_940_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_944_23:  '
+    FileOffset:      944
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1244542
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_944_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1060_1:  '
+    FileOffset:      1060
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1247218
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1060_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1066_2:  '
+    FileOffset:      1066
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1247368
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1066_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1070_3:  '
+    FileOffset:      1070
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1247466
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1070_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1157_4:  '
+    FileOffset:      1157
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1250936
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1157_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1163_5:  '
+    FileOffset:      1163
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1251087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1163_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_6:  '
+    FileOffset:      1167
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1251186
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1186_7:  '
+    FileOffset:      1186
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1251666
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1186_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1193_8:  '
+    FileOffset:      1193
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1251908
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1193_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1309_9:  '
+    FileOffset:      1309
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1257480
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1309_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1315_10:  '
+    FileOffset:      1315
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1257632
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1315_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1319_11:  '
+    FileOffset:      1319
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1257731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1319_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1339_12:  '
+    FileOffset:      1339
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1258240
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1339_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1346_13:  '
+    FileOffset:      1346
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1258489
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1346_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1608_14:  '
+    FileOffset:      1608
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1275846
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1608_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1614_15:  '
+    FileOffset:      1614
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1275998
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1614_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1618_16:  '
+    FileOffset:      1618
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1276098
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1618_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1642_17:  '
+    FileOffset:      1642
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1276572
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1642_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1649_18:  '
+    FileOffset:      1649
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1276839
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1649_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2079_19:  '
+    FileOffset:      2079
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1315410
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2079_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2085_20:  '
+    FileOffset:      2085
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1315562
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2085_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2089_21:  '
+    FileOffset:      2089
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1315662
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2089_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2219_1:  '
+    FileOffset:      2219
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1318282
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2219_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2226_2:  '
+    FileOffset:      2226
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1318445
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2226_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2230_3:  '
+    FileOffset:      2230
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1318537
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2230_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2277_4:  '
+    FileOffset:      2277
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1320146
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2277_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2284_5:  '
+    FileOffset:      2284
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1320308
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2284_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2288_6:  '
+    FileOffset:      2288
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1320400
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2288_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2306_7:  '
+    FileOffset:      2306
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1320773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2306_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2361_8:  '
+    FileOffset:      2361
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1323239
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2361_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2368_9:  '
+    FileOffset:      2368
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1323406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2368_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2372_10:  '
+    FileOffset:      2372
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1323499
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2372_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2390_11:  '
+    FileOffset:      2390
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1323880
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2390_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2479_12:  '
+    FileOffset:      2479
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1329321
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2479_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2486_13:  '
+    FileOffset:      2486
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1329489
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2486_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2490_14:  '
+    FileOffset:      2490
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1329583
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2490_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2500_15:  '
+    FileOffset:      2500
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1329754
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2500_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2504_16:  '
+    FileOffset:      2504
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1329845
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2504_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2515_17:  '
+    FileOffset:      2515
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1330127
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2515_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2523_18:  '
+    FileOffset:      2523
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1330314
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2523_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2848_19:  '
+    FileOffset:      2848
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1364784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2848_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2855_20:  '
+    FileOffset:      2855
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1364952
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2855_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2859_21:  '
+    FileOffset:      2859
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1365046
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2859_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_1:  '
+    FileOffset:      2947
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1366848
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2954_2:  '
+    FileOffset:      2954
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1366956
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2954_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2958_3:  '
+    FileOffset:      2958
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1367027
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2958_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2973_4:  '
+    FileOffset:      2973
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1367315
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2973_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_5:  '
+    FileOffset:      3005
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1368529
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3012_6:  '
+    FileOffset:      3012
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1368640
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3012_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3016_7:  '
+    FileOffset:      3016
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1368713
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3016_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3031_8:  '
+    FileOffset:      3031
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1369008
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3031_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_9:  '
+    FileOffset:      3081
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1372341
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3088_10:  '
+    FileOffset:      3088
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1372452
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3088_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3092_11:  '
+    FileOffset:      3092
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1372525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3092_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3107_12:  '
+    FileOffset:      3107
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1372821
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3107_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_13:  '
+    FileOffset:      3244
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1392133
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3251_14:  '
+    FileOffset:      3251
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1392247
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3251_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3255_15:  '
+    FileOffset:      3255
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1392322
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3255_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3270_16:  '
+    FileOffset:      3270
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1392609
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3270_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3430_17:  '
+    FileOffset:      3430
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1418219
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3430_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3437_18:  '
+    FileOffset:      3437
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1418333
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3437_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3441_19:  '
+    FileOffset:      3441
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1418410
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3441_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_729_1:  '
+    FileOffset:      729
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1452473
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_729_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_947_1:  '
+    FileOffset:      947
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1460862
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1371_1:  '
+    FileOffset:      1371
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1479834
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1371_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_1:  '
+    FileOffset:      266
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1494763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_2:  '
+    FileOffset:      294
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1495284
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1511274
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_2:  '
+    FileOffset:      135
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1512422
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_3:  '
+    FileOffset:      149
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1512731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_179_4:  '
+    FileOffset:      179
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1513241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_179_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1515151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_327_2:  '
+    FileOffset:      327
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1515516
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_327_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_3:  '
+    FileOffset:      341
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1515824
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_459_1:  '
+    FileOffset:      459
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1517650
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_459_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_473_2:  '
+    FileOffset:      473
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1517975
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_473_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1520699
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_1:  '
+    FileOffset:      209
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1523586
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_274_1:  '
+    FileOffset:      274
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1524871
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_274_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_1:  '
+    FileOffset:      42
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1535916
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536091
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_1:  '
+    FileOffset:      64
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536252
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536414
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536588
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_1:  '
+    FileOffset:      97
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_1:  '
+    FileOffset:      108
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1536924
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_1:  '
+    FileOffset:      119
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1537086
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_23_1:  '
+    FileOffset:      23
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_mad_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1608089
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_23_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_66_1:  '
+    FileOffset:      66
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cbrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1609830
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_66_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1614327
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_2:  '
+    FileOffset:      107
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1615057
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_3:  '
+    FileOffset:      195
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1616740
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_1:  '
+    FileOffset:      40
+    FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/src/correlation.cpp
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1670647
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_1:  '
+    FileOffset:      85
+    FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/src/correlation.cpp
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1671648
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_1:  '
+    FileOffset:      132
+    FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/src/correlation.cpp
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1672499
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_137_2:  '
+    FileOffset:      137
+    FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/src/correlation.cpp
+    Replacements:    
+      - FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/zcu104/.autopilot/db/correlation.pp.0.cpp
+        Offset:          1672728
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_137_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      161
+    FilePath:        /home/derumigny/FPGA/data/zcu104/2023-Dac/ger-max-sharing/src/correlation.cpp
+    Replacements:    
+...

@@ -1,0 +1,145 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sat Nov 19 22:08:35 2022
+| Host         : liara running 64-bit Arch Linux
+| Command      : report_drc -file bd_0_wrapper_drc_opted.rpt -pb bd_0_wrapper_drc_opted.pb -rpx bd_0_wrapper_drc_opted.rpx
+| Design       : bd_0_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_bd_0_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 21
++----------+----------+---------------------------------------------------------------------+------------+
+| Rule     | Severity | Description                                                         | Violations |
++----------+----------+---------------------------------------------------------------------+------------+
+| DPIP-2   | Warning  | Input pipelining                                                    | 10         |
+| DPOP-3   | Warning  | PREG Output pipelining                                              | 6          |
+| DPOP-4   | Warning  | MREG Output pipelining                                              | 3          |
+| AVAL-155 | Advisory | enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 1          |
+| AVAL-156 | Advisory | enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND    | 1          |
++----------+----------+---------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP output bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP multiplier stage bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hadd_16ns_16ns_16_2_full_dsp_1_U39/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 multiplier stage bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2 multiplier stage bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e2.iDSP48E2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+AVAL-155#1 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-156#1 Advisory
+enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_56/hmul_16ns_16ns_16_2_max_dsp_1_U40/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+

@@ -1,0 +1,616 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jan 12 12:37:41 2023
+# Process ID: 125353
+# Current directory: /home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: /home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: /home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 1362.029 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 41683
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1717.312 ; gain = 84.992 ; free physical = 12160 ; free virtual = 18782
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_0_hls_inst_0
+Command: synth_design -top bd_0_hls_inst_0 -part xczu7ev-ffvc1156-2-e -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 125449
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3051.914 ; gain = 231.828 ; free physical = 10705 ; free virtual = 17333
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2423.812; parent = 2230.957; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4023.383; parent = 3061.824; children = 961.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_reg_file_RAM_T2P_BRAM_1R1W' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_reg_file_RAM_T2P_BRAM_1R1W' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_recv_data_burst' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_flow_control_loop_pipe_sequential_init' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_flow_control_loop_pipe_sequential_init' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_recv_data_burst' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_compute' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_compute_Pipeline_VITIS_LOOP_132_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_compute_Pipeline_VITIS_LOOP_132_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_hmul_16ns_16ns_16_2_max_dsp_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/ip/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/ip/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_hmul_16ns_16ns_16_2_max_dsp_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_mux_21_16_1_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_mux_21_16_1_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_compute_Pipeline_VITIS_LOOP_132_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_compute_Pipeline_VITIS_LOOP_132_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_compute' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_send_data_burst' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_mux_83_16_1_1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_mux_83_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_mux_83_16_1_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_mux_83_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_send_data_burst' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_control_s_axi' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_control_s_axi.v:233]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_control_s_axi' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_store' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized0' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_mem' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_mem' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized0' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl__parameterized0' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl__parameterized0' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized2' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl__parameterized1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl__parameterized1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized2' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_store' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_load' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized3' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_mem__parameterized0' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_mem__parameterized0' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized3' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_load' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_write' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_reg_slice' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_reg_slice' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized4' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl__parameterized2' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl__parameterized2' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized4' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_throttle' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized0' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized0' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized5' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl__parameterized3' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl__parameterized3' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized5' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_fifo__parameterized6' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_srl__parameterized4' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_srl__parameterized4' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_fifo__parameterized6' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_throttle' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized1' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized1' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_write' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_read' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized2' [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_reg_slice__parameterized2' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi_read' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel_data_m_axi' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_data_m_axi.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'corr_accel' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/5aca/hdl/verilog/corr_accel_control_s_axi.v:316]
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module corr_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module corr_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module corr_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module corr_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module corr_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module corr_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module corr_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module corr_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module corr_accel_data_m_axi_srl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module corr_accel_data_m_axi_srl__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_AWREADY in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_ARREADY in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RVALID in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[63] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[62] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[61] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[60] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[59] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[58] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[57] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[56] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[55] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[54] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[53] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[52] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[51] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[50] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[49] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[48] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[47] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[46] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[45] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[44] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[43] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[42] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[41] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[40] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[39] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[38] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[37] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[36] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[35] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[34] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[33] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[32] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[31] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[30] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[29] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[28] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[27] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[26] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[25] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[24] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[23] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[22] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[21] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[20] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[19] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[18] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[17] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[16] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[15] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[14] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[13] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[12] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[11] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[10] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[9] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[8] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[7] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[6] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[5] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[4] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[3] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[2] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[1] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RLAST in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RID[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[8] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[7] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[6] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[5] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[4] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[3] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[2] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[1] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RFIFONUM[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RUSER[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RRESP[1] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RRESP[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_BVALID in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_BRESP[1] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_BRESP[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_BID[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_BUSER[0] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln85[60] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln85[59] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln85[58] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln85[57] in module corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3216.789 ; gain = 396.703 ; free physical = 10704 ; free virtual = 17334
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4178.352; parent = 3216.793; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3234.602 ; gain = 414.516 ; free physical = 10700 ; free virtual = 17331
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4196.164; parent = 3234.605; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3234.602 ; gain = 414.516 ; free physical = 10710 ; free virtual = 17341
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4196.164; parent = 3234.605; children = 961.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3240.539 ; gain = 0.000 ; free physical = 10713 ; free virtual = 17343
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/corr_accel_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3386.320 ; gain = 0.000 ; free physical = 10595 ; free virtual = 17227
+Finished Parsing XDC File [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/corr_accel_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3386.320 ; gain = 0.000 ; free physical = 10594 ; free virtual = 17226
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3386.320 ; gain = 0.000 ; free physical = 10591 ; free virtual = 17223
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3386.320 ; gain = 566.234 ; free physical = 10685 ; free virtual = 17317
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4347.883; parent = 3386.324; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3386.320 ; gain = 566.234 ; free physical = 10685 ; free virtual = 17317
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4347.883; parent = 3386.324; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3386.320 ; gain = 566.234 ; free physical = 10685 ; free virtual = 17317
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4347.883; parent = 3386.324; children = 961.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'corr_accel_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'corr_accel_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'corr_accel_data_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'corr_accel_data_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'corr_accel_data_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'corr_accel_data_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "corr_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg"
+INFO: [Synth 8-3971] The signal "corr_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'corr_accel_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'corr_accel_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'corr_accel_data_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'corr_accel_data_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'corr_accel_data_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'corr_accel_data_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 3386.320 ; gain = 566.234 ; free physical = 10672 ; free virtual = 17306
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4347.883; parent = 3386.324; children = 961.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_BIT_DEL' (delay__parameterized6) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_DELAY' (delay__parameterized6) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized9) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized9) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized6) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized6) to 'inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_132_1_fu_32/hmul_16ns_16ns_16_2_max_dsp_1_U37/corr_accel_hmul_16ns_16ns_16_2_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_1_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_1_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_2_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_2_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_3_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_3_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_4_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_4_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_5_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_5_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_6_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_6_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_7_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_7_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_8_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_8_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_9_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_9_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_10_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_10_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_11_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_11_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_12_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_12_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_13_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_13_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_14_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_14_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_15_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_15_U/ram_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module corr_accel_control_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module corr_accel_control_s_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 3386.320 ; gain = 566.234 ; free physical = 10653 ; free virtual = 17296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2530.218; parent = 2337.373; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4347.883; parent = 3386.324; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 3722.625 ; gain = 902.539 ; free physical = 10059 ; free virtual = 16696
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3032.321; parent = 2840.317; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4684.188; parent = 3722.629; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 3760.664 ; gain = 940.578 ; free physical = 10034 ; free virtual = 16672
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3046.716; parent = 2854.722; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4722.227; parent = 3760.668; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/data_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 3768.672 ; gain = 948.586 ; free physical = 10010 ; free virtual = 16648
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3051.528; parent = 2859.534; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4730.234; parent = 3768.676; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 10008 ; free virtual = 16645
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3052.173; parent = 2860.200; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 10008 ; free virtual = 16645
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3052.188; parent = 2860.216; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 10007 ; free virtual = 16645
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3052.548; parent = 2860.575; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 10007 ; free virtual = 16644
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3052.548; parent = 2860.575; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 9997 ; free virtual = 16635
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3053.060; parent = 2861.087; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 9997 ; free virtual = 16635
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3053.060; parent = 2861.087; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp             | C+A*B       | 11     | 11     | 0      | -      | 45     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper | Dynamic     | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    98|
+|2     |DSP48E1         |     1|
+|3     |DSP_ALU         |     1|
+|4     |DSP_A_B_DATA    |     1|
+|5     |DSP_C_DATA      |     1|
+|6     |DSP_MULTIPLIER  |     1|
+|7     |DSP_M_DATA      |     1|
+|8     |DSP_OUTPUT      |     1|
+|9     |DSP_PREADD      |     1|
+|10    |DSP_PREADD_DATA |     1|
+|11    |LUT1            |    39|
+|12    |LUT2            |   154|
+|13    |LUT3            |   468|
+|14    |LUT4            |   517|
+|15    |LUT5            |   340|
+|16    |LUT6            |   450|
+|17    |MUXCY           |    16|
+|18    |MUXF7           |    64|
+|19    |RAMB36E2        |    18|
+|22    |SRL16E          |   269|
+|23    |XORCY           |    10|
+|24    |FDRE            |  2755|
+|25    |FDSE            |     9|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 3774.609 ; gain = 954.523 ; free physical = 9991 ; free virtual = 16633
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3053.071; parent = 2861.100; children = 192.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4736.172; parent = 3774.613; children = 961.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 161 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 3774.609 ; gain = 802.805 ; free physical = 10026 ; free virtual = 16667
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 3774.617 ; gain = 954.523 ; free physical = 10026 ; free virtual = 16668
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3774.617 ; gain = 0.000 ; free physical = 10134 ; free virtual = 16776
+INFO: [Netlist 29-17] Analyzing 190 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3832.309 ; gain = 0.000 ; free physical = 10051 ; free virtual = 16694
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  (CARRY4) => CARRY8: 5 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+
+Synth Design complete, checksum: 17deb5bc
+INFO: [Common 17-83] Releasing license: Synthesis
+199 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 3832.309 ; gain = 2048.184 ; free physical = 10274 ; free virtual = 16917
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 6979e1c2791c82bf
+INFO: [Coretcl 2-1174] Renamed 85 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/data/2023-FCCM/scalv-max-sharing/zcu104/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 12:39:29 2023...

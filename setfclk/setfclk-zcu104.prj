@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="setfclk-zcu104" location="/home/derumigny/FPGA/SDK-projects/setfclk-zcu104" platform="/opt/Xilinx/platform/xilinx_zcu104_base_202110_1/xilinx_zcu104_base_202110_1.xpfm" platformUID="xilinx.com:xd:xilinx_zcu104_base_202110_1:202110.1(custom)" systemProject="ZCU104_Linux" sysConfig="xilinx_zcu104_base_202110_1" cpu="xrt" cpuInstance="cortex-a53" os="linux" language="CPP">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.linux.exe.debug.92825801">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.linux.exe.release.1339587580" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute'
+================================================================
+* Date:           Sun Nov 20 16:50:17 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        gemv-max-sharing
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.141 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4553|     4553|  45.530 us|  45.530 us|  4553|  4553|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+-----------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                             |                                   |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                   Instance                  |               Module              |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +---------------------------------------------+-----------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_compute_Pipeline_VITIS_LOOP_132_1_fu_58  |compute_Pipeline_VITIS_LOOP_132_1  |       67|       67|   0.670 us|   0.670 us|    67|    67|       no|
+        |grp_compute_Pipeline_VITIS_LOOP_139_2_fu_68  |compute_Pipeline_VITIS_LOOP_139_2  |     4482|     4482|  44.820 us|  44.820 us|  4482|  4482|       no|
+        +---------------------------------------------+-----------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     4|    2037|    2702|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     259|    -|
+|Register         |        -|     -|      39|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     4|    2076|    2961|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+-----------------------------------+---------+----+------+------+-----+
+    |                   Instance                  |               Module              | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------+-----------------------------------+---------+----+------+------+-----+
+    |grp_compute_Pipeline_VITIS_LOOP_132_1_fu_58  |compute_Pipeline_VITIS_LOOP_132_1  |        0|   0|    34|    80|    0|
+    |grp_compute_Pipeline_VITIS_LOOP_139_2_fu_68  |compute_Pipeline_VITIS_LOOP_139_2  |        0|   2|  1939|  2588|    0|
+    |hmul_16ns_16ns_16_2_max_dsp_1_U56            |hmul_16ns_16ns_16_2_max_dsp_1      |        0|   2|    64|    34|    0|
+    +---------------------------------------------+-----------------------------------+---------+----+------+------+-----+
+    |Total                                        |                                   |        0|   4|  2037|  2702|    0|
+    +---------------------------------------------+-----------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  31|          6|    1|          6|
+    |grp_fu_106_ce          |  14|          3|    1|          3|
+    |grp_fu_106_p0          |  14|          3|   16|         48|
+    |grp_fu_106_p1          |  14|          3|   16|         48|
+    |reg_file_7_0_address0  |  14|          3|   11|         33|
+    |reg_file_7_0_address1  |  14|          3|   11|         33|
+    |reg_file_7_0_ce0       |  14|          3|    1|          3|
+    |reg_file_7_0_ce1       |  14|          3|    1|          3|
+    |reg_file_7_0_d0        |  14|          3|   16|         48|
+    |reg_file_7_0_we0       |  14|          3|    1|          3|
+    |reg_file_7_0_we1       |   9|          2|    1|          2|
+    |reg_file_7_1_address0  |  14|          3|   11|         33|
+    |reg_file_7_1_address1  |  14|          3|   11|         33|
+    |reg_file_7_1_ce0       |  14|          3|    1|          3|
+    |reg_file_7_1_ce1       |  14|          3|    1|          3|
+    |reg_file_7_1_d0        |  14|          3|   16|         48|
+    |reg_file_7_1_we0       |  14|          3|    1|          3|
+    |reg_file_7_1_we1       |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 259|         55|  118|        355|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                           | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                 |   5|   0|    5|          0|
+    |grp_compute_Pipeline_VITIS_LOOP_132_1_fu_58_ap_start_reg  |   1|   0|    1|          0|
+    |grp_compute_Pipeline_VITIS_LOOP_139_2_fu_68_ap_start_reg  |   1|   0|    1|          0|
+    |reg_file_0_0_load_reg_101                                 |  16|   0|   16|          0|
+    |reg_file_1_0_load_reg_91                                  |  16|   0|   16|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                     |  39|   0|   39|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|       compute|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|       compute|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|       compute|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|       compute|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|       compute|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|       compute|  return value|
+|reg_file_0_0_address0  |  out|   11|   ap_memory|  reg_file_0_0|         array|
+|reg_file_0_0_ce0       |  out|    1|   ap_memory|  reg_file_0_0|         array|
+|reg_file_0_0_q0        |   in|   16|   ap_memory|  reg_file_0_0|         array|
+|reg_file_1_0_address0  |  out|   11|   ap_memory|  reg_file_1_0|         array|
+|reg_file_1_0_ce0       |  out|    1|   ap_memory|  reg_file_1_0|         array|
+|reg_file_1_0_q0        |   in|   16|   ap_memory|  reg_file_1_0|         array|
+|reg_file_2_0_address0  |  out|   11|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_0_ce0       |  out|    1|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_0_q0        |   in|   16|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_0_address1  |  out|   11|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_0_ce1       |  out|    1|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_0_q1        |   in|   16|   ap_memory|  reg_file_2_0|         array|
+|reg_file_2_1_address0  |  out|   11|   ap_memory|  reg_file_2_1|         array|
+|reg_file_2_1_ce0       |  out|    1|   ap_memory|  reg_file_2_1|         array|
+|reg_file_2_1_q0        |   in|   16|   ap_memory|  reg_file_2_1|         array|
+|reg_file_2_1_address1  |  out|   11|   ap_memory|  reg_file_2_1|         array|
+|reg_file_2_1_ce1       |  out|    1|   ap_memory|  reg_file_2_1|         array|
+|reg_file_2_1_q1        |   in|   16|   ap_memory|  reg_file_2_1|         array|
+|reg_file_6_0_address0  |  out|   11|   ap_memory|  reg_file_6_0|         array|
+|reg_file_6_0_ce0       |  out|    1|   ap_memory|  reg_file_6_0|         array|
+|reg_file_6_0_q0        |   in|   16|   ap_memory|  reg_file_6_0|         array|
+|reg_file_6_1_address0  |  out|   11|   ap_memory|  reg_file_6_1|         array|
+|reg_file_6_1_ce0       |  out|    1|   ap_memory|  reg_file_6_1|         array|
+|reg_file_6_1_q0        |   in|   16|   ap_memory|  reg_file_6_1|         array|
+|reg_file_7_0_address0  |  out|   11|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_ce0       |  out|    1|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_we0       |  out|    1|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_d0        |  out|   16|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_q0        |   in|   16|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_address1  |  out|   11|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_ce1       |  out|    1|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_we1       |  out|    1|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_d1        |  out|   16|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_0_q1        |   in|   16|   ap_memory|  reg_file_7_0|         array|
+|reg_file_7_1_address0  |  out|   11|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_ce0       |  out|    1|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_we0       |  out|    1|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_d0        |  out|   16|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_q0        |   in|   16|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_address1  |  out|   11|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_ce1       |  out|    1|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_we1       |  out|    1|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_d1        |  out|   16|   ap_memory|  reg_file_7_1|         array|
+|reg_file_7_1_q1        |   in|   16|   ap_memory|  reg_file_7_1|         array|
++-----------------------+-----+-----+------------+--------------+--------------+
+

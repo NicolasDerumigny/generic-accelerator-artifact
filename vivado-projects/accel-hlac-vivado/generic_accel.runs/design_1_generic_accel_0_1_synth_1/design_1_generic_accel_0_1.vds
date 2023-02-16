@@ -1,0 +1,969 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jan 11 14:39:24 2023
+# Process ID: 83627
+# Current directory: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1
+# Command line: vivado -log design_1_generic_accel_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_generic_accel_0_1.tcl
+# Log file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.vds
+# Journal file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 1910.800 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source design_1_generic_accel_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1700.820 ; gain = 87.961 ; free physical = 6625 ; free virtual = 17141
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/derumigny/FPGA/HLS-projects/generic-accel'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_generic_accel_0_1
+Command: synth_design -top design_1_generic_accel_0_1 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 83741
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3043.723 ; gain = 240.801 ; free physical = 4875 ; free virtual = 15398
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2398.256; parent = 2225.714; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.129; parent = 3065.539; children = 955.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_generic_accel_0_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/synth/design_1_generic_accel_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_reg_file_RAM_T2P_BRAM_1R1W' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_reg_file_RAM_T2P_BRAM_1R1W' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_data_burst' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_flow_control_loop_pipe_sequential_init' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_flow_control_loop_pipe_sequential_init' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_data_burst' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_pgm' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_pgm.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_pgm' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_pgm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_171_2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_171_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_171_2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_171_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_9_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_9_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_9_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_9_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_65_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_65_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_fu_addmul_axis' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_fu_addmul_axis.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_fu_addmul_axis' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_fu_addmul_axis.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_21_16_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_21_16_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_21_32_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_21_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_21_32_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_21_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_73_32_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_73_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_73_32_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_73_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_65_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_65_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_send_data_burst' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_275_16_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_275_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_275_16_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_mux_275_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_send_data_burst' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_control_s_axi' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_control_s_axi_ram' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:589]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_control_s_axi_ram' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:589]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:277]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_control_s_axi' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_store' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_mem' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_mem' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_store' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_load' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_mem__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_mem__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_load' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_write' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized4' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized4' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_throttle' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized5' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized5' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized6' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized4' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized4' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized6' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_throttle' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_write' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_read' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_read' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_data_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_regslice_both' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_regslice_both' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_generic_accel_0_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/synth/design_1_generic_accel_0_1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_control_s_axi.v:363]
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module generic_accel_data_m_axi_srl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module generic_accel_data_m_axi_srl__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_AWREADY in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_ARREADY in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RVALID in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[63] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[62] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[61] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[60] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[59] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[58] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[57] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[56] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[55] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[54] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[53] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[52] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[51] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[50] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[49] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[48] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[47] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[46] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[45] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[44] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[43] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[42] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[41] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[40] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[39] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[38] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[37] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[36] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[35] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[34] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[33] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[32] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[31] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[30] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[29] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[28] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[27] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[26] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[25] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[24] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[23] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[22] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[21] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[20] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[19] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[18] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[17] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[16] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[15] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[14] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[13] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3243.504 ; gain = 440.582 ; free physical = 4670 ; free virtual = 15149
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4199.098; parent = 3243.508; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3258.348 ; gain = 455.426 ; free physical = 4677 ; free virtual = 15157
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4213.941; parent = 3258.352; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3258.348 ; gain = 455.426 ; free physical = 4679 ; free virtual = 15159
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4213.941; parent = 3258.352; children = 955.590
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3258.348 ; gain = 0.000 ; free physical = 4604 ; free virtual = 15084
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/constraints/generic_accel_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3431.066 ; gain = 0.000 ; free physical = 4447 ; free virtual = 14927
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/constraints/generic_accel_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3431.066 ; gain = 0.000 ; free physical = 4446 ; free virtual = 14926
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.31 . Memory (MB): peak = 3431.066 ; gain = 0.000 ; free physical = 4439 ; free virtual = 14919
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 3431.066 ; gain = 628.145 ; free physical = 4638 ; free virtual = 15117
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.645; parent = 3399.055; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 3431.066 ; gain = 628.145 ; free physical = 4638 ; free virtual = 15117
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.645; parent = 3399.055; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3431.066 ; gain = 628.145 ; free physical = 4638 ; free virtual = 15117
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.645; parent = 3399.055; children = 955.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln111_reg_113_reg' and it is trimmed from '10' to '9' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/dec3/hdl/verilog/generic_accel_recv_pgm.v:141]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram0_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram1_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram2_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3431.066 ; gain = 628.145 ; free physical = 4635 ; free virtual = 15116
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2529.507; parent = 2357.001; children = 172.542
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.645; parent = 3399.055; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 4     
+	   2 Input   52 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 15    
+	   2 Input   15 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 10    
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 5     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 19    
+	   2 Input    4 Bit       Adders := 16    
+	   2 Input    3 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 32    
++---Registers : 
+	               96 Bit    Registers := 6     
+	               73 Bit    Registers := 1     
+	               72 Bit    Registers := 4     
+	               66 Bit    Registers := 1     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 17    
+	               61 Bit    Registers := 2     
+	               52 Bit    Registers := 2     
+	               32 Bit    Registers := 33    
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 196   
+	               15 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 8     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 26    
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 505   
++---RAMs : 
+	              32K Bit	(2048 X 16 bit)          RAMs := 54    
+	              16K Bit	(255 X 66 bit)          RAMs := 1     
+	               4K Bit	(512 X 8 bit)          RAMs := 3     
+	               4K Bit	(128 X 32 bit)          RAMs := 1     
+	               1K Bit	(15 X 72 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   72 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 10    
+	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 427   
+	   8 Input   19 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 788   
+	   4 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 228   
+	   2 Input    9 Bit        Muxes := 9     
+	  10 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 13    
+	   9 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 3     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 23    
+	   2 Input    4 Bit        Muxes := 21    
+	   2 Input    3 Bit        Muxes := 11    
+	   3 Input    2 Bit        Muxes := 16    
+	   2 Input    2 Bit        Muxes := 74    
+	   6 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 13    
+	   2 Input    1 Bit        Muxes := 601   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_1_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_1_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_2_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_2_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_3_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_3_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_4_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_4_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_5_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_5_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_6_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_6_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_7_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_7_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_8_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_8_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_9_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_9_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_10_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_10_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_11_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_11_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_12_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_12_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_13_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_13_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_14_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_14_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_15_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_15_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_16_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_16_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_17_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_17_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_18_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_18_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_19_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_19_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_20_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_20_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_21_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_21_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_22_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_22_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_23_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_23_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_24_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_24_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_25_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_25_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_26_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_26_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_27_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_27_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_28_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_28_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_29_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_29_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_30_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_30_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_31_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_31_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_32_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_32_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_33_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_33_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_34_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_34_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_35_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_35_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_36_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_36_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_37_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_37_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_38_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_38_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_39_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_39_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_40_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_40_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_41_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_41_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_42_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_42_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_43_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_43_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_44_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_44_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_45_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_45_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_46_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_46_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_47_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_47_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_48_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_48_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_49_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_49_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_50_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_50_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_51_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_51_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_52_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_52_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "inst/reg_file_53_U/ram_reg"
+INFO: [Synth 8-3971] The signal "inst/reg_file_53_U/ram_reg" was recognized as a true dual port RAM template.
+RAM ("inst/pgml_V_U/ram0_reg") is too shallow (depth = 512) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "inst/pgml_V_U/ram0_reg"
+RAM ("inst/pgml_V_U/ram1_reg") is too shallow (depth = 512) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "inst/pgml_V_U/ram1_reg"
+RAM ("inst/pgml_V_U/ram2_reg") is too shallow (depth = 512) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "inst/pgml_V_U/ram2_reg"
+RAM ("inst/i_9_0/control_s_axi_U/int_pgm/mem_reg") is too shallow (depth = 128) to use URAM. Choosing BRAM instead of URAM 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 3431.066 ; gain = 628.145 ; free physical = 7551 ; free virtual = 18135
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2665.204; parent = 2475.560; children = 206.877
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.645; parent = 3399.055; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst                       | reg_file_U/ram_reg                       | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_1_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_2_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_3_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_4_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_5_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_6_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_7_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_8_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_9_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_10_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_11_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_12_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_13_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_14_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_15_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_16_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_17_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_18_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_19_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_20_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_21_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_22_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_23_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_24_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_25_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_26_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_27_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_28_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_29_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_30_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_31_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_32_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_33_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_34_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_35_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_36_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_37_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_38_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_39_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_40_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_41_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_42_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_43_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_44_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_45_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_46_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_47_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_48_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_49_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_50_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_51_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_52_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_53_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | pgml_V_U/ram0_reg                        | 512 x 8(READ_FIRST)    | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 1               | 
+|inst                       | pgml_V_U/ram1_reg                        | 512 x 8(WRITE_FIRST)   |   | R | 512 x 8(READ_FIRST)    | W |   | Port A and B     | 1      | 0      | 1               | 
+|inst                       | pgml_V_U/ram2_reg                        | 512 x 8(WRITE_FIRST)   |   | R | 512 x 8(READ_FIRST)    | W |   | Port A and B     | 1      | 0      | 1               | 
+|inst/i_9_0/control_s_axi_U | int_pgm/mem_reg                          | 128 x 32(READ_FIRST)   | W | R | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst/i_9_0/data_m_axi_U    | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 72(READ_FIRST)    | W |   | 15 x 72(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      |                 | 
+|inst/i_9_0/data_m_axi_U    | load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 66(READ_FIRST)   | W |   | 255 x 66(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:23 . Memory (MB): peak = 3785.566 ; gain = 982.645 ; free physical = 6092 ; free virtual = 16640
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3104.396; parent = 2914.092; children = 206.877
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4741.160; parent = 3785.570; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:15 ; elapsed = 00:03:21 . Memory (MB): peak = 3986.105 ; gain = 1183.184 ; free physical = 4365 ; free virtual = 14911
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3202.953; parent = 3013.244; children = 206.877
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4941.699; parent = 3986.109; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst/i_9_0/control_s_axi_U | int_pgm/mem_reg                          | 128 x 32(READ_FIRST)   | W | R | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst/i_9_0/data_m_axi_U    | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 72(READ_FIRST)    | W |   | 15 x 72(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      |                 | 
+|inst/i_9_0/data_m_axi_U    | load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 66(READ_FIRST)   | W |   | 255 x 66(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst                       | reg_file_40_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_42_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_22_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_32_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_33_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_34_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_35_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_36_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_37_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_38_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_39_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_41_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_43_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_44_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_45_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_46_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_47_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_48_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_49_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_50_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_51_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_52_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_53_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_U/ram_reg                       | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_1_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_2_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_3_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_4_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_5_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_6_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_7_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_8_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_9_U/ram_reg                     | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_10_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_11_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_12_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_13_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_14_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_15_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_16_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_17_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_18_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_19_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_20_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_21_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_23_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_24_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_25_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_26_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_27_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_28_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_29_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_30_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | reg_file_31_U/ram_reg                    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 1               | 
+|inst                       | pgml_V_U/ram0_reg                        | 512 x 8(READ_FIRST)    | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 1               | 
+|inst                       | pgml_V_U/ram1_reg                        | 512 x 8(WRITE_FIRST)   |   | R | 512 x 8(READ_FIRST)    | W |   | Port A and B     | 1      | 0      | 1               | 
+|inst                       | pgml_V_U/ram2_reg                        | 512 x 8(WRITE_FIRST)   |   | R | 512 x 8(READ_FIRST)    | W |   | Port A and B     | 1      | 0      | 1               | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_pgm/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_pgm/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/data_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_40_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_40_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_42_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_42_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_22_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_22_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_32_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_32_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_33_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_33_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_34_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_34_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_35_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_35_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_36_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_36_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_37_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_37_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_38_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_38_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_39_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_39_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_41_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_41_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_43_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_43_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_44_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_44_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_45_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_45_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_46_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_46_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_47_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_47_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_48_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_48_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_49_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_49_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_50_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_50_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_51_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_51_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_52_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_52_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_53_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_53_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_16_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_16_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_17_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_17_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_18_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_18_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_19_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_19_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_20_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_20_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_21_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_21_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_23_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_23_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_24_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_24_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_25_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_25_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/reg_file_26_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:26 ; elapsed = 00:03:33 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7025 ; free virtual = 17573
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3260.403; parent = 3047.830; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:32 ; elapsed = 00:03:39 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7039 ; free virtual = 17588
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3261.548; parent = 3048.996; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:33 ; elapsed = 00:03:39 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7039 ; free virtual = 17588
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3261.548; parent = 3048.996; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:35 ; elapsed = 00:03:42 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7030 ; free virtual = 17582
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3264.267; parent = 3051.715; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:35 ; elapsed = 00:03:42 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7031 ; free virtual = 17582
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3264.282; parent = 3051.730; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:37 ; elapsed = 00:03:44 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7027 ; free virtual = 17578
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3264.282; parent = 3051.730; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:37 ; elapsed = 00:03:44 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7027 ; free virtual = 17578
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3264.282; parent = 3051.730; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[3]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[14] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[3]  | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[14] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[14] | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[14] | 73     | 73         | 73     | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |   165|
+|2     |LUT1     |   100|
+|3     |LUT2     |   711|
+|4     |LUT3     |  2263|
+|5     |LUT4     |   941|
+|6     |LUT5     |  4743|
+|7     |LUT6     |  7086|
+|8     |MUXF7    |  1280|
+|9     |MUXF8    |   544|
+|10    |RAMB18E2 |     3|
+|12    |RAMB36E2 |    57|
+|16    |SRL16E   |   275|
+|17    |FDRE     |  5519|
+|18    |FDSE     |    28|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:37 ; elapsed = 00:03:44 . Memory (MB): peak = 4108.113 ; gain = 1305.191 ; free physical = 7025 ; free virtual = 17577
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3264.282; parent = 3051.730; children = 212.573
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5063.707; parent = 4108.117; children = 955.590
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:23 ; elapsed = 00:03:32 . Memory (MB): peak = 4108.113 ; gain = 1132.473 ; free physical = 7074 ; free virtual = 17626
+Synthesis Optimization Complete : Time (s): cpu = 00:03:37 ; elapsed = 00:03:44 . Memory (MB): peak = 4108.121 ; gain = 1305.191 ; free physical = 7074 ; free virtual = 17625
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.41 . Memory (MB): peak = 4108.121 ; gain = 0.000 ; free physical = 7178 ; free virtual = 17734
+INFO: [Netlist 29-17] Analyzing 1989 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4132.125 ; gain = 0.000 ; free physical = 7100 ; free virtual = 17675
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e98fd9af
+INFO: [Common 17-83] Releasing license: Synthesis
+349 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:55 ; elapsed = 00:03:59 . Memory (MB): peak = 4132.125 ; gain = 2364.070 ; free physical = 7341 ; free virtual = 17916
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_generic_accel_0_1, cache-ID = c75e429a52484c9e
+INFO: [Coretcl 2-1174] Renamed 201 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_generic_accel_0_1_utilization_synth.rpt -pb design_1_generic_accel_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 11 14:43:49 2023...

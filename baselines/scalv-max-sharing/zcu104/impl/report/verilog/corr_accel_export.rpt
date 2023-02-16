@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             scalv-max-sharing
+Solution:            zcu104
+Device target:       xczu7ev-ffvc1156-2-e
+Report date:         Thu Jan 12 12:44:54 CET 2023
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:           1701
+FF:            2764
+DSP:              2
+BRAM:            36
+URAM:             0
+LATCH:            0
+SRL:            146
+CLB:            465
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      4.669
+CP achieved post-implementation: 5.679
+Timing met

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="correlation.cpp" path="/home/derumigny/FPGA/data/2023-FCCM/copy-max-sharing/src/correlation.cpp"/>
+    <originFiles name="correlation.hpp" path="/home/derumigny/FPGA/data/2023-FCCM/copy-max-sharing/src/correlation.hpp"/>
+    <originFiles name="dma.hpp" path="/home/derumigny/FPGA/data/2023-FCCM/copy-max-sharing/src/dma.hpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

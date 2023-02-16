@@ -1,0 +1,103 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sat Nov 19 16:02:40 2022
+| Host         : liara running 64-bit Arch Linux
+| Command      : report_utilization -hierarchical -hierarchical_depth 7 -file ./report/corr_accel_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Physopt postRoute
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|                                  Instance                                  |                                     Module                                    | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| bd_0_wrapper                                                               |                                                                         (top) |       1289 |       1283 |       0 |    6 | 1019 |     32 |      0 |    0 |          4 |
+|   bd_0_i                                                                   |                                                                          bd_0 |       1289 |       1283 |       0 |    6 | 1019 |     32 |      0 |    0 |          4 |
+|     hls_inst                                                               |                                                               bd_0_hls_inst_0 |       1289 |       1283 |       0 |    6 | 1019 |     32 |      0 |    0 |          4 |
+|       (hls_inst)                                                           |                                                               bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|       inst                                                                 |                                                    bd_0_hls_inst_0_corr_accel |       1289 |       1283 |       0 |    6 | 1019 |     32 |      0 |    0 |          4 |
+|         (inst)                                                             |                                                    bd_0_hls_inst_0_corr_accel |          0 |          0 |       0 |    0 |  139 |      0 |      0 |    0 |          0 |
+|         control_s_axi_U                                                    |                                      bd_0_hls_inst_0_corr_accel_control_s_axi |         67 |         67 |       0 |    0 |  183 |      0 |      0 |    0 |          0 |
+|         grp_compute_fu_291                                                 |                                            bd_0_hls_inst_0_corr_accel_compute |        779 |        773 |       0 |    6 |  451 |      0 |      0 |    0 |          4 |
+|           (grp_compute_fu_291)                                             |                                            bd_0_hls_inst_0_corr_accel_compute |          3 |          3 |       0 |    0 |   28 |      0 |      0 |    0 |          0 |
+|           grp_compute_Pipeline_VITIS_LOOP_134_1_fu_42                      |                  bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_134_1 |         12 |         12 |       0 |    0 |    7 |      0 |      0 |    0 |          0 |
+|             (grp_compute_Pipeline_VITIS_LOOP_134_1_fu_42)                  |                  bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_134_1 |          0 |          0 |       0 |    0 |    5 |      0 |      0 |    0 |          0 |
+|             flow_control_loop_pipe_sequential_init_U                       |         bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init_154 |         12 |         12 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|           grp_compute_Pipeline_VITIS_LOOP_140_2_VITIS_LOOP_141_3_fu_50     | bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_140_2_VITIS_LOOP_141_3 |         48 |         48 |       0 |    0 |   39 |      0 |      0 |    0 |          0 |
+|             (grp_compute_Pipeline_VITIS_LOOP_140_2_VITIS_LOOP_141_3_fu_50) | bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_140_2_VITIS_LOOP_141_3 |          7 |          7 |       0 |    0 |   37 |      0 |      0 |    0 |          0 |
+|             flow_control_loop_pipe_sequential_init_U                       |         bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init_153 |         41 |         41 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|           grp_compute_Pipeline_VITIS_LOOP_150_4_fu_62                      |                  bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_150_4 |        463 |        457 |       0 |    6 |  222 |      0 |      0 |    0 |          0 |
+|             (grp_compute_Pipeline_VITIS_LOOP_150_4_fu_62)                  |                  bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_150_4 |         15 |          9 |       0 |    6 |   22 |      0 |      0 |    0 |          0 |
+|             flow_control_loop_pipe_sequential_init_U                       |          bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init_58 |         10 |         10 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|             hdiv_16ns_16ns_16_5_no_dsp_1_U42                               |                       bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1 |        220 |        220 |       0 |    0 |  107 |      0 |      0 |    0 |          0 |
+|               (hdiv_16ns_16ns_16_5_no_dsp_1_U42)                           |                       bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |    0 |          0 |
+|               corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip_u                 |                 bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip_91 |        220 |        220 |       0 |    0 |   75 |      0 |      0 |    0 |          0 |
+|             hdiv_16ns_16ns_16_5_no_dsp_1_U43                               |                    bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_59 |        220 |        220 |       0 |    0 |   91 |      0 |      0 |    0 |          0 |
+|               (hdiv_16ns_16ns_16_5_no_dsp_1_U43)                           |                    bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_59 |          0 |          0 |       0 |    0 |   16 |      0 |      0 |    0 |          0 |
+|               corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip_u                 |                    bd_0_hls_inst_0_corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip |        220 |        220 |       0 |    0 |   75 |      0 |      0 |    0 |          0 |
+|           grp_compute_Pipeline_VITIS_LOOP_156_5_VITIS_LOOP_157_6_fu_72     | bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_156_5_VITIS_LOOP_157_6 |         61 |         61 |       0 |    0 |   91 |      0 |      0 |    0 |          0 |
+|             (grp_compute_Pipeline_VITIS_LOOP_156_5_VITIS_LOOP_157_6_fu_72) | bd_0_hls_inst_0_corr_accel_compute_Pipeline_VITIS_LOOP_156_5_VITIS_LOOP_157_6 |         29 |         29 |       0 |    0 |   89 |      0 |      0 |    0 |          0 |
+|             flow_control_loop_pipe_sequential_init_U                       |          bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init_57 |         32 |         32 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|           hadd_16ns_16ns_16_2_full_dsp_1_U54                               |                     bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1 |         97 |         97 |       0 |    0 |   32 |      0 |      0 |    0 |          2 |
+|             (hadd_16ns_16ns_16_2_full_dsp_1_U54)                           |                     bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |    0 |          0 |
+|             corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u                 |               bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_36 |         97 |         97 |       0 |    0 |    0 |      0 |      0 |    0 |          2 |
+|               (corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u)             |               bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_36 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|               inst                                                         |                     bd_0_hls_inst_0_floating_point_v7_1_15__parameterized0__1 |         89 |         89 |       0 |    0 |    0 |      0 |      0 |    0 |          2 |
+|           hadd_16ns_16ns_16_2_full_dsp_1_U55                               |                  bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_32 |         97 |         97 |       0 |    0 |   32 |      0 |      0 |    0 |          2 |
+|             (hadd_16ns_16ns_16_2_full_dsp_1_U55)                           |                  bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |    0 |          0 |
+|             corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u                 |                  bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip |         97 |         97 |       0 |    0 |    0 |      0 |      0 |    0 |          2 |
+|               (corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u)             |                  bd_0_hls_inst_0_corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip |          8 |          8 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|               inst                                                         |                        bd_0_hls_inst_0_floating_point_v7_1_15__parameterized0 |         89 |         89 |       0 |    0 |    0 |      0 |      0 |    0 |          2 |
+|         grp_recv_data_burst_fu_221                                         |                                    bd_0_hls_inst_0_corr_accel_recv_data_burst |         58 |         58 |       0 |    0 |  105 |      0 |      0 |    0 |          0 |
+|           (grp_recv_data_burst_fu_221)                                     |                                    bd_0_hls_inst_0_corr_accel_recv_data_burst |         49 |         49 |       0 |    0 |  103 |      0 |      0 |    0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                         |          bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init_31 |         10 |         10 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|         grp_send_data_burst_fu_300                                         |                                    bd_0_hls_inst_0_corr_accel_send_data_burst |        352 |        352 |       0 |    0 |  141 |      0 |      0 |    0 |          0 |
+|           (grp_send_data_burst_fu_300)                                     |                                    bd_0_hls_inst_0_corr_accel_send_data_burst |        347 |        347 |       0 |    0 |  139 |      0 |      0 |    0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                         |             bd_0_hls_inst_0_corr_accel_flow_control_loop_pipe_sequential_init |          5 |          5 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|         reg_file_10_U                                                      |                         bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_11_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_0 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_12_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_1 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_13_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_2 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_14_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_3 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_15_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_4 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_16_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_5 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_17_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_6 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_18_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_7 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_19_U                                                      |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_8 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_1_U                                                       |                       bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_9 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_20_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_10 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_21_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_11 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_22_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_12 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_23_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_13 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_24_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_14 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_25_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_15 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_26_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_16 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_27_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_17 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_28_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_18 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_29_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_19 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_2_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_20 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_30_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_21 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_31_U                                                      |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_22 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_3_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_23 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_4_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_24 |          8 |          8 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_5_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_25 |          8 |          8 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_6_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_26 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_7_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_27 |          0 |          0 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_8_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_28 |          8 |          8 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_9_U                                                       |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_29 |          8 |          8 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
+|         reg_file_U                                                         |                      bd_0_hls_inst_0_corr_accel_reg_file_RAM_T2P_BRAM_1R1W_30 |          1 |          1 |       0 |    0 |    0 |      1 |      0 |    0 |          0 |
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_Pipeline_VITIS_LOOP_134_1'
+================================================================
+* Date:           Sat Nov 19 12:22:16 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        stddev-max-sharing
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.054 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_134_1  |       64|       64|         1|          1|          1|    64|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.05>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 4 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_4_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 5 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_4_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %j"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%j_9 = load i7 %j" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 9 'load' 'j_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.81ns)   --->   "%icmp_ln134 = icmp_eq  i7 %j_9, i7 64" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 10 'icmp' 'icmp_ln134' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.77ns)   --->   "%add_ln134 = add i7 %j_9, i7 1" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 12 'add' 'add_ln134' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln134 = br i1 %icmp_ln134, void %fpga_resource_limit_hint.for.inc.25_begin, void %for.inc17.preheader.exitStub" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 13 'br' 'br_ln134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_48" [stddev-max-sharing/src/correlation.cpp:139]   --->   Operation 14 'specpipeline' 'specpipeline_ln139' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln132 = specloopname void @_ssdm_op_SpecLoopName, void @empty_45" [stddev-max-sharing/src/correlation.cpp:132]   --->   Operation 15 'specloopname' 'specloopname_ln132' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_39" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 16 'specregionbegin' 'rbegin' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%rbegin1 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_26" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 17 'specregionbegin' 'rbegin1' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%rbegin3 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_27" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 18 'specregionbegin' 'rbegin3' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %j_9, i32 1, i32 5" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 19 'partselect' 'lshr_ln' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln140 = zext i5 %lshr_ln" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 20 'zext' 'zext_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%reg_file_4_0_addr = getelementptr i16 %reg_file_4_0, i64 0, i64 %zext_ln140" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 21 'getelementptr' 'reg_file_4_0_addr' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%reg_file_4_1_addr = getelementptr i16 %reg_file_4_1, i64 0, i64 %zext_ln140" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 22 'getelementptr' 'reg_file_4_1_addr' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln140 = trunc i7 %j_9" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 23 'trunc' 'trunc_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln140 = br i1 %trunc_ln140, void %arrayidx1191.case.0, void %arrayidx1191.case.1" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 24 'br' 'br_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.23ns)   --->   "%store_ln140 = store i16 0, i11 %reg_file_4_0_addr" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 25 'store' 'store_ln140' <Predicate = (!icmp_ln134 & !trunc_ln140)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln140 = br void %fpga_resource_limit_hint.for.inc.27_end" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 26 'br' 'br_ln140' <Predicate = (!icmp_ln134 & !trunc_ln140)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.23ns)   --->   "%store_ln140 = store i16 0, i11 %reg_file_4_1_addr" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 27 'store' 'store_ln140' <Predicate = (!icmp_ln134 & trunc_ln140)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln140 = br void %fpga_resource_limit_hint.for.inc.27_end" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 28 'br' 'br_ln140' <Predicate = (!icmp_ln134 & trunc_ln140)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specresourcelimit_ln140 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_1, void @empty_48, void @empty_48, void @empty_48" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 29 'specresourcelimit' 'specresourcelimit_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%rend4 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_27, i32 %rbegin3" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 30 'specregionend' 'rend4' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specresourcelimit_ln140 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty, void @empty_48, void @empty_48, void @empty_48" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 31 'specresourcelimit' 'specresourcelimit_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%rend2 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_26, i32 %rbegin1" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 32 'specregionend' 'rend2' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specresourcelimit_ln140 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_36, void @empty_48, void @empty_48, void @empty_48" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 33 'specresourcelimit' 'specresourcelimit_ln140' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_39, i32 %rbegin" [stddev-max-sharing/src/correlation.cpp:140]   --->   Operation 34 'specregionend' 'rend' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln134 = store i7 %add_ln134, i7 %j" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 35 'store' 'store_ln134' <Predicate = (!icmp_ln134)> <Delay = 0.42>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln134 = br void %for.inc" [stddev-max-sharing/src/correlation.cpp:134]   --->   Operation 36 'br' 'br_ln134' <Predicate = (!icmp_ln134)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 37 'ret' 'ret_ln0' <Predicate = (icmp_ln134)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.05ns
+The critical path consists of the following:
+	'alloca' operation ('j') [3]  (0 ns)
+	'load' operation ('j', stddev-max-sharing/src/correlation.cpp:140) on local variable 'j' [9]  (0 ns)
+	'getelementptr' operation ('reg_file_4_1_addr', stddev-max-sharing/src/correlation.cpp:140) [23]  (0 ns)
+	'store' operation ('store_ln140', stddev-max-sharing/src/correlation.cpp:140) of constant 0 on array 'reg_file_4_1' [30]  (1.24 ns)
+	blocking operation 0.817 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

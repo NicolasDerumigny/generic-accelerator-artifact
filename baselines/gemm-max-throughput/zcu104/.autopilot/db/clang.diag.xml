@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/derumigny/FPGA/data/zcu104/2023-Dac/gemm-max-throughput/zcu104/.autopilot/db/correlation.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>gemm-max-throughput/src/correlation.cpp</string>
+      <key>line</key>
+      <integer>162</integer>
+      <key>column</key>
+      <integer>57</integer>
+      <key>message</key>
+      <string>unexpected pragma argument &apos;=&apos;, expects identifier</string>
+      <key>ID</key>
+      <integer>5555</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

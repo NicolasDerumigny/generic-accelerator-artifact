@@ -1,0 +1,604 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jan 12 12:07:25 2023
+# Process ID: 71626
+# Current directory: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1
+# Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
+# Log file: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 3093.532 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source design_1_xbar_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1700.789 ; gain = 88.992 ; free physical = 11498 ; free virtual = 16387
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/derumigny/FPGA/HLS-projects/generic-accel'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xbar_0
+Command: synth_design -top design_1_xbar_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 72187
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3052.270 ; gain = 241.801 ; free physical = 6989 ; free virtual = 11905
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2324.870; parent = 2171.663; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4014.805; parent = 3059.211; children = 955.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_axi_crossbar' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_crossbar' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_addr_decoder' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_addr_decoder' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_arbiter_resp' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:1024]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_arbiter_resp' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:1024]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_splitter' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_splitter' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_wdata_router' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_wdata_router' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized4' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_si_transactor__parameterized4' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_addr_decoder__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_addr_decoder__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_wdata_mux' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_wdata_mux' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_ndeep_srl__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_srl_fifo__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_wdata_mux__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_wdata_mux__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_decerr_slave' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_decerr_slave' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_28_addr_arbiter' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_addr_arbiter' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_crossbar' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_28_axi_crossbar' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[2].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[3].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[4].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[5].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[6].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.gen_thread_loop[7].gen_debug_r_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:4346]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[27] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[26] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[25] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[24] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[23] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[22] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[21] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[20] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[19] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[18] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[17] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[16] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[15] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[14] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[13] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[12] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[11] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[10] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[9] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[8] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[7] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[6] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[5] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[4] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[39] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[38] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[37] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[36] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[35] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[34] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[33] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[32] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[31] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[30] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[29] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[28] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[27] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[26] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[25] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[24] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[23] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[22] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[21] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[20] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[19] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[18] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[17] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[16] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[15] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[14] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[13] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[12] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[11] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[10] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[9] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[8] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[7] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[6] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[5] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[4] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[3] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[2] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[1] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[0] in module axi_crossbar_v2_1_28_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[1] in module axi_crossbar_v2_1_28_si_transactor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ABURST[0] in module axi_crossbar_v2_1_28_si_transactor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[83] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[82] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[81] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[80] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[79] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[78] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[77] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[76] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[75] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[74] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[73] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[72] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[71] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[70] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[69] in module axi_crossbar_v2_1_28_crossbar is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3284.176 ; gain = 473.707 ; free physical = 6014 ; free virtual = 10936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2389.753; parent = 2236.575; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.773; parent = 3284.180; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3290.113 ; gain = 479.645 ; free physical = 5887 ; free virtual = 10828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2389.753; parent = 2236.575; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4245.711; parent = 3290.117; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3290.113 ; gain = 479.645 ; free physical = 5763 ; free virtual = 10705
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2389.753; parent = 2236.575; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4245.711; parent = 3290.117; children = 955.594
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.66 . Memory (MB): peak = 3290.113 ; gain = 0.000 ; free physical = 5263 ; free virtual = 10223
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3420.832 ; gain = 0.000 ; free physical = 4360 ; free virtual = 9417
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3420.832 ; gain = 0.000 ; free physical = 4318 ; free virtual = 9376
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.6 . Memory (MB): peak = 3420.832 ; gain = 0.000 ; free physical = 4288 ; free virtual = 9345
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3420.832 ; gain = 610.363 ; free physical = 4806 ; free virtual = 9866
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2449.800; parent = 2302.169; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4376.430; parent = 3420.836; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3420.832 ; gain = 610.363 ; free physical = 4843 ; free virtual = 9904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2449.800; parent = 2302.169; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4376.430; parent = 3420.836; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3420.832 ; gain = 610.363 ; free physical = 4862 ; free virtual = 9923
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2449.800; parent = 2302.169; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4376.430; parent = 3420.836; children = 955.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_28_decerr_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                             1000 |                               10
+                     ONE |                             0010 |                               11
+                     TWO |                             0001 |                               01
+                  iSTATE |                             0100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                             1000 |                               10
+                     ONE |                             0010 |                               11
+                     TWO |                             0001 |                               01
+                  iSTATE |                             0100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                             1000 |                               10
+                     ONE |                             0010 |                               11
+                     TWO |                             0001 |                               01
+                  iSTATE |                             0100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_28_decerr_slave'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3420.832 ; gain = 610.363 ; free physical = 4827 ; free virtual = 9918
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2449.800; parent = 2302.169; children = 153.207
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4376.430; parent = 3420.836; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 104   
+	   2 Input    3 Bit       Adders := 9     
+	   2 Input    2 Bit       Adders := 3     
+	   2 Input    1 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 55    
++---Registers : 
+	              160 Bit    Registers := 4     
+	              114 Bit    Registers := 2     
+	               31 Bit    Registers := 2     
+	               28 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 54    
+	                3 Bit    Registers := 13    
+	                2 Bit    Registers := 28    
+	                1 Bit    Registers := 85    
++---Muxes : 
+	   2 Input  160 Bit        Muxes := 4     
+	   2 Input   64 Bit        Muxes := 48    
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 53    
+	   2 Input    4 Bit        Muxes := 17    
+	   2 Input    3 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 115   
+	   2 Input    1 Bit        Muxes := 132   
+	   4 Input    1 Bit        Muxes := 15    
+	   3 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_28_wdata_router.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized1.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[1]) is unused and will be removed from module axi_data_fifo_v2_1_26_axic_reg_srl_fifo__parameterized0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 3420.832 ; gain = 610.363 ; free physical = 4011 ; free virtual = 9126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2449.800; parent = 2302.169; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4376.430; parent = 3420.836; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 3710.293 ; gain = 899.824 ; free physical = 2284 ; free virtual = 7459
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2916.972; parent = 2756.547; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4665.891; parent = 3710.297; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:14 ; elapsed = 00:03:19 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 434 ; free virtual = 5625
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3060.350; parent = 2900.168; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:19 ; elapsed = 00:03:24 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 287 ; free virtual = 5371
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.158; parent = 2903.997; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:25 ; elapsed = 00:03:31 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 251 ; free virtual = 5240
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.158; parent = 2903.997; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:25 ; elapsed = 00:03:31 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 261 ; free virtual = 5248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.158; parent = 2903.997; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 262 ; free virtual = 5243
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.578; parent = 2904.417; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 259 ; free virtual = 5239
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.578; parent = 2904.417; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 253 ; free virtual = 5227
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.578; parent = 2904.417; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 257 ; free virtual = 5225
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.578; parent = 2904.417; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+------------------------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                                       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+------------------------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | gen_rtl_shifter.gen_inferred_srl.shift_reg_reg | 32     | 1          | 0      | 1       | 0      | 0      | 0      | 
+|dsrl__1     | gen_rtl_shifter.gen_inferred_srl.shift_reg_reg | 32     | 1          | 0      | 1       | 0      | 0      | 0      | 
+|dsrl__2     | gen_rtl_shifter.gen_inferred_srl.shift_reg_reg | 32     | 1          | 0      | 1       | 0      | 0      | 0      | 
++------------+------------------------------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |    64|
+|2     |LUT1    |    65|
+|3     |LUT2    |   208|
+|4     |LUT3    |   614|
+|5     |LUT4    |   285|
+|6     |LUT5    |   381|
+|7     |LUT6    |   873|
+|8     |SRLC32E |     5|
+|9     |FDRE    |  2005|
+|10    |FDSE    |    29|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:26 ; elapsed = 00:03:33 . Memory (MB): peak = 3903.043 ; gain = 1092.574 ; free physical = 254 ; free virtual = 5221
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3064.578; parent = 2904.417; children = 167.523
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4858.641; parent = 3903.047; children = 955.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 330 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:08 ; elapsed = 00:03:17 . Memory (MB): peak = 3903.043 ; gain = 961.855 ; free physical = 286 ; free virtual = 5248
+Synthesis Optimization Complete : Time (s): cpu = 00:03:26 ; elapsed = 00:03:33 . Memory (MB): peak = 3903.051 ; gain = 1092.574 ; free physical = 279 ; free virtual = 5240
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3914.012 ; gain = 0.000 ; free physical = 341 ; free virtual = 5303
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3943.961 ; gain = 0.000 ; free physical = 318 ; free virtual = 5292
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: aafd4850
+INFO: [Common 17-83] Releasing license: Synthesis
+126 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:43 ; elapsed = 00:03:46 . Memory (MB): peak = 3943.961 ; gain = 2171.391 ; free physical = 633 ; free virtual = 5611
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xbar_0, cache-ID = a1b0f9e9da47932d
+INFO: [Coretcl 2-1174] Renamed 40 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 12:11:35 2023...

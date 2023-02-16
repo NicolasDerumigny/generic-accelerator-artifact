@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <packageLog>
+        <logs message="WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port &quot;ap_clk&quot; is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew&#xA;Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design" projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:03:39.196-0700" type="Warning"/>
+        <logs message="WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port &quot;ap_clk&quot; is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew&#xA;Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design" projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:52.949-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;counter[16]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;counter[16]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.149-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;counter[35]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;counter[35]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.147-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;counter[32]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;counter[32]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.145-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;s_axi_control_wdata[7]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;s_axi_control_wdata[7]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.143-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;s_axi_control_wstrb[0]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;s_axi_control_wstrb[0]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.141-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;s_axi_control_wdata[0]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;s_axi_control_wdata[0]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.140-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;counter[1]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;counter[1]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.138-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;counter[57]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;counter[57]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="correlation-max-throughput" solutionName="zcu104" date="2022-11-19T16:02:23.136-0700" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

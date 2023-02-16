@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jan 13 11:49:18 2023
+# Process ID: 87457
+# Current directory: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1
+# Command line: vivado -log design_1_generic_accel_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_generic_accel_0_1.tcl
+# Log file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.vds
+# Journal file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 3189.665 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source design_1_generic_accel_0_1.tcl -notrace

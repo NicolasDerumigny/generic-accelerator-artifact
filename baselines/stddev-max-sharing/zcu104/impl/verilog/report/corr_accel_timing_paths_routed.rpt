@@ -1,0 +1,1141 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date              : Sat Nov 19 12:46:30 2022
+| Host              : liara running 64-bit Arch Linux
+| Command           : report_timing -max_paths 10 -file ./report/corr_accel_timing_paths_routed.rpt
+| Design            : bd_0_wrapper
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Temperature Grade : E
+----------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.442ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[13]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.276ns  (logic 4.437ns (53.615%)  route 3.839ns (46.385%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[3])
+                                                      0.120     5.306 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[3]
+                         net (fo=3, routed)           0.386     5.692    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[17]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[17]_C_DATA[17])
+                                                      0.105     5.797 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[17]
+                         net (fo=2, routed)           0.000     5.797    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<17>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[17]_ALU_OUT[17])
+                                                      0.585     6.382 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[17]
+                         net (fo=1, routed)           0.000     6.382    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<17>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[17]_P[17])
+                                                      0.109     6.491 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[17]
+                         net (fo=1, routed)           0.359     6.850    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[3]
+    SLICE_X76Y188        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.090     6.940 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0/O
+                         net (fo=5, routed)           0.481     7.421    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[13]
+    SLICE_X73Y159        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.125     7.546 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_59__0/O
+                         net (fo=2, routed)           0.469     8.015    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[13]
+    SLICE_X98Y159        LUT3 (Prop_G5LUT_SLICEL_I0_O)
+                                                      0.067     8.082 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_3__8/O
+                         net (fo=1, routed)           0.223     8.305    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0_3[13]
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_11_U/ap_clk
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y32         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[13])
+                                                     -0.258     9.747    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.747    
+                         arrival time                          -8.305    
+  -------------------------------------------------------------------
+                         slack                                  1.442    
+
+Slack (MET) :             1.511ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[11]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.198ns  (logic 4.293ns (52.364%)  route 3.905ns (47.636%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[1])
+                                                      0.053     5.239 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[1]
+                         net (fo=3, routed)           0.338     5.577    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[15]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[15]_C_DATA[15])
+                                                      0.105     5.682 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[15]
+                         net (fo=2, routed)           0.000     5.682    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<15>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[15]_ALU_OUT[15])
+                                                      0.585     6.267 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[15]
+                         net (fo=1, routed)           0.000     6.267    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<15>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[15]_P[15])
+                                                      0.109     6.376 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[15]
+                         net (fo=1, routed)           0.409     6.785    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[1]
+    SLICE_X76Y188        LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.099     6.884 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[11]_INST_0/O
+                         net (fo=5, routed)           0.447     7.331    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[11]
+    SLICE_X73Y159        LUT6 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.037     7.368 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_61__0/O
+                         net (fo=2, routed)           0.528     7.896    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[11]
+    SLICE_X98Y159        LUT3 (Prop_A5LUT_SLICEL_I0_O)
+                                                      0.069     7.965 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_5__1/O
+                         net (fo=1, routed)           0.262     8.227    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0_3[11]
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_11_U/ap_clk
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y32         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[11])
+                                                     -0.266     9.739    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.739    
+                         arrival time                          -8.227    
+  -------------------------------------------------------------------
+                         slack                                  1.511    
+
+Slack (MET) :             1.519ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[12]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.200ns  (logic 4.347ns (53.010%)  route 3.853ns (46.990%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[1])
+                                                      0.053     5.239 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[1]
+                         net (fo=3, routed)           0.338     5.577    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[15]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[15]_C_DATA[15])
+                                                      0.105     5.682 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[15]
+                         net (fo=2, routed)           0.000     5.682    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<15>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[15]_ALU_OUT[16])
+                                                      0.585     6.267 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[16]
+                         net (fo=1, routed)           0.000     6.267    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<16>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[16]_P[16])
+                                                      0.109     6.376 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[16]
+                         net (fo=1, routed)           0.351     6.727    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[2]
+    SLICE_X76Y188        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.096     6.823 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[12]_INST_0/O
+                         net (fo=5, routed)           0.465     7.288    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[12]
+    SLICE_X71Y159        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.090     7.378 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_60__0/O
+                         net (fo=2, routed)           0.561     7.939    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[12]
+    SLICE_X98Y159        LUT3 (Prop_B5LUT_SLICEL_I0_O)
+                                                      0.073     8.012 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_4__1/O
+                         net (fo=1, routed)           0.217     8.229    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0_3[12]
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_11_U/ap_clk
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y32         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[12])
+                                                     -0.256     9.749    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.749    
+                         arrival time                          -8.229    
+  -------------------------------------------------------------------
+                         slack                                  1.519    
+
+Slack (MET) :             1.574ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[12]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.145ns  (logic 4.325ns (53.098%)  route 3.820ns (46.902%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[1])
+                                                      0.053     5.239 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[1]
+                         net (fo=3, routed)           0.338     5.577    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[15]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[15]_C_DATA[15])
+                                                      0.105     5.682 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[15]
+                         net (fo=2, routed)           0.000     5.682    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<15>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[15]_ALU_OUT[16])
+                                                      0.585     6.267 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[16]
+                         net (fo=1, routed)           0.000     6.267    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<16>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[16]_P[16])
+                                                      0.109     6.376 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[16]
+                         net (fo=1, routed)           0.351     6.727    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[2]
+    SLICE_X76Y188        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.096     6.823 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[12]_INST_0/O
+                         net (fo=5, routed)           0.465     7.288    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[12]
+    SLICE_X71Y159        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.090     7.378 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_60__0/O
+                         net (fo=2, routed)           0.561     7.939    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[12]
+    SLICE_X98Y159        LUT3 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.051     7.990 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_16__2/O
+                         net (fo=1, routed)           0.184     8.174    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0_3[12]
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_10_U/ap_clk
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y31         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[12])
+                                                     -0.256     9.749    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.749    
+                         arrival time                          -8.174    
+  -------------------------------------------------------------------
+                         slack                                  1.574    
+
+Slack (MET) :             1.581ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[14]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.125ns  (logic 4.446ns (54.722%)  route 3.679ns (45.278%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[4])
+                                                      0.200     5.386 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[4]
+                         net (fo=3, routed)           0.359     5.745    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[18]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[18]_C_DATA[18])
+                                                      0.105     5.850 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[18]
+                         net (fo=2, routed)           0.000     5.850    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<18>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[18]_ALU_OUT[18])
+                                                      0.585     6.435 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[18]
+                         net (fo=1, routed)           0.000     6.435    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<18>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[18]_P[18])
+                                                      0.109     6.544 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[18]
+                         net (fo=1, routed)           0.355     6.899    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[4]
+    SLICE_X76Y188        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.050     6.949 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0/O
+                         net (fo=5, routed)           0.349     7.298    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[14]
+    SLICE_X77Y161        LUT6 (Prop_C6LUT_SLICEL_I2_O)
+                                                      0.096     7.394 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_58__0/O
+                         net (fo=2, routed)           0.491     7.885    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[14]
+    SLICE_X98Y160        LUT3 (Prop_H5LUT_SLICEL_I0_O)
+                                                      0.065     7.950 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_2__2/O
+                         net (fo=1, routed)           0.204     8.154    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0_3[14]
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_11_U/ap_clk
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y32         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[14])
+                                                     -0.270     9.735    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.735    
+                         arrival time                          -8.154    
+  -------------------------------------------------------------------
+                         slack                                  1.581    
+
+Slack (MET) :             1.583ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[13]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.135ns  (logic 4.420ns (54.336%)  route 3.715ns (45.664%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[3])
+                                                      0.120     5.306 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[3]
+                         net (fo=3, routed)           0.386     5.692    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[17]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[17]_C_DATA[17])
+                                                      0.105     5.797 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[17]
+                         net (fo=2, routed)           0.000     5.797    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<17>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[17]_ALU_OUT[17])
+                                                      0.585     6.382 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[17]
+                         net (fo=1, routed)           0.000     6.382    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<17>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[17]_P[17])
+                                                      0.109     6.491 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[17]
+                         net (fo=1, routed)           0.359     6.850    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[3]
+    SLICE_X76Y188        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.090     6.940 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0/O
+                         net (fo=5, routed)           0.481     7.421    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[13]
+    SLICE_X73Y159        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.125     7.546 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_59__0/O
+                         net (fo=2, routed)           0.469     8.015    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[13]
+    SLICE_X98Y159        LUT3 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.050     8.065 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_15__2/O
+                         net (fo=1, routed)           0.099     8.164    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0_3[13]
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_10_U/ap_clk
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y31         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[13])
+                                                     -0.258     9.747    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.747    
+                         arrival time                          -8.164    
+  -------------------------------------------------------------------
+                         slack                                  1.583    
+
+Slack (MET) :             1.595ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[14]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.111ns  (logic 4.432ns (54.644%)  route 3.679ns (45.356%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[4])
+                                                      0.200     5.386 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[4]
+                         net (fo=3, routed)           0.359     5.745    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[18]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[18]_C_DATA[18])
+                                                      0.105     5.850 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[18]
+                         net (fo=2, routed)           0.000     5.850    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<18>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[18]_ALU_OUT[18])
+                                                      0.585     6.435 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[18]
+                         net (fo=1, routed)           0.000     6.435    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<18>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[18]_P[18])
+                                                      0.109     6.544 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[18]
+                         net (fo=1, routed)           0.355     6.899    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[4]
+    SLICE_X76Y188        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.050     6.949 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0/O
+                         net (fo=5, routed)           0.349     7.298    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[14]
+    SLICE_X77Y161        LUT6 (Prop_C6LUT_SLICEL_I2_O)
+                                                      0.096     7.394 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_58__0/O
+                         net (fo=2, routed)           0.491     7.885    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[14]
+    SLICE_X98Y160        LUT3 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.051     7.936 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_14__2/O
+                         net (fo=1, routed)           0.204     8.140    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0_3[14]
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_10_U/ap_clk
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y31         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[14])
+                                                     -0.270     9.735    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.735    
+                         arrival time                          -8.140    
+  -------------------------------------------------------------------
+                         slack                                  1.595    
+
+Slack (MET) :             1.642ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[7]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.054ns  (logic 4.728ns (58.704%)  route 3.326ns (41.296%))
+  Logic Levels:           21  (CARRY8=2 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=3 LUT3=1 LUT4=3 LUT6=2)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[3])
+                                                      0.184     4.117 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[3]
+                         net (fo=9, routed)           0.265     4.382    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[3].CARRY_MUX_0
+    SLICE_X78Y201        LUT4 (Prop_B5LUT_SLICEM_I1_O)
+                                                      0.143     4.525 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/i_no_versal_es1_workaround.DSP_i_4/O
+                         net (fo=1, routed)           0.175     4.700    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/B[9]
+    DSP48E2_X9Y81        DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_B[9]_B2_DATA[9])
+                                                      0.151     4.851 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST/B2_DATA[9]
+                         net (fo=1, routed)           0.000     4.851    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA.B2_DATA<9>
+    DSP48E2_X9Y81        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_B2_DATA[9]_B2B1[9])
+                                                      0.073     4.924 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/B2B1[9]
+                         net (fo=1, routed)           0.000     4.924    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.B2B1<9>
+    DSP48E2_X9Y81        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_B2B1[9]_V[9])
+                                                      0.609     5.533 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/V[9]
+                         net (fo=1, routed)           0.000     5.533    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.V<9>
+    DSP48E2_X9Y81        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_V[9]_V_DATA[9])
+                                                      0.046     5.579 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/V_DATA[9]
+                         net (fo=1, routed)           0.000     5.579    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA.V_DATA<9>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_V_DATA[9]_ALU_OUT[9])
+                                                      0.571     6.150 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[9]
+                         net (fo=1, routed)           0.000     6.150    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<9>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[9]_P[9])
+                                                      0.109     6.259 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[9]
+                         net (fo=1, routed)           0.401     6.660    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/P[7]
+    SLICE_X76Y186        LUT6 (Prop_C6LUT_SLICEL_I5_O)
+                                                      0.050     6.710 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/mant_op_inferred_i_3/O
+                         net (fo=5, routed)           0.473     7.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[7]
+    SLICE_X72Y158        LUT6 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.050     7.233 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_65__0/O
+                         net (fo=2, routed)           0.556     7.789    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[7]
+    SLICE_X98Y158        LUT3 (Prop_B5LUT_SLICEL_I0_O)
+                                                      0.073     7.862 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_9__1/O
+                         net (fo=1, routed)           0.221     8.083    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0_3[7]
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/DINBDIN[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_11_U/ap_clk
+    RAMB36_X3Y32         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y32         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[7])
+                                                     -0.280     9.725    bd_0_i/hls_inst/inst/reg_file_11_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.725    
+                         arrival time                          -8.083    
+  -------------------------------------------------------------------
+                         slack                                  1.642    
+
+Slack (MET) :             1.658ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[11]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.051ns  (logic 4.274ns (53.084%)  route 3.777ns (46.916%))
+  Logic Levels:           22  (CARRY8=3 DSP_ALU=2 DSP_C_DATA=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=2 LUT3=2 LUT4=2 LUT5=1 LUT6=4)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[5])
+                                                      0.199     4.132 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[5]
+                         net (fo=5, routed)           0.202     4.333    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_6
+    SLICE_X78Y201        LUT3 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.159     4.492 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1/O
+                         net (fo=3, routed)           0.135     4.628    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/c[2]
+    SLICE_X77Y201        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.089     4.717 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1/O
+                         net (fo=2, routed)           0.143     4.860    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/I4
+    SLICE_X77Y200        LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.069     4.929 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5/O
+                         net (fo=3, routed)           0.197     5.126    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/I4
+    SLICE_X77Y200        LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     5.177 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6/O
+                         net (fo=1, routed)           0.009     5.186    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/o6lut_i[1]
+    SLICE_X77Y200        CARRY8 (Prop_CARRY8_SLICEL_S[1]_O[1])
+                                                      0.053     5.239 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8/O[1]
+                         net (fo=3, routed)           0.338     5.577    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[15]
+    DSP48E2_X9Y81        DSP_C_DATA (Prop_DSP_C_DATA_DSP48E2_C[15]_C_DATA[15])
+                                                      0.105     5.682 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST/C_DATA[15]
+                         net (fo=2, routed)           0.000     5.682    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA.C_DATA<15>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_C_DATA[15]_ALU_OUT[15])
+                                                      0.585     6.267 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[15]
+                         net (fo=1, routed)           0.000     6.267    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<15>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[15]_P[15])
+                                                      0.109     6.376 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[15]
+                         net (fo=1, routed)           0.409     6.785    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/ram_reg_bram_0_2[1]
+    SLICE_X76Y188        LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.099     6.884 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[11]_INST_0/O
+                         net (fo=5, routed)           0.447     7.331    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[11]
+    SLICE_X73Y159        LUT6 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.037     7.368 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_61__0/O
+                         net (fo=2, routed)           0.528     7.896    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[11]
+    SLICE_X98Y159        LUT3 (Prop_A6LUT_SLICEL_I0_O)
+                                                      0.050     7.946 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_17__0/O
+                         net (fo=1, routed)           0.134     8.080    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0_3[11]
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_10_U/ap_clk
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y31         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[11])
+                                                     -0.266     9.739    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.739    
+                         arrival time                          -8.080    
+  -------------------------------------------------------------------
+                         slack                                  1.658    
+
+Slack (MET) :             1.694ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[5]
+                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.032ns  (logic 4.830ns (60.138%)  route 3.202ns (39.862%))
+  Logic Levels:           21  (CARRY8=2 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=2 DSP_PREADD=1 DSP_PREADD_DATA=3 LUT3=1 LUT4=3 LUT6=2)
+  Clock Path Skew:        0.011ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.040ns = ( 10.040 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.029     0.029    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/ap_clk
+    SLICE_X69Y171        FDRE                                         r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X69Y171        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/din1_buf1_reg[10]/Q
+                         net (fo=9, routed)           0.554     0.662    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X75Y187        LUT4 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.123     0.785 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     0.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/ADD_MANT_GEN[5].lut_op_reg
+    SLICE_X75Y187        CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.162     0.958 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=14, routed)          0.422     1.380    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_INMODE[1]_PREADD_AB[25])
+                                                      0.265     1.645 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/PREADD_AB[25]
+                         net (fo=1, routed)           0.000     1.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.PREADD_AB<25>
+    DSP48E2_X9Y80        DSP_PREADD (Prop_DSP_PREADD_DSP48E2_PREADD_AB[25]_AD[25])
+                                                      0.488     2.133 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST/AD[25]
+                         net (fo=1, routed)           0.000     2.133    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD.AD<25>
+    DSP48E2_X9Y80        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_AD[25]_AD_DATA[25])
+                                                      0.050     2.183 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/AD_DATA[25]
+                         net (fo=1, routed)           0.000     2.183    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.AD_DATA<25>
+    DSP48E2_X9Y80        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_AD_DATA[25]_U[26])
+                                                      0.612     2.795 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/U[26]
+                         net (fo=1, routed)           0.000     2.795    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.U<26>
+    DSP48E2_X9Y80        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[26]_U_DATA[26])
+                                                      0.047     2.842 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/U_DATA[26]
+                         net (fo=1, routed)           0.000     2.842    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA.U_DATA<26>
+    DSP48E2_X9Y80        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[26]_ALU_OUT[26])
+                                                      0.585     3.427 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[26]
+                         net (fo=1, routed)           0.000     3.427    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<26>
+    DSP48E2_X9Y80        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[26]_P[26])
+                                                      0.109     3.536 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[26]
+                         net (fo=11, routed)          0.231     3.768    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/P[13]
+    SLICE_X78Y202        LUT4 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.149     3.917 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1/O
+                         net (fo=1, routed)           0.016     3.933    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/det_lut_lzd_1
+    SLICE_X78Y202        CARRY8 (Prop_CARRY8_SLICEM_S[1]_CO[2])
+                                                      0.098     4.031 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8/CO[2]
+                         net (fo=4, routed)           0.165     4.195    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/zero_pair_lzd_3
+    SLICE_X79Y202        LUT4 (Prop_B5LUT_SLICEM_I0_O)
+                                                      0.167     4.362 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/i_no_versal_es1_workaround.DSP_i_8/O
+                         net (fo=1, routed)           0.283     4.645    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/B[5]
+    DSP48E2_X9Y81        DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_B[5]_B2_DATA[5])
+                                                      0.151     4.796 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST/B2_DATA[5]
+                         net (fo=1, routed)           0.000     4.796    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA.B2_DATA<5>
+    DSP48E2_X9Y81        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_B2_DATA[5]_B2B1[5])
+                                                      0.073     4.869 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST/B2B1[5]
+                         net (fo=1, routed)           0.000     4.869    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA.B2B1<5>
+    DSP48E2_X9Y81        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_B2B1[5]_V[7])
+                                                      0.609     5.478 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST/V[7]
+                         net (fo=1, routed)           0.000     5.478    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER.V<7>
+    DSP48E2_X9Y81        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_V[7]_V_DATA[7])
+                                                      0.046     5.524 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST/V_DATA[7]
+                         net (fo=1, routed)           0.000     5.524    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA.V_DATA<7>
+    DSP48E2_X9Y81        DSP_ALU (Prop_DSP_ALU_DSP48E2_V_DATA[7]_ALU_OUT[7])
+                                                      0.571     6.095 f  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[7]
+                         net (fo=1, routed)           0.000     6.095    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<7>
+    DSP48E2_X9Y81        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[7]_P[7])
+                                                      0.109     6.204 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[7]
+                         net (fo=1, routed)           0.427     6.631    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/P[5]
+    SLICE_X76Y186        LUT6 (Prop_A6LUT_SLICEL_I5_O)
+                                                      0.149     6.780 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/mant_op_inferred_i_5/O
+                         net (fo=5, routed)           0.423     7.204    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/m_axis_result_tdata[5]
+    SLICE_X73Y159        LUT6 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.123     7.327 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_67/O
+                         net (fo=2, routed)           0.460     7.787    bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/grp_compute_fu_291_reg_file_5_1_d0[5]
+    SLICE_X98Y159        LUT3 (Prop_H5LUT_SLICEL_I0_O)
+                                                      0.065     7.852 r  bd_0_i/hls_inst/inst/grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U82/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_23__0/O
+                         net (fo=1, routed)           0.209     8.061    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0_3[5]
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/DINBDIN[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1356, unset)         0.040    10.040    bd_0_i/hls_inst/inst/reg_file_10_U/ap_clk
+    RAMB36_X3Y31         RAMB36E2                                     r  bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.040    
+                         clock uncertainty           -0.035    10.005    
+    RAMB36_X3Y31         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKBWRCLK_DINBDIN[5])
+                                                     -0.250     9.755    bd_0_i/hls_inst/inst/reg_file_10_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.755    
+                         arrival time                          -8.061    
+  -------------------------------------------------------------------
+                         slack                                  1.694    
+
+
+
+

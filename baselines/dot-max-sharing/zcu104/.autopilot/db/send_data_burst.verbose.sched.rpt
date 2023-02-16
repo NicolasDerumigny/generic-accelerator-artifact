@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'send_data_burst'
+================================================================
+* Date:           Thu Jan 12 15:09:13 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        dot-max-sharing
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     8203|     8203|  82.030 us|  82.030 us|  8203|  8203|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%data_out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %data_out" [dot-max-sharing/src/correlation.cpp:74]   --->   Operation 9 'read' 'data_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %data_out_read, i32 3, i32 63" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 10 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln85 = sext i61 %trunc_ln" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 11 'sext' 'sext_ln85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%data_addr = getelementptr i64 %data, i64 %sext_ln85" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 12 'getelementptr' 'data_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (7.30ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i64, i64 %data_addr, i32 8192" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 13 'writereq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (0.00ns)   --->   "%call_ln85 = call void @send_data_burst_Pipeline_VITIS_LOOP_85_1, i64 %data, i61 %trunc_ln, i16 %reg_file_0_0, i16 %reg_file_0_1, i16 %reg_file_1_0, i16 %reg_file_1_1, i16 %reg_file_2_0, i16 %reg_file_2_1, i16 %reg_file_3_0, i16 %reg_file_3_1, i16 %reg_file_4_0, i16 %reg_file_4_1, i16 %reg_file_5_0, i16 %reg_file_5_1, i16 %reg_file_6_0, i16 %reg_file_6_1, i16 %reg_file_7_0, i16 %reg_file_7_1" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 14 'call' 'call_ln85' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 15 [1/2] (0.00ns)   --->   "%call_ln85 = call void @send_data_burst_Pipeline_VITIS_LOOP_85_1, i64 %data, i61 %trunc_ln, i16 %reg_file_0_0, i16 %reg_file_0_1, i16 %reg_file_1_0, i16 %reg_file_1_1, i16 %reg_file_2_0, i16 %reg_file_2_1, i16 %reg_file_3_0, i16 %reg_file_3_1, i16 %reg_file_4_0, i16 %reg_file_4_1, i16 %reg_file_5_0, i16 %reg_file_5_1, i16 %reg_file_6_0, i16 %reg_file_6_1, i16 %reg_file_7_0, i16 %reg_file_7_1" [dot-max-sharing/src/correlation.cpp:85]   --->   Operation 15 'call' 'call_ln85' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 16 [5/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i64, i64 %data_addr" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 16 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 17 [4/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i64, i64 %data_addr" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 17 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 18 [3/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i64, i64 %data_addr" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 18 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 19 [2/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i64, i64 %data_addr" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 19 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 20 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_0_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 20 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_0_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 21 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_1_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_1_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 24 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 25 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_3_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 26 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_3_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 27 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_4_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 28 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_4_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 29 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 30 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_5_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 30 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_5_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 31 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 32 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 33 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 33 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_7_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 34 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_7_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 35 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data, void @empty_0, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_6, i32 16, i32 16, i32 16, i32 16, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 37 [1/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i64, i64 %data_addr" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 37 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 38 [1/1] (0.00ns)   --->   "%ret_ln111 = ret" [dot-max-sharing/src/correlation.cpp:111]   --->   Operation 38 'ret' 'ret_ln111' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.3ns
+The critical path consists of the following:
+	wire read operation ('data_out_read', dot-max-sharing/src/correlation.cpp:74) on port 'data_out' (dot-max-sharing/src/correlation.cpp:74) [36]  (0 ns)
+	'getelementptr' operation ('data_addr', dot-max-sharing/src/correlation.cpp:85) [39]  (0 ns)
+	bus request operation ('empty', dot-max-sharing/src/correlation.cpp:85) on port 'data' (dot-max-sharing/src/correlation.cpp:85) [40]  (7.3 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_32', dot-max-sharing/src/correlation.cpp:111) on port 'data' (dot-max-sharing/src/correlation.cpp:111) [42]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_32', dot-max-sharing/src/correlation.cpp:111) on port 'data' (dot-max-sharing/src/correlation.cpp:111) [42]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_32', dot-max-sharing/src/correlation.cpp:111) on port 'data' (dot-max-sharing/src/correlation.cpp:111) [42]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_32', dot-max-sharing/src/correlation.cpp:111) on port 'data' (dot-max-sharing/src/correlation.cpp:111) [42]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_32', dot-max-sharing/src/correlation.cpp:111) on port 'data' (dot-max-sharing/src/correlation.cpp:111) [42]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

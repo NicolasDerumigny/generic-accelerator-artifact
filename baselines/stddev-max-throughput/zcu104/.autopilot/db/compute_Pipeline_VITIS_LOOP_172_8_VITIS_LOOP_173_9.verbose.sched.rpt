@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_Pipeline_VITIS_LOOP_172_8_VITIS_LOOP_173_9'
+================================================================
+* Date:           Sat Nov 19 16:30:27 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        stddev-max-throughput
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.387 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2052|     2052|  20.520 us|  20.520 us|  2052|  2052|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_172_8_VITIS_LOOP_173_9  |     2050|     2050|         4|          1|          1|  2048|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.37>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_8 = alloca i32 1"   --->   Operation 7 'alloca' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%j_8 = alloca i32 1"   --->   Operation 8 'alloca' 'j_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten13 = alloca i32 1"   --->   Operation 9 'alloca' 'indvar_flatten13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten13"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %j_8"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %i_8"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc85"   --->   Operation 17 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%indvar_flatten13_load = load i12 %indvar_flatten13" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 18 'load' 'indvar_flatten13_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.97ns)   --->   "%icmp_ln172 = icmp_eq  i12 %indvar_flatten13_load, i12 2048" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 19 'icmp' 'icmp_ln172' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.80ns)   --->   "%add_ln172 = add i12 %indvar_flatten13_load, i12 1" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 20 'add' 'add_ln172' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln172 = br i1 %icmp_ln172, void %for.inc88, void %for.inc105.preheader.exitStub" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 21 'br' 'br_ln172' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%i_8_load = load i7 %i_8" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 22 'load' 'i_8_load' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%j_8_load = load i7 %j_8" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 23 'load' 'j_8_load' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i7.i32, i7 %i_8_load, i32 6" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 24 'bitselect' 'tmp' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.36ns)   --->   "%select_ln172 = select i1 %tmp, i7 0, i7 %i_8_load" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 25 'select' 'select_ln172' <Predicate = (!icmp_ln172)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.77ns)   --->   "%add_ln172_1 = add i7 %j_8_load, i7 1" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 26 'add' 'add_ln172_1' <Predicate = (!icmp_ln172)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.36ns)   --->   "%select_ln172_1 = select i1 %tmp, i7 %add_ln172_1, i7 %j_8_load" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 27 'select' 'select_ln172_1' <Predicate = (!icmp_ln172)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln172 = zext i7 %select_ln172_1" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 28 'zext' 'zext_ln172' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%indvars_iv66_udiv_mid2 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %select_ln172_1, i32 1, i32 5" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 29 'partselect' 'indvars_iv66_udiv_mid2' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln172_1 = zext i5 %indvars_iv66_udiv_mid2" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 30 'zext' 'zext_ln172_1' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln172 = trunc i7 %select_ln172_1" [stddev-max-throughput/src/correlation.cpp:172]   --->   Operation 31 'trunc' 'trunc_ln172' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %select_ln172, i32 1, i32 5" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 32 'partselect' 'tmp_3' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%add_ln2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i5.i6, i5 %tmp_3, i6 %zext_ln172_1" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 33 'bitconcatenate' 'add_ln2' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln177 = zext i11 %add_ln2" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 34 'zext' 'zext_ln177' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%reg_file_2_0_addr = getelementptr i16 %reg_file_2_0, i64 0, i64 %zext_ln177" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 35 'getelementptr' 'reg_file_2_0_addr' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%reg_file_2_1_addr = getelementptr i16 %reg_file_2_1, i64 0, i64 %zext_ln177" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 36 'getelementptr' 'reg_file_2_1_addr' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 37 'load' 'reg_file_2_0_load' <Predicate = (!icmp_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 38 [2/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 38 'load' 'reg_file_2_1_load' <Predicate = (!icmp_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%reg_file_6_0_addr = getelementptr i16 %reg_file_6_0, i64 0, i64 %zext_ln177" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 39 'getelementptr' 'reg_file_6_0_addr' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%reg_file_6_1_addr = getelementptr i16 %reg_file_6_1, i64 0, i64 %zext_ln177" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 40 'getelementptr' 'reg_file_6_1_addr' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln178 = br i1 %trunc_ln172, void %arrayidx84919.case.0, void %arrayidx84919.case.1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 41 'br' 'br_ln178' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node add_ln11)   --->   "%trunc_ln11 = trunc i7 %select_ln172" [stddev-max-throughput/src/correlation.cpp:11]   --->   Operation 42 'trunc' 'trunc_ln11' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node add_ln11)   --->   "%shl_ln = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i6.i6, i6 %trunc_ln11, i6 0" [stddev-max-throughput/src/correlation.cpp:11]   --->   Operation 43 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node add_ln11)   --->   "%or_ln11 = or i12 %shl_ln, i12 64" [stddev-max-throughput/src/correlation.cpp:11]   --->   Operation 44 'or' 'or_ln11' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.80ns) (out node of the LUT)   --->   "%add_ln11 = add i12 %or_ln11, i12 %zext_ln172" [stddev-max-throughput/src/correlation.cpp:11]   --->   Operation 45 'add' 'add_ln11' <Predicate = (!icmp_ln172)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i11 @_ssdm_op_PartSelect.i11.i12.i32.i32, i12 %add_ln11, i32 1, i32 11" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 46 'partselect' 'lshr_ln' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln178 = br i1 %trunc_ln172, void %arrayidx849.121.case.0, void %arrayidx849.121.case.1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 47 'br' 'br_ln178' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.77ns)   --->   "%add_ln173 = add i7 %select_ln172, i7 2" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 48 'add' 'add_ln173' <Predicate = (!icmp_ln172)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln173 = store i12 %add_ln172, i12 %indvar_flatten13" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 49 'store' 'store_ln173' <Predicate = (!icmp_ln172)> <Delay = 0.42>
+ST_1 : Operation 50 [1/1] (0.42ns)   --->   "%store_ln173 = store i7 %select_ln172_1, i7 %j_8" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 50 'store' 'store_ln173' <Predicate = (!icmp_ln172)> <Delay = 0.42>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln173 = store i7 %add_ln173, i7 %i_8" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 51 'store' 'store_ln173' <Predicate = (!icmp_ln172)> <Delay = 0.42>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln173 = br void %for.inc85" [stddev-max-throughput/src/correlation.cpp:173]   --->   Operation 52 'br' 'br_ln173' <Predicate = (!icmp_ln172)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.38>
+ST_2 : Operation 53 [1/2] (1.23ns)   --->   "%reg_file_2_0_load = load i11 %reg_file_2_0_addr" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 53 'load' 'reg_file_2_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 54 [1/2] (1.23ns)   --->   "%reg_file_2_1_load = load i11 %reg_file_2_1_addr" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 54 'load' 'reg_file_2_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 55 [1/1] (0.42ns)   --->   "%val1 = mux i16 @_ssdm_op_Mux.ap_auto.2f16.i1, i16 %reg_file_2_0_load, i16 %reg_file_2_1_load, i1 %trunc_ln172" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 55 'mux' 'val1' <Predicate = true> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [2/2] (4.72ns)   --->   "%mul = hmul i16 %val1, i16 %val1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 56 'hmul' 'mul' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln177_1 = zext i11 %lshr_ln" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 57 'zext' 'zext_ln177_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%reg_file_2_0_addr_7 = getelementptr i16 %reg_file_2_0, i64 0, i64 %zext_ln177_1" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 58 'getelementptr' 'reg_file_2_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%reg_file_2_1_addr_7 = getelementptr i16 %reg_file_2_1, i64 0, i64 %zext_ln177_1" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 59 'getelementptr' 'reg_file_2_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [2/2] (1.23ns)   --->   "%reg_file_2_0_load_4 = load i11 %reg_file_2_0_addr_7" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 60 'load' 'reg_file_2_0_load_4' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 61 [2/2] (1.23ns)   --->   "%reg_file_2_1_load_4 = load i11 %reg_file_2_1_addr_7" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 61 'load' 'reg_file_2_1_load_4' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%reg_file_6_0_addr_7 = getelementptr i16 %reg_file_6_0, i64 0, i64 %zext_ln177_1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 62 'getelementptr' 'reg_file_6_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%reg_file_6_1_addr_7 = getelementptr i16 %reg_file_6_1, i64 0, i64 %zext_ln177_1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 63 'getelementptr' 'reg_file_6_1_addr_7' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.38>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_172_8_VITIS_LOOP_173_9_str"   --->   Operation 64 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2048, i64 2048, i64 2048"   --->   Operation 65 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%specpipeline_ln176 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_2" [stddev-max-throughput/src/correlation.cpp:176]   --->   Operation 66 'specpipeline' 'specpipeline_ln176' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%specloopname_ln132 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [stddev-max-throughput/src/correlation.cpp:132]   --->   Operation 67 'specloopname' 'specloopname_ln132' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/2] (4.72ns)   --->   "%mul = hmul i16 %val1, i16 %val1" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 68 'hmul' 'mul' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (1.23ns)   --->   "%store_ln178 = store i16 %mul, i11 %reg_file_6_0_addr" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 69 'store' 'store_ln178' <Predicate = (!trunc_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln178 = br void %arrayidx84919.exit" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 70 'br' 'br_ln178' <Predicate = (!trunc_ln172)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (1.23ns)   --->   "%store_ln178 = store i16 %mul, i11 %reg_file_6_1_addr" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 71 'store' 'store_ln178' <Predicate = (trunc_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln178 = br void %arrayidx84919.exit" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 72 'br' 'br_ln178' <Predicate = (trunc_ln172)> <Delay = 0.00>
+ST_3 : Operation 73 [1/2] (1.23ns)   --->   "%reg_file_2_0_load_4 = load i11 %reg_file_2_0_addr_7" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 73 'load' 'reg_file_2_0_load_4' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 74 [1/2] (1.23ns)   --->   "%reg_file_2_1_load_4 = load i11 %reg_file_2_1_addr_7" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 74 'load' 'reg_file_2_1_load_4' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 75 [1/1] (0.42ns)   --->   "%val1_2 = mux i16 @_ssdm_op_Mux.ap_auto.2f16.i1, i16 %reg_file_2_0_load_4, i16 %reg_file_2_1_load_4, i1 %trunc_ln172" [stddev-max-throughput/src/correlation.cpp:177]   --->   Operation 75 'mux' 'val1_2' <Predicate = true> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [2/2] (4.72ns)   --->   "%mul_1 = hmul i16 %val1_2, i16 %val1_2" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 76 'hmul' 'mul_1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 82 'ret' 'ret_ln0' <Predicate = (icmp_ln172)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.96>
+ST_4 : Operation 77 [1/2] (4.72ns)   --->   "%mul_1 = hmul i16 %val1_2, i16 %val1_2" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 77 'hmul' 'mul_1' <Predicate = true> <Delay = 4.72> <CoreInst = "HMul_maxdsp">   --->   Core 60 'HMul_maxdsp' <Latency = 1> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'hmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (1.23ns)   --->   "%store_ln178 = store i16 %mul_1, i11 %reg_file_6_0_addr_7" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 78 'store' 'store_ln178' <Predicate = (!trunc_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%br_ln178 = br void %arrayidx849.121.exit" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 79 'br' 'br_ln178' <Predicate = (!trunc_ln172)> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (1.23ns)   --->   "%store_ln178 = store i16 %mul_1, i11 %reg_file_6_1_addr_7" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 80 'store' 'store_ln178' <Predicate = (trunc_ln172)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln178 = br void %arrayidx849.121.exit" [stddev-max-throughput/src/correlation.cpp:178]   --->   Operation 81 'br' 'br_ln178' <Predicate = (trunc_ln172)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.37ns
+The critical path consists of the following:
+	'alloca' operation ('j') [6]  (0 ns)
+	'load' operation ('j_8_load', stddev-max-throughput/src/correlation.cpp:172) on local variable 'j' [23]  (0 ns)
+	'add' operation ('add_ln172_1', stddev-max-throughput/src/correlation.cpp:172) [28]  (0.773 ns)
+	'select' operation ('select_ln172_1', stddev-max-throughput/src/correlation.cpp:172) [29]  (0.36 ns)
+	'getelementptr' operation ('reg_file_2_0_addr', stddev-max-throughput/src/correlation.cpp:177) [39]  (0 ns)
+	'load' operation ('reg_file_2_0_load', stddev-max-throughput/src/correlation.cpp:177) on array 'reg_file_2_0' [41]  (1.24 ns)
+
+ <State 2>: 6.39ns
+The critical path consists of the following:
+	'load' operation ('reg_file_2_0_load', stddev-max-throughput/src/correlation.cpp:177) on array 'reg_file_2_0' [41]  (1.24 ns)
+	'mux' operation ('val1', stddev-max-throughput/src/correlation.cpp:177) [43]  (0.427 ns)
+	'hmul' operation ('mul', stddev-max-throughput/src/correlation.cpp:178) [44]  (4.72 ns)
+
+ <State 3>: 6.39ns
+The critical path consists of the following:
+	'load' operation ('reg_file_2_0_load_4', stddev-max-throughput/src/correlation.cpp:177) on array 'reg_file_2_0' [63]  (1.24 ns)
+	'mux' operation ('val1', stddev-max-throughput/src/correlation.cpp:177) [65]  (0.427 ns)
+	'hmul' operation ('mul_1', stddev-max-throughput/src/correlation.cpp:178) [66]  (4.72 ns)
+
+ <State 4>: 5.96ns
+The critical path consists of the following:
+	'hmul' operation ('mul_1', stddev-max-throughput/src/correlation.cpp:178) [66]  (4.72 ns)
+	'store' operation ('store_ln178', stddev-max-throughput/src/correlation.cpp:178) of variable 'mul_1', stddev-max-throughput/src/correlation.cpp:178 on array 'reg_file_6_0' [71]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

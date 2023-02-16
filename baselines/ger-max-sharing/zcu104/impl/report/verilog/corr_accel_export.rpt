@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             ger-max-sharing
+Solution:            zcu104
+Device target:       xczu7ev-ffvc1156-2-e
+Report date:         Mon Nov 21 13:59:32 MST 2022
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:           1864
+FF:            2860
+DSP:              4
+BRAM:            36
+URAM:             0
+LATCH:            0
+SRL:            152
+CLB:            490
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      6.872
+CP achieved post-implementation: 7.922
+Timing met

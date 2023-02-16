@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vitis HLS Report for 'corr_accel'
+================================================================
+* Date:           Thu Jan 12 14:50:57 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        asum-max-sharing
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    16484|    16484|  0.165 ms|  0.165 ms|  16485|  16485|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 10 [1/1] (1.00ns)   --->   "%data_out_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %data_out"   --->   Operation 10 'read' 'data_out_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 11 [1/1] (1.00ns)   --->   "%data_in_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %data_in"   --->   Operation 11 'read' 'data_in_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%reg_file = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 12 'alloca' 'reg_file' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%reg_file_1 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 13 'alloca' 'reg_file_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%reg_file_2 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 14 'alloca' 'reg_file_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%reg_file_3 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 15 'alloca' 'reg_file_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%reg_file_4 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 16 'alloca' 'reg_file_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%reg_file_5 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 17 'alloca' 'reg_file_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%reg_file_6 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 18 'alloca' 'reg_file_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%reg_file_7 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 19 'alloca' 'reg_file_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%reg_file_8 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 20 'alloca' 'reg_file_8' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%reg_file_9 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 21 'alloca' 'reg_file_9' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%reg_file_10 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 22 'alloca' 'reg_file_10' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%reg_file_11 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 23 'alloca' 'reg_file_11' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%reg_file_12 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 24 'alloca' 'reg_file_12' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%reg_file_13 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 25 'alloca' 'reg_file_13' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%reg_file_14 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 26 'alloca' 'reg_file_14' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%reg_file_15 = alloca i64 1" [asum-max-sharing/src/correlation.cpp:162]   --->   Operation 27 'alloca' 'reg_file_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 28 [2/2] (7.30ns)   --->   "%call_ln169 = call void @recv_data_burst, i64 %data, i64 %data_in_read, i16 %reg_file, i16 %reg_file_1, i16 %reg_file_2, i16 %reg_file_3, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6, i16 %reg_file_7, i16 %reg_file_8, i16 %reg_file_9, i16 %reg_file_10, i16 %reg_file_11, i16 %reg_file_12, i16 %reg_file_13, i16 %reg_file_14, i16 %reg_file_15" [asum-max-sharing/src/correlation.cpp:169]   --->   Operation 28 'call' 'call_ln169' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln169 = call void @recv_data_burst, i64 %data, i64 %data_in_read, i16 %reg_file, i16 %reg_file_1, i16 %reg_file_2, i16 %reg_file_3, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6, i16 %reg_file_7, i16 %reg_file_8, i16 %reg_file_9, i16 %reg_file_10, i16 %reg_file_11, i16 %reg_file_12, i16 %reg_file_13, i16 %reg_file_14, i16 %reg_file_15" [asum-max-sharing/src/correlation.cpp:169]   --->   Operation 29 'call' 'call_ln169' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%wait_ln170 = wait void @_ssdm_op_Wait, i32 1" [asum-max-sharing/src/correlation.cpp:170]   --->   Operation 30 'wait' 'wait_ln170' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%counter_read = read i64 @_ssdm_op_Read.ap_auto.i64P0A, i64 %counter" [asum-max-sharing/src/correlation.cpp:171]   --->   Operation 31 'read' 'counter_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [2/2] (1.00ns)   --->   "%write_ln171 = write void @_ssdm_op_Write.ap_none.i64P0A, i64 %start_time, i64 %counter_read" [asum-max-sharing/src/correlation.cpp:171]   --->   Operation 32 'write' 'write_ln171' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 5 <SV = 4> <Delay = 1.00>
+ST_5 : Operation 33 [1/2] (1.00ns)   --->   "%write_ln171 = write void @_ssdm_op_Write.ap_none.i64P0A, i64 %start_time, i64 %counter_read" [asum-max-sharing/src/correlation.cpp:171]   --->   Operation 33 'write' 'write_ln171' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%wait_ln172 = wait void @_ssdm_op_Wait, i32 1" [asum-max-sharing/src/correlation.cpp:172]   --->   Operation 34 'wait' 'wait_ln172' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln173 = call void @compute, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6" [asum-max-sharing/src/correlation.cpp:173]   --->   Operation 35 'call' 'call_ln173' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln173 = call void @compute, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6" [asum-max-sharing/src/correlation.cpp:173]   --->   Operation 36 'call' 'call_ln173' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 1.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%wait_ln174 = wait void @_ssdm_op_Wait, i32 1" [asum-max-sharing/src/correlation.cpp:174]   --->   Operation 37 'wait' 'wait_ln174' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [2/2] (1.00ns)   --->   "%write_ln175 = write void @_ssdm_op_Write.ap_none.i64P0A, i64 %end_time, i64 %counter_read" [asum-max-sharing/src/correlation.cpp:175]   --->   Operation 38 'write' 'write_ln175' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 39 [1/2] (1.00ns)   --->   "%write_ln175 = write void @_ssdm_op_Write.ap_none.i64P0A, i64 %end_time, i64 %counter_read" [asum-max-sharing/src/correlation.cpp:175]   --->   Operation 39 'write' 'write_ln175' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_8 : Operation 40 [1/1] (0.00ns)   --->   "%wait_ln176 = wait void @_ssdm_op_Wait, i32 1" [asum-max-sharing/src/correlation.cpp:176]   --->   Operation 40 'wait' 'wait_ln176' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 41 [2/2] (7.30ns)   --->   "%call_ln177 = call void @send_data_burst, i64 %data, i64 %data_out_read, i16 %reg_file, i16 %reg_file_1, i16 %reg_file_2, i16 %reg_file_3, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6, i16 %reg_file_7, i16 %reg_file_8, i16 %reg_file_9, i16 %reg_file_10, i16 %reg_file_11, i16 %reg_file_12, i16 %reg_file_13, i16 %reg_file_14, i16 %reg_file_15" [asum-max-sharing/src/correlation.cpp:177]   --->   Operation 41 'call' 'call_ln177' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (0.00ns)   --->   "%spectopmodule_ln150 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_18" [asum-max-sharing/src/correlation.cpp:150]   --->   Operation 42 'spectopmodule' 'spectopmodule_ln150' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data, void @empty_0, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_6, i32 16, i32 16, i32 16, i32 16, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %data"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data_in, void @empty_3, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_4, void @empty_22, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_10, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data_in, void @empty_11, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_10, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data_out, void @empty_3, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_4, void @empty_12, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_10, i32 4294967295, i32 0"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data_out, void @empty_11, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_10, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %counter"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %counter, void @empty_11, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %start_time"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %start_time, void @empty_3, i32 1, i32 1, void @empty_14, i32 0, i32 0, void @empty_4, void @empty_16, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %start_time, void @empty_9, i32 1, i32 1, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %end_time"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %end_time, void @empty_3, i32 1, i32 1, void @empty_14, i32 0, i32 0, void @empty_4, void @empty_17, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %end_time, void @empty_9, i32 1, i32 1, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_4, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_15, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 58 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_14, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 59 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_13, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 60 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_12, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 61 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_11, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 62 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_10, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 63 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_9, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 64 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_8, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 65 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_7, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 66 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_6, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 67 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 68 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_5, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 68 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 69 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_4, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 69 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 70 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_3, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 70 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_2, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 71 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_1, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 72 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%specmemcore_ln163 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file, i64 666, i64 30, i64 18446744073709551615" [asum-max-sharing/src/correlation.cpp:163]   --->   Operation 73 'specmemcore' 'specmemcore_ln163' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_5" [asum-max-sharing/src/correlation.cpp:165]   --->   Operation 74 'specregionbegin' 'rbegin' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [1/2] (0.00ns)   --->   "%call_ln177 = call void @send_data_burst, i64 %data, i64 %data_out_read, i16 %reg_file, i16 %reg_file_1, i16 %reg_file_2, i16 %reg_file_3, i16 %reg_file_4, i16 %reg_file_5, i16 %reg_file_6, i16 %reg_file_7, i16 %reg_file_8, i16 %reg_file_9, i16 %reg_file_10, i16 %reg_file_11, i16 %reg_file_12, i16 %reg_file_13, i16 %reg_file_14, i16 %reg_file_15" [asum-max-sharing/src/correlation.cpp:177]   --->   Operation 75 'call' 'call_ln177' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%specprotocol_ln178 = specprotocol void @_ssdm_op_SpecProtocol, i64 1, void @empty_6" [asum-max-sharing/src/correlation.cpp:178]   --->   Operation 76 'specprotocol' 'specprotocol_ln178' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_5, i32 %rbegin" [asum-max-sharing/src/correlation.cpp:178]   --->   Operation 77 'specregionend' 'rend' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln179 = ret" [asum-max-sharing/src/correlation.cpp:179]   --->   Operation 78 'ret' 'ret_ln179' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read operation ('data_out_read') on port 'data_out' [23]  (1 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln169', asum-max-sharing/src/correlation.cpp:169) to 'recv_data_burst' [58]  (7.3 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 1ns
+The critical path consists of the following:
+	wire read operation ('counter_read', asum-max-sharing/src/correlation.cpp:171) on port 'counter' (asum-max-sharing/src/correlation.cpp:171) [60]  (0 ns)
+	register write operation ('write_ln171', asum-max-sharing/src/correlation.cpp:171) on port 'start_time' (asum-max-sharing/src/correlation.cpp:171) [61]  (1 ns)
+
+ <State 5>: 1ns
+The critical path consists of the following:
+	register write operation ('write_ln171', asum-max-sharing/src/correlation.cpp:171) on port 'start_time' (asum-max-sharing/src/correlation.cpp:171) [61]  (1 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 1ns
+The critical path consists of the following:
+	register write operation ('write_ln175', asum-max-sharing/src/correlation.cpp:175) on port 'end_time' (asum-max-sharing/src/correlation.cpp:175) [65]  (1 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln177', asum-max-sharing/src/correlation.cpp:177) to 'send_data_burst' [67]  (7.3 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             trmm-max-throughput
+Solution:            zcu104
+Device target:       xczu7ev-ffvc1156-2-e
+Report date:         Thu Jan 12 11:26:12 CET 2023
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:           1970
+FF:            2987
+DSP:              6
+BRAM:            36
+URAM:             0
+LATCH:            0
+SRL:            155
+CLB:            520
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      6.872
+CP achieved post-implementation: 7.792
+Timing met

@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_Pipeline_VITIS_LOOP_156_5'
+================================================================
+* Date:           Sat Nov 19 15:44:19 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        correlation-max-throughput
+* Solution:       zcu104 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.237 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       34|       34|  0.340 us|  0.340 us|   34|   34|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_156_5  |       32|       32|         1|          1|          1|    32|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.23>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j_6 = alloca i32 1"   --->   Operation 4 'alloca' 'j_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_5_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 5 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %reg_file_5_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %j_6"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc40"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%j = load i7 %j_6" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 9 'load' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i7.i32, i7 %j, i32 6" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 10 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln156 = br i1 %tmp, void %for.inc40.split, void %for.inc64.preheader.exitStub" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 12 'br' 'br_ln156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln159 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_17" [correlation-max-throughput/src/correlation.cpp:159]   --->   Operation 13 'specpipeline' 'specpipeline_ln159' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln132 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [correlation-max-throughput/src/correlation.cpp:132]   --->   Operation 14 'specloopname' 'specloopname_ln132' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%lshr_ln9 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %j, i32 1, i32 5" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 15 'partselect' 'lshr_ln9' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln160 = zext i5 %lshr_ln9" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 16 'zext' 'zext_ln160' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%reg_file_5_0_addr = getelementptr i16 %reg_file_5_0, i64 0, i64 %zext_ln160" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 17 'getelementptr' 'reg_file_5_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%store_ln160 = store i16 0, i11 %reg_file_5_0_addr" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 18 'store' 'store_ln160' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%reg_file_5_1_addr = getelementptr i16 %reg_file_5_1, i64 0, i64 %zext_ln160" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 19 'getelementptr' 'reg_file_5_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.23ns)   --->   "%store_ln160 = store i16 0, i11 %reg_file_5_1_addr" [correlation-max-throughput/src/correlation.cpp:160]   --->   Operation 20 'store' 'store_ln160' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_1 : Operation 21 [1/1] (0.77ns)   --->   "%add_ln156 = add i7 %j, i7 2" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 21 'add' 'add_ln156' <Predicate = (!tmp)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.42ns)   --->   "%store_ln156 = store i7 %add_ln156, i7 %j_6" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 22 'store' 'store_ln156' <Predicate = (!tmp)> <Delay = 0.42>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln156 = br void %for.inc40" [correlation-max-throughput/src/correlation.cpp:156]   --->   Operation 23 'br' 'br_ln156' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (tmp)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.24ns
+The critical path consists of the following:
+	'alloca' operation ('j') [3]  (0 ns)
+	'load' operation ('j', correlation-max-throughput/src/correlation.cpp:156) on local variable 'j' [9]  (0 ns)
+	'getelementptr' operation ('reg_file_5_0_addr', correlation-max-throughput/src/correlation.cpp:160) [18]  (0 ns)
+	'store' operation ('store_ln160', correlation-max-throughput/src/correlation.cpp:160) of constant 0 on array 'reg_file_5_0' [19]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

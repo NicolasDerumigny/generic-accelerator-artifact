@@ -1,0 +1,331 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2022.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.872</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.872</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>6.872</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.128</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>3.128</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.128</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>3.128</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>36</BRAM>
+      <CLB>0</CLB>
+      <DSP>4</DSP>
+      <FF>2860</FF>
+      <LATCH>0</LATCH>
+      <LUT>2027</LUT>
+      <SRL>275</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>624</BRAM>
+      <CLB>0</CLB>
+      <DSP>1728</DSP>
+      <FF>460800</FF>
+      <LUT>230400</LUT>
+      <URAM>96</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="corr_accel" DISPNAME="inst" RTLNAME="corr_accel">
+      <SubModules count="21">control_s_axi_U data_m_axi_U grp_compute_fu_208 grp_recv_data_burst_fu_185 grp_send_data_burst_fu_219 reg_file_10_U reg_file_11_U reg_file_12_U reg_file_13_U reg_file_14_U reg_file_15_U reg_file_1_U reg_file_2_U reg_file_3_U reg_file_4_U reg_file_5_U reg_file_6_U reg_file_7_U reg_file_8_U reg_file_9_U reg_file_U</SubModules>
+      <Resources BRAM="36" DSP="4" FF="2860" LUT="2027"/>
+      <LocalResources FF="262" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="corr_accel_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="corr_accel_control_s_axi">
+      <Resources FF="312" LUT="201"/>
+    </RtlModule>
+    <RtlModule CELL="inst/data_m_axi_U" BINDMODULE="corr_accel_data_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="data_m_axi" DISPNAME="data_m_axi_U" RTLNAME="corr_accel_data_m_axi">
+      <Resources BRAM="4" FF="1752" LUT="1240"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208" DEPTH="1" TYPE="function" MODULENAME="compute" DISPNAME="grp_compute_fu_208" RTLNAME="corr_accel_compute">
+      <SubModules count="2">grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121 hmul_16ns_16ns_16_2_max_dsp_1_U48</SubModules>
+      <Resources DSP="4" FF="172" LUT="256"/>
+      <LocalResources FF="48" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121" DEPTH="2" TYPE="function" MODULENAME="compute_Pipeline_VITIS_LOOP_137_2" DISPNAME="grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121" RTLNAME="corr_accel_compute_Pipeline_VITIS_LOOP_137_2">
+      <SubModules count="3">flow_control_loop_pipe_sequential_init_U hadd_16ns_16ns_16_2_full_dsp_1_U37 mux_21_16_1_1_U40</SubModules>
+      <Resources DSP="2" FF="76" LUT="197"/>
+      <LocalResources FF="42" LUT="43"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="corr_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37" BINDMODULE="corr_accel_hadd_16ns_16ns_16_2_full_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="hadd_16ns_16ns_16_2_full_dsp_1" DISPNAME="hadd_16ns_16ns_16_2_full_dsp_1_U37" RTLNAME="corr_accel_hadd_16ns_16ns_16_2_full_dsp_1">
+      <Resources DSP="2" FF="32" LUT="131"/>
+      <LocalResources FF="32"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op hadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="1" LOOP="VITIS_LOOP_137_2" OPTYPE="hadd" PRAGMA="" RTLNAME="hadd_16ns_16ns_16_2_full_dsp_1_U37" SOURCE="ger-max-sharing/src/correlation.cpp:143" URAM="0" VARIABLE="add"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/mux_21_16_1_1_U40" BINDMODULE="corr_accel_mux_21_16_1_1" DEPTH="3" TYPE="rtl" MODULENAME="mux_21_16_1_1" DISPNAME="mux_21_16_1_1_U40" RTLNAME="corr_accel_mux_21_16_1_1">
+      <Resources LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_compute_fu_208/hmul_16ns_16ns_16_2_max_dsp_1_U48" BINDMODULE="corr_accel_hmul_16ns_16ns_16_2_max_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="hmul_16ns_16ns_16_2_max_dsp_1" DISPNAME="hmul_16ns_16ns_16_2_max_dsp_1_U48" RTLNAME="corr_accel_hmul_16ns_16ns_16_2_max_dsp_1">
+      <Resources DSP="2" FF="48" LUT="44"/>
+      <LocalResources FF="48" LUT="8"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op hmul" DSP="2" ID="" IMPL="maxdsp" LATENCY="1" LOOP="VITIS_LOOP_132_1" OPTYPE="hmul" PRAGMA="" RTLNAME="hmul_16ns_16ns_16_2_max_dsp_1_U48" SOURCE="ger-max-sharing/src/correlation.cpp:136" URAM="0" VARIABLE="tmp_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_recv_data_burst_fu_185" DEPTH="1" TYPE="function" MODULENAME="recv_data_burst" DISPNAME="grp_recv_data_burst_fu_185" RTLNAME="corr_accel_recv_data_burst">
+      <SubModules count="1">grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87</SubModules>
+      <Resources FF="178" LUT="110"/>
+      <LocalResources FF="10" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87" DEPTH="2" TYPE="function" MODULENAME="recv_data_burst_Pipeline_VITIS_LOOP_40_1" DISPNAME="grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87" RTLNAME="corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="168" LUT="77"/>
+      <LocalResources FF="166" LUT="45"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="corr_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_send_data_burst_fu_219" DEPTH="1" TYPE="function" MODULENAME="send_data_burst" DISPNAME="grp_send_data_burst_fu_219" RTLNAME="corr_accel_send_data_burst">
+      <SubModules count="1">grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90</SubModules>
+      <Resources FF="184" LUT="218"/>
+      <LocalResources FF="9" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_send_data_burst_fu_219/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90" DEPTH="2" TYPE="function" MODULENAME="send_data_burst_Pipeline_VITIS_LOOP_85_1" DISPNAME="grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90" RTLNAME="corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="175" LUT="212"/>
+      <LocalResources FF="173" LUT="205"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_send_data_burst_fu_219/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="corr_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_10_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_10_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_10_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_11_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_11_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_11_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_12_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_12_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_12_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_13_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_13_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_13_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_14_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_14_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_14_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_15_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_15_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_15_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_1_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_1_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_1_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_2_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_2_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_2_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_3_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_3_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_3_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_4_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_4_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_4_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_5_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_5_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_5_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_6_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_6_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_6_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_7_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_7_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_7_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_8_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_8_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_8_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_9_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_9_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_9_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/reg_file_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="reg_file_RAM_T2P_BRAM_1R1W" DISPNAME="reg_file_U" RTLNAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+      <Resources BRAM="2" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="yes" RTLNAME="reg_file_U" SOURCE="ger-max-sharing/src/correlation.cpp:160" URAM="0" VARIABLE="reg_file"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="6.578" DATAPATH_LOGIC_DELAY="4.217" DATAPATH_NET_DELAY="2.361" ENDPOINT_PIN="reg_file_9_U/ram_reg_bram_0/DINBDIN[14]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="3.128" STARTPOINT_PIN="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]/C">
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="49"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_2__7" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="678"/>
+      <CELL NAME="reg_file_9_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.546" DATAPATH_LOGIC_DELAY="4.185" DATAPATH_NET_DELAY="2.361" ENDPOINT_PIN="reg_file_8_U/ram_reg_bram_0/DINBDIN[14]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="3.160" STARTPOINT_PIN="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]/C">
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="49"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_14__0" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="678"/>
+      <CELL NAME="reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.443" DATAPATH_LOGIC_DELAY="4.130" DATAPATH_NET_DELAY="2.313" ENDPOINT_PIN="reg_file_9_U/ram_reg_bram_0/DINBDIN[13]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="3.275" STARTPOINT_PIN="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]/C">
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="49"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_3__3" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="678"/>
+      <CELL NAME="reg_file_9_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.434" DATAPATH_LOGIC_DELAY="4.130" DATAPATH_NET_DELAY="2.304" ENDPOINT_PIN="reg_file_9_U/ram_reg_bram_0/DINBDIN[12]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="3.286" STARTPOINT_PIN="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]/C">
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="49"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[12]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_4__3" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="678"/>
+      <CELL NAME="reg_file_9_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.411" DATAPATH_LOGIC_DELAY="4.098" DATAPATH_NET_DELAY="2.313" ENDPOINT_PIN="reg_file_8_U/ram_reg_bram_0/DINBDIN[13]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="3.307" STARTPOINT_PIN="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]/C">
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/din1_buf1_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="49"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+      <CELL NAME="i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_137_2_fu_121/hadd_16ns_16ns_16_2_full_dsp_1_U37/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_15__0" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="678"/>
+      <CELL NAME="reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/corr_accel_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/corr_accel_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/corr_accel_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/corr_accel_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/corr_accel_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/corr_accel_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Mon Nov 21 13:59:43 MST 2022"/>
+    <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
+    <item NAME="Project" VALUE="ger-max-sharing"/>
+    <item NAME="Solution" VALUE="zcu104 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynquplus"/>
+    <item NAME="Target device" VALUE="xczu7ev-ffvc1156-2-e"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

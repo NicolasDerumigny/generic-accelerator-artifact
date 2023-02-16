@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "corr_accel",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/derumigny\/FPGA\/data\/2023-FCCM\/trmv-max-sharing\/zcu104\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "corr_accel"
+              }]
+          }
+        },
+        {
+          "functionName": "corr_accel",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/derumigny\/FPGA\/data\/2023-FCCM\/trmv-max-sharing\/zcu104\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "corr_accel"
+              }]
+          }
+        }
+      ]
+    }]}

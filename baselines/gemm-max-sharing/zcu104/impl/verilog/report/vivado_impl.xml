@@ -1,0 +1,291 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>7.932</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>7.932</CP_FINAL>
+  <CP_ROUTE>7.932</CP_ROUTE>
+  <CP_SYNTH>6.840</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>2.068</SLACK_FINAL>
+  <SLACK_ROUTE>2.068</SLACK_ROUTE>
+  <SLACK_SYNTH>3.160</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>2.068</WNS_FINAL>
+  <WNS_ROUTE>2.068</WNS_ROUTE>
+  <WNS_SYNTH>3.160</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>36</BRAM>
+    <CLB>518</CLB>
+    <DSP>4</DSP>
+    <FF>2954</FF>
+    <LATCH>0</LATCH>
+    <LUT>1951</LUT>
+    <SRL>155</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>624</BRAM>
+    <CLB>28800</CLB>
+    <DSP>1728</DSP>
+    <FF>460800</FF>
+    <LUT>230400</LUT>
+    <URAM>96</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="corr_accel" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="21">control_s_axi_U data_m_axi_U grp_compute_fu_208 grp_recv_data_burst_fu_185 grp_send_data_burst_fu_220 reg_file_10_U reg_file_11_U reg_file_12_U reg_file_13_U reg_file_14_U reg_file_15_U reg_file_1_U reg_file_2_U reg_file_3_U reg_file_4_U reg_file_5_U reg_file_6_U reg_file_7_U reg_file_8_U reg_file_9_U reg_file_U</SubModules>
+    <Resources BRAM="36" DSP="4" FF="2954" LUT="1951" LogicLUT="1796" RAMB36="18" SRL="155"/>
+    <LocalResources FF="262" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="corr_accel_control_s_axi" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_control_s_axi">
+    <Resources FF="312" LUT="198" LogicLUT="198"/>
+  </RtlModule>
+  <RtlModule CELL="inst/data_m_axi_U" BINDMODULE="corr_accel_data_m_axi" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_data_m_axi">
+    <Resources BRAM="4" FF="1752" LUT="1106" LogicLUT="960" RAMB36="2" SRL="146"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_compute">
+    <SubModules count="3">grp_compute_Pipeline_VITIS_LOOP_133_2_fu_154 grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164 hmul_16ns_16ns_16_2_max_dsp_1_U56</SubModules>
+    <Resources DSP="4" FF="266" LUT="303" LogicLUT="294" SRL="9"/>
+    <LocalResources FF="100" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_133_2_fu_154" DEPTH="2" FILE_NAME="corr_accel_compute.v" ORIG_REF_NAME="corr_accel_compute_Pipeline_VITIS_LOOP_133_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="36" LUT="37" LogicLUT="37"/>
+    <LocalResources FF="34" LUT="23" LogicLUT="23"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_133_2_fu_154/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_compute_Pipeline_VITIS_LOOP_133_2.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164" DEPTH="2" FILE_NAME="corr_accel_compute.v" ORIG_REF_NAME="corr_accel_compute_Pipeline_VITIS_LOOP_142_4">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U hadd_16ns_16ns_16_2_full_dsp_1_U44</SubModules>
+    <Resources DSP="2" FF="82" LUT="197" LogicLUT="188" SRL="9"/>
+    <LocalResources FF="48" LUT="53" LogicLUT="44" SRL="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_compute_Pipeline_VITIS_LOOP_142_4.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44" BINDMODULE="corr_accel_hadd_16ns_16ns_16_2_full_dsp_1" DEPTH="3" FILE_NAME="corr_accel_compute_Pipeline_VITIS_LOOP_142_4.v" ORIG_REF_NAME="corr_accel_hadd_16ns_16ns_16_2_full_dsp_1">
+    <Resources DSP="2" FF="32" LUT="130" LogicLUT="130"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_compute_fu_208/hmul_16ns_16ns_16_2_max_dsp_1_U56" BINDMODULE="corr_accel_hmul_16ns_16ns_16_2_max_dsp_1" DEPTH="2" FILE_NAME="corr_accel_compute.v" ORIG_REF_NAME="corr_accel_hmul_16ns_16ns_16_2_max_dsp_1">
+    <Resources DSP="2" FF="48" LUT="50" LogicLUT="50"/>
+    <LocalResources FF="48" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_recv_data_burst">
+    <SubModules count="1">grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87</SubModules>
+    <Resources FF="178" LUT="109" LogicLUT="109"/>
+    <LocalResources FF="10" LUT="33" LogicLUT="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87" DEPTH="2" FILE_NAME="corr_accel_recv_data_burst.v" ORIG_REF_NAME="corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="168" LUT="76" LogicLUT="76"/>
+    <LocalResources FF="166" LUT="44" LogicLUT="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_recv_data_burst_fu_185/grp_recv_data_burst_Pipeline_VITIS_LOOP_40_1_fu_87/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_recv_data_burst_Pipeline_VITIS_LOOP_40_1.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_220" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_send_data_burst">
+    <SubModules count="1">grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90</SubModules>
+    <Resources FF="184" LUT="228" LogicLUT="228"/>
+    <LocalResources FF="9" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_220/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90" DEPTH="2" FILE_NAME="corr_accel_send_data_burst.v" ORIG_REF_NAME="corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="175" LUT="222" LogicLUT="222"/>
+    <LocalResources FF="173" LUT="217" LogicLUT="217"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_send_data_burst_fu_220/grp_send_data_burst_Pipeline_VITIS_LOOP_85_1_fu_90/flow_control_loop_pipe_sequential_init_U" BINDMODULE="corr_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="corr_accel_send_data_burst_Pipeline_VITIS_LOOP_85_1.v" ORIG_REF_NAME="corr_accel_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_10_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_11_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_12_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_13_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_14_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_15_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_1_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_2_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_3_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_4_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_5_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_6_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_7_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_8_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_9_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" LUT="8" LogicLUT="8" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/reg_file_U" BINDMODULE="corr_accel_reg_file_RAM_T2P_BRAM_1R1W" DEPTH="1" FILE_NAME="corr_accel.v" ORIG_REF_NAME="corr_accel_reg_file_RAM_T2P_BRAM_1R1W">
+    <Resources BRAM="2" LUT="1" LogicLUT="1" RAMB36="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="7.650" DATAPATH_LOGIC_DELAY="4.155" DATAPATH_NET_DELAY="3.495" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0/DINBDIN[13]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="2.068" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="47"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/lut_op0_inferred__0/i_" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_21" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="680"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.518" DATAPATH_LOGIC_DELAY="4.249" DATAPATH_NET_DELAY="3.269" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0/DINBDIN[14]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="2.187" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="47"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/lut_op0_inferred__0/i_" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_20" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="680"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.513" DATAPATH_LOGIC_DELAY="4.764" DATAPATH_NET_DELAY="2.749" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0/DINBDIN[11]" LOGIC_LEVELS="20" MAX_FANOUT="14" SLACK="2.197" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="47"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/lut_op0_inferred__0/i_" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/i_no_versal_es1_workaround.DSP_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[11]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_23" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="680"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.464" DATAPATH_LOGIC_DELAY="4.228" DATAPATH_NET_DELAY="3.236" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0/DINBDIN[12]" LOGIC_LEVELS="21" MAX_FANOUT="14" SLACK="2.255" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="47"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/lut_op0_inferred__0/i_" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[12]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="680"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.324" DATAPATH_LOGIC_DELAY="4.716" DATAPATH_NET_DELAY="2.608" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0/DINBDIN[10]" LOGIC_LEVELS="20" MAX_FANOUT="14" SLACK="2.414" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/din0_buf1_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="47"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/lut_op0_inferred__0/i_" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/i_no_versal_es1_workaround.DSP_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[10]_INST_0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_compute_fu_208/grp_compute_Pipeline_VITIS_LOOP_142_4_fu_164/hadd_16ns_16ns_16_2_full_dsp_1_U44/corr_accel_hadd_16ns_16ns_16_2_full_dsp_1_ip_u/ram_reg_bram_0_i_24__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="680"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/reg_file_8_U/ram_reg_bram_0" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB36E2" LINE_NUMBER="38"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/corr_accel_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/corr_accel_failfast_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/corr_accel_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/corr_accel_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/corr_accel_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/corr_accel_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/corr_accel_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

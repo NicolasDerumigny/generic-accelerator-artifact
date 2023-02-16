@@ -1,0 +1,979 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jan 13 11:49:18 2023
+# Process ID: 87457
+# Current directory: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1
+# Command line: vivado -log design_1_generic_accel_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_generic_accel_0_1.tcl
+# Log file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.vds
+# Journal file: /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 3189.665 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source design_1_generic_accel_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1700.793 ; gain = 88.992 ; free physical = 4698 ; free virtual = 12206
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/derumigny/FPGA/HLS-projects/generic-accel'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_generic_accel_0_1
+Command: synth_design -top design_1_generic_accel_0_1 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 87585
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3045.758 ; gain = 241.832 ; free physical = 3163 ; free virtual = 10669
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2324.586; parent = 2175.064; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4025.164; parent = 3069.574; children = 955.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_generic_accel_0_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/synth/design_1_generic_accel_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_reg_file_RAM_T2P_BRAM_1R1W' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_reg_file_RAM_T2P_BRAM_1R1W' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_reg_file_RAM_T2P_BRAM_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_data_burst' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_flow_control_loop_pipe_sequential_init' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_flow_control_loop_pipe_sequential_init' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_data_burst_Pipeline_VITIS_LOOP_33_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_data_burst' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_recv_pgm' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_pgm.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_recv_pgm' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_pgm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_187_2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_187_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_187_2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_187_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_9_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_9_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_42_8_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_8_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_42_8_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_8_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_9_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_9_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_69_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_69_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_fu_addmul_axis' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fu_addmul_axis.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_uitofp_32ns_32_4_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_uitofp_32ns_32_4_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_uitofp_32ns_32_4_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_uitofp_32ns_32_4_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_uitofp_32ns_32_4_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_uitofp_32ns_32_4_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_sptohp_32ns_16_2_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_sptohp_32ns_16_2_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_sptohp_32ns_16_2_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_sptohp_32ns_16_2_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_sptohp_32ns_16_2_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_sptohp_32ns_16_2_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hptosp_16ns_32_1_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hptosp_16ns_32_1_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hptosp_16ns_32_1_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hptosp_16ns_32_1_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip.v:53]
+WARNING: [Synth 8-689] width (33) of port connection 'm_axis_result_tdata' does not match port width (32) of module 'generic_accel_hptosp_16ns_32_1_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hptosp_16ns_32_1_no_dsp_0.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hptosp_16ns_32_1_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hptosp_16ns_32_1_no_dsp_0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_fu_addmul_axis' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fu_addmul_axis.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_fu_divsqrt' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fu_divsqrt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hsqrt_16ns_16_4_no_dsp_0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hsqrt_16ns_16_4_no_dsp_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/ip/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_hsqrt_16ns_16_4_no_dsp_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hsqrt_16ns_16_4_no_dsp_0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_fu_divsqrt' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fu_divsqrt.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_21_16_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_21_16_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_21_16_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_42_16_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_42_16_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_16_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_42_32_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_42_32_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_42_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_134_32_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_134_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_134_32_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_134_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute_Pipeline_VITIS_LOOP_69_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_69_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_compute' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_send_data_burst' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_mux_275_16_1_1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_275_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_mux_275_16_1_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_mux_275_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_send_data_burst' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_send_data_burst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_control_s_axi' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_control_s_axi_ram' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:589]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_control_s_axi_ram' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:589]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:277]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_control_s_axi' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_store' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_mem' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_mem' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_store' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_load' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_mem__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_mem__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_load' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_write' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized4' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized4' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_throttle' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized0' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized5' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized3' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized3' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized5' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_fifo__parameterized6' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_srl__parameterized4' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_srl__parameterized4' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_fifo__parameterized6' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_throttle' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized1' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_write' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_read' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized2' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_reg_slice__parameterized2' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi_read' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_data_m_axi' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_data_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'generic_accel_regslice_both' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel_regslice_both' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'generic_accel' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_generic_accel_0_1' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/synth/design_1_generic_accel_0_1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg_24001_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_compute_Pipeline_VITIS_LOOP_69_1.v:12687]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_control_s_axi.v:363]
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module generic_accel_data_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module generic_accel_data_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module generic_accel_data_m_axi_srl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module generic_accel_data_m_axi_srl__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module generic_accel_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_AWREADY in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_ARREADY in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RVALID in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[63] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[62] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[61] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[60] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[59] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[58] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[57] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[56] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[55] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[54] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[53] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[52] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[51] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[50] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[49] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[48] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[47] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[46] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[45] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[44] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[43] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[42] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[41] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[40] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[39] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[38] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[37] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[36] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[35] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[34] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[33] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[32] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[31] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[30] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[29] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[28] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[27] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[26] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[25] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[24] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[23] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[22] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[21] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[20] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[19] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[18] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[17] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[16] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[15] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[14] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_data_RDATA[13] in module generic_accel_send_data_burst_Pipeline_VITIS_LOOP_77_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3354.109 ; gain = 550.184 ; free physical = 2934 ; free virtual = 10488
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2544.654; parent = 2395.161; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4309.703; parent = 3354.113; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3368.953 ; gain = 565.027 ; free physical = 2911 ; free virtual = 10465
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2544.654; parent = 2395.161; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4324.547; parent = 3368.957; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3368.953 ; gain = 565.027 ; free physical = 2911 ; free virtual = 10465
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2544.654; parent = 2395.161; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4324.547; parent = 3368.957; children = 955.590
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3382.891 ; gain = 0.000 ; free physical = 2734 ; free virtual = 10288
+INFO: [Netlist 29-17] Analyzing 1051 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/constraints/generic_accel_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3549.734 ; gain = 0.000 ; free physical = 2325 ; free virtual = 9884
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ip/design_1_generic_accel_0_1/constraints/generic_accel_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3549.734 ; gain = 0.000 ; free physical = 2324 ; free virtual = 9883
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3549.734 ; gain = 0.000 ; free physical = 2315 ; free virtual = 9873
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 3549.734 ; gain = 745.809 ; free physical = 1978 ; free virtual = 9567
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2591.654; parent = 2442.229; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4505.328; parent = 3549.738; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 3549.734 ; gain = 745.809 ; free physical = 1975 ; free virtual = 9565
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2591.654; parent = 2442.229; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4505.328; parent = 3549.738; children = 955.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 3549.734 ; gain = 745.809 ; free physical = 1972 ; free virtual = 9561
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2591.654; parent = 2442.229; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4505.328; parent = 3549.738; children = 955.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln111_reg_113_reg' and it is trimmed from '11' to '10' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_recv_pgm.v:141]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'generic_accel_data_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel_reg_file_RAM_T2P_BRAM_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram0_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram1_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel_pgml_V_RAM_1WNR_AUTO_1R1W:/ram2_reg"
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W:/ram0_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1_st_div_0_RAM_1WNR_AUTO_1R1W:/ram1_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'generic_accel_data_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3549.734 ; gain = 745.809 ; free physical = 416 ; free virtual = 8005
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2591.654; parent = 2442.229; children = 149.521
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4505.328; parent = 3549.738; children = 955.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized12) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized12) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/fcmp_32ns_32ns_1_2_no_dsp_0_U158/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/sptohp_32ns_16_2_no_dsp_0_U159/generic_accel_sptohp_32ns_16_2_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'generic_accel_fu_addmul_axis:/hptosp_16ns_32_1_no_dsp_0_U160/generic_accel_hptosp_16ns_32_1_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized23) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized23) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hdiv_16ns_16ns_16_5_no_dsp_0_U172/generic_accel_hdiv_16ns_16ns_16_5_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized23) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized23) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_divsqrt_fu_5877/hsqrt_16ns_16_4_no_dsp_0_U173/generic_accel_hsqrt_16ns_16_4_no_dsp_0_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'DIV_OP.SPD.OP/MANT_DIV/RT[6].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '13' to '6' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '13' to '10' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'hsqrt_16ns_16_4_no_dsp_0_U173/ce_r_reg' into 'hdiv_16ns_16ns_16_5_no_dsp_0_U172/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hsqrt_16ns_16_4_no_dsp_0.v:44]
+INFO: [Synth 8-4471] merging register 'hsqrt_16ns_16_4_no_dsp_0_U173/din0_buf1_reg[15:0]' into 'hdiv_16ns_16ns_16_5_no_dsp_0_U172/din0_buf1_reg[15:0]' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_hsqrt_16ns_16_4_no_dsp_0.v:46]
+INFO: [Synth 8-3936] Found unconnected internal register 'FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '32' to '26' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_0_U158/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0.v:100]
+INFO: [Synth 8-4471] merging register 'sptohp_32ns_16_2_no_dsp_0_U159/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_sptohp_32ns_16_2_no_dsp_0.v:50]
+INFO: [Synth 8-3936] Found unconnected internal register 'FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '32' to '26' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_0_U158/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0.v:100]
+INFO: [Synth 8-4471] merging register 'sptohp_32ns_16_2_no_dsp_0_U159/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_sptohp_32ns_16_2_no_dsp_0.v:50]
+INFO: [Synth 8-3936] Found unconnected internal register 'FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '32' to '26' bits. [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_0_U158/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_fcmp_32ns_32ns_1_2_no_dsp_0.v:100]
+INFO: [Synth 8-4471] merging register 'sptohp_32ns_16_2_no_dsp_0_U159/ce_r_reg' into 'uitofp_32ns_32_4_no_dsp_0_U157/ce_r_reg' [/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.gen/sources_1/bd/design_1/ipshared/cb6b/hdl/verilog/generic_accel_sptohp_32ns_16_2_no_dsp_0.v:50]
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1__GB2/st_div_0_U/ram0_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1__GB2/st_div_0_U/ram1_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1__GB2/st_div_0_U/ram0_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "generic_accel_compute_Pipeline_VITIS_LOOP_69_1__GB2/st_div_0_U/ram1_reg" of size (depth=13 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'grp_fu_addmul_axis_fu_5844/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5844/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'grp_fu_addmul_axis_fu_5855/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5855/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'grp_fu_addmul_axis_fu_5866/uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5866/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5844/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/OP/RESULT_REG.NORMAL.sign_op_reg )
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[31]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[29]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[30]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[28]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[23]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[24]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[25]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[26]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[27]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[18]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[19]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[20]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[21]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[22]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[17]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[12]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[13]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[14]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[15]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[16]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[11]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[6]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[7]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[8]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[9]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[10]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[5]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[0]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[1]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[2]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[3]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[4]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[3]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]' (FDE) to 'grp_fu_addmul_axis_fu_5844/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_fu_addmul_axis_fu_5844/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5844/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5855/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/OP/RESULT_REG.NORMAL.sign_op_reg )
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[31]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[29]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[30]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[28]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[23]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[24]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[25]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[26]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[27]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[18]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[19]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[20]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[21]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[22]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[17]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[12]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[13]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[14]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[15]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[16]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[11]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[6]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[7]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[8]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[9]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[10]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[5]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[0]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[1]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[2]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[3]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/din1_buf1_reg[4]' (FDE) to 'grp_fu_addmul_axis_fu_5855/fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_fu_addmul_axis_fu_5855/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5855/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5866/\uitofp_32ns_32_4_no_dsp_0_U157/generic_accel_uitofp_32ns_32_4_no_dsp_0_ip_u/inst /i_synth/\FIX_TO_FLT_OP.SPD.OP/OP/RESULT_REG.NORMAL.sign_op_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_fu_addmul_axis_fu_5866/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_fu_addmul_axis_fu_5866/\fcmp_32ns_32ns_1_2_no_dsp_0_U158/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ap_CS_fsm_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_1_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_1_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_2_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_2_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_3_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_3_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_4_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_4_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_5_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_5_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_6_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_6_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_7_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_7_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_8_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_8_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_9_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_9_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_10_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_10_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_11_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_11_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_12_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_12_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_13_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_13_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_14_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_14_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_15_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_15_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_16_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_16_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_17_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_17_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_18_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_18_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_19_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_19_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_20_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_20_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_21_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_21_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_22_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_22_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_23_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_23_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_24_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_24_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_25_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_25_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_26_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_26_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_27_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_27_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_28_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_28_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_29_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_29_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_30_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_30_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_31_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_31_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_32_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_32_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_33_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_33_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_34_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_34_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_35_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_35_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_36_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_36_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_37_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_37_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_38_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_38_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_39_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_39_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_40_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_40_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_41_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_41_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_42_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_42_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_43_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_43_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_44_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_44_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_45_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_45_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_46_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_46_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_47_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_47_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_48_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_48_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_49_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_49_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_50_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_50_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_51_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_51_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_52_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_52_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "generic_accel__GC0/reg_file_53_U/ram_reg"
+INFO: [Synth 8-3971] The signal "generic_accel__GC0/reg_file_53_U/ram_reg" was recognized as a true dual port RAM template.
+RAM ("generic_accel__GC0/pgml_V_U/ram0_reg") is too shallow (depth = 1024) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel__GC0/pgml_V_U/ram0_reg"
+RAM ("generic_accel__GC0/pgml_V_U/ram1_reg") is too shallow (depth = 1024) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel__GC0/pgml_V_U/ram1_reg"
+RAM ("generic_accel__GC0/pgml_V_U/ram2_reg") is too shallow (depth = 1024) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "generic_accel__GC0/pgml_V_U/ram2_reg"
+RAM ("control_s_axi_U/int_pgm/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\store_unit/tmp_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\load_unit/tmp_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/could_multi_bursts.awaddr_buf_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/i_5_3/\j_fu_194_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_recv_data_burst_fu_377/i_5_7/\grp_recv_data_burst_Pipeline_VITIS_LOOP_33_1_fu_163/j_3_fu_250_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/i_5_3/\j_fu_194_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_recv_data_burst_fu_377/\grp_recv_data_burst_Pipeline_VITIS_LOOP_33_1_fu_163/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_recv_pgm_fu_438/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_recv_data_burst_fu_377/i_5_7/\grp_recv_data_burst_Pipeline_VITIS_LOOP_33_1_fu_163/j_3_fu_250_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_recv_data_burst_fu_377/\grp_recv_data_burst_Pipeline_VITIS_LOOP_33_1_fu_163/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_recv_pgm_fu_438/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_read/could_multi_bursts.araddr_buf_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/rs_wreq/data_p2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\load_unit/fifo_rreq/U_fifo_srl/dout_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_read/rs_rreq/data_p2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\store_unit/fifo_wreq/U_fifo_srl/dout_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/fifo_burst/U_fifo_srl/dout_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/\trunc_ln5_1_reg_4171_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_recv_data_burst_fu_377/\grp_recv_data_burst_Pipeline_VITIS_LOOP_33_1_fu_163/trunc_ln5_2_reg_3205_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/rs_wreq/data_p1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_send_data_burst_fu_528/grp_send_data_burst_Pipeline_VITIS_LOOP_77_1_fu_166/\trunc_ln5_1_reg_4171_pp0_iter2_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_read/rs_rreq/data_p1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/wreq_throttle/req_fifo/U_fifo_srl/dout_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p1_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:52 . Memory (MB): peak = 3549.734 ; gain = 745.809 ; free physical = 10895 ; free virtual = 15314
+Synthesis current peak Physical Memory [PSS] (MB): peak = 11425.796; parent = 2442.229; children = 9159.554
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 17509.051; parent = 3549.738; children = 13991.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:24 ; elapsed = 00:03:12 . Memory (MB): peak = 3810.000 ; gain = 1006.074 ; free physical = 8870 ; free virtual = 13354
+Synthesis current peak Physical Memory [PSS] (MB): peak = 11798.351; parent = 2852.543; children = 9159.554
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 17801.332; parent = 3810.004; children = 13991.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:03:20 . Memory (MB): peak = 3855.016 ; gain = 1051.090 ; free physical = 8867 ; free virtual = 13358
+Synthesis current peak Physical Memory [PSS] (MB): peak = 11841.847; parent = 2896.069; children = 9159.554
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 17846.348; parent = 3855.020; children = 13991.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441i_8_3/\grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_addmul_axis_fu_5844/sptohp_32ns_16_2_no_dsp_0_U159/dout_r_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441i_8_3/\grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_addmul_axis_fu_5855/sptohp_32ns_16_2_no_dsp_0_U159/dout_r_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441i_8_3/\grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/grp_fu_addmul_axis_fu_5866/sptohp_32ns_16_2_no_dsp_0_U159/dout_r_reg[15] )
+INFO: [Synth 8-7067] Removed DRAM instance inst/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441i_8_3/grp_compute_fu_445/grp_compute_Pipeline_VITIS_LOOP_69_1_fu_441/st_div_0_U/ram0_reg_0_15_14_15 from module generic_accel_compute_Pipeline_VITIS_LOOP_69_1__GB2_tempName due to constant propagation
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_3_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_4_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_5_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_6_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_7_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_8_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_9_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_10_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_11_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_12_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_13_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_14_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_15_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_16_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_16_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_17_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_17_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_18_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_18_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_19_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_19_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_20_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_20_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_21_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_21_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_22_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_22_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_23_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_23_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_24_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_24_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_25_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_25_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_26_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_26_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_27_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_27_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_28_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_28_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_29_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_29_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_30_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_30_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_31_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_31_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_32_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_32_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_33_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_33_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_34_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_34_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_35_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_35_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_36_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_36_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_37_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_37_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_38_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_38_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_39_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_39_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_40_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_40_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_41_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_41_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_42_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_42_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_43_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_43_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_44_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_44_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_45_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_45_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_46_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_46_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_47_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_47_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_48_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_48_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_49_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_8_0/reg_file_49_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:44 ; elapsed = 00:03:56 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8487 ; free virtual = 12987
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14448.313; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:54 ; elapsed = 00:04:07 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8439 ; free virtual = 12966
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14454.571; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:54 ; elapsed = 00:04:07 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8449 ; free virtual = 12976
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14454.571; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:04:11 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8438 ; free virtual = 12965
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14461.587; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:04:11 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8438 ; free virtual = 12965
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14461.603; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:59 ; elapsed = 00:04:13 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8445 ; free virtual = 12972
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14462.540; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:00 ; elapsed = 00:04:14 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8444 ; free virtual = 12971
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14462.540; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |   154|
+|2     |LUT1     |   128|
+|3     |LUT2     |   706|
+|4     |LUT3     |  2897|
+|5     |LUT4     |   981|
+|6     |LUT5     |  6380|
+|7     |LUT6     |  9975|
+|8     |MUXCY    |   588|
+|9     |MUXF7    |  2280|
+|10    |MUXF8    |   891|
+|11    |RAM32M16 |     1|
+|12    |RAM32X1D |     2|
+|13    |RAMB18E2 |     3|
+|14    |RAMB36E2 |    57|
+|18    |SRL16E   |   497|
+|19    |XORCY    |   402|
+|20    |FDRE     |  7865|
+|21    |FDSE     |    84|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:00 ; elapsed = 00:04:14 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 8444 ; free virtual = 12971
+Synthesis current peak Physical Memory [PSS] (MB): peak = 14462.540; parent = 2896.069; children = 11568.648
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 20443.938; parent = 3887.051; children = 16556.891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 201 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:45 ; elapsed = 00:04:01 . Memory (MB): peak = 3890.957 ; gain = 906.250 ; free physical = 20085 ; free virtual = 24612
+Synthesis Optimization Complete : Time (s): cpu = 00:03:05 ; elapsed = 00:04:18 . Memory (MB): peak = 3890.957 ; gain = 1087.031 ; free physical = 20084 ; free virtual = 24601
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.41 . Memory (MB): peak = 3890.957 ; gain = 0.000 ; free physical = 20059 ; free virtual = 24577
+INFO: [Netlist 29-17] Analyzing 4318 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3990.742 ; gain = 0.000 ; free physical = 19947 ; free virtual = 24467
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 105 instances were transformed.
+  (CARRY4) => CARRY8: 102 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete, checksum: 4a73854c
+INFO: [Common 17-83] Releasing license: Synthesis
+592 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:24 ; elapsed = 00:04:38 . Memory (MB): peak = 3990.742 ; gain = 2222.715 ; free physical = 20190 ; free virtual = 24710
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_generic_accel_0_1, cache-ID = 1c8409a1d212eb6e
+INFO: [Coretcl 2-1174] Renamed 895 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic_accel/generic_accel.runs/design_1_generic_accel_0_1_synth_1/design_1_generic_accel_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_generic_accel_0_1_utilization_synth.rpt -pb design_1_generic_accel_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 13 11:54:34 2023...

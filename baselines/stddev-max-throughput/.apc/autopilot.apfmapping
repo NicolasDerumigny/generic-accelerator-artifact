@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dma.hpp" path="/home/derumigny/FPGA/data/zcu104/2023-Dac/stddev-max-throughput/src/dma.hpp"/>
+    <originFiles name="correlation.hpp" path="/home/derumigny/FPGA/data/zcu104/2023-Dac/stddev-max-throughput/src/correlation.hpp"/>
+    <originFiles name="correlation.cpp" path="/home/derumigny/FPGA/data/zcu104/2023-Dac/stddev-max-throughput/src/correlation.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

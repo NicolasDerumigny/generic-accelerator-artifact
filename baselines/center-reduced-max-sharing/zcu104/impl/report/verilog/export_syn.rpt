@@ -1,0 +1,392 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sat Nov 19 15:20:13 MST 2022
+    * Version:         2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:         center-reduced-max-sharing
+    * Solution:        zcu104 (Vivado IP Flow Target)
+    * Product family:  zynquplus
+    * Target device:   xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              1846
+FF:               1553
+DSP:              4
+BRAM:             64
+URAM:             0
+SRL:              46
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++------------+-------------+
+| Timing     | Period (ns) |
++------------+-------------+
+| Target     | 10.000      |
+| Post-Route | 7.338       |
++------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-------------------------------------------------------------------------+------+------+-----+------+------+-----+--------+--------+---------+-------------------+-----------------------------------------------------------------------------------------------------------+
+| Name                                                                    | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl   | Latency | Variable          | Source                                                                                                    |
++-------------------------------------------------------------------------+------+------+-----+------+------+-----+--------+--------+---------+-------------------+-----------------------------------------------------------------------------------------------------------+
+| inst                                                                    | 1846 | 1553 | 4   | 64   |      |     |        |        |         |                   |                                                                                                           |
+|   (inst)                                                                |      | 139  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|   control_s_axi_U                                                       | 70   | 183  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|   grp_compute_fu_291                                                    | 1310 | 985  | 4   |      |      |     |        |        |         |                   |                                                                                                           |
+|     (grp_compute_fu_291)                                                | 14   | 66   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_134_1_fu_82                         | 18   | 9    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_134_1_fu_82)                     | 1    | 7    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 17   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_142_2_VITIS_LOOP_143_3_fu_98        | 87   | 83   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_142_2_VITIS_LOOP_143_3_fu_98)    | 37   | 81   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 50   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_154_4_fu_110                        | 63   | 24   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_154_4_fu_110)                    | 45   | 22   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 18   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_162_5_fu_90                         | 20   | 9    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_162_5_fu_90)                     | 1    | 7    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 19   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_170_6_VITIS_LOOP_171_7_fu_120       | 47   | 101  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_170_6_VITIS_LOOP_171_7_fu_120)   | 4    | 99   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 43   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_182_8_VITIS_LOOP_183_9_fu_132       | 89   | 55   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_182_8_VITIS_LOOP_183_9_fu_132)   | 35   | 53   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 54   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_193_10_VITIS_LOOP_194_11_fu_144     | 54   | 83   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_193_10_VITIS_LOOP_194_11_fu_144) | 6    | 81   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 48   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_204_12_fu_156                       | 47   | 24   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_204_12_fu_156)                   | 27   | 22   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 20   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_215_13_fu_165                       | 155  | 134  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_215_13_fu_165)                   | 12   | 43   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 14   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       hsqrt_16ns_16_4_no_dsp_1_U76                                      | 129  | 89   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|         bind_op hsqrt                                                   |      |      |     |      |      |     |        | fabric | 3       | tmp_s             | /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrthalf.cpp:19 |
+|     grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173                       | 136  | 138  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173)                   | 25   | 104  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       fcmp_32ns_32ns_1_2_no_dsp_1_U81                                   | 61   | 32   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|         (fcmp_32ns_32ns_1_2_no_dsp_1_U81)                               |      | 32   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 22   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       hptosp_16ns_32_1_no_dsp_1_U82                                     | 28   |      |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_235_15_fu_181                       | 31   | 24   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_235_15_fu_181)                   | 12   | 22   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 19   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     grp_compute_Pipeline_VITIS_LOOP_243_16_VITIS_LOOP_244_17_fu_195     | 89   | 55   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (grp_compute_Pipeline_VITIS_LOOP_243_16_VITIS_LOOP_244_17_fu_195) | 38   | 53   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       flow_control_loop_pipe_sequential_init_U                          | 51   | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     hadd_16ns_16ns_16_2_full_dsp_1_U102                                 | 115  | 32   | 2   |      |      |     |        |        |         |                   |                                                                                                           |
+|       (hadd_16ns_16ns_16_2_full_dsp_1_U102)                             |      | 32   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     hdiv_16ns_16ns_16_5_no_dsp_1_U103                                   | 293  | 116  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|       (hdiv_16ns_16ns_16_5_no_dsp_1_U103)                               |      | 32   |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     hmul_16ns_16ns_16_2_max_dsp_1_U104                                  | 52   | 32   | 2   |      |      |     |        |        |         |                   |                                                                                                           |
+|       bind_op ram_t2p                                                   |      |      |     |      |      |     |        | bram   | 1       | reg_file_1_0_load |                                                                                                           |
+|   grp_recv_data_burst_fu_221                                            | 68   | 105  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     (grp_recv_data_burst_fu_221)                                        | 59   | 103  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     flow_control_loop_pipe_sequential_init_U                            | 9    | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|   grp_send_data_burst_fu_305                                            | 333  | 141  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     (grp_send_data_burst_fu_305)                                        | 327  | 139  |     |      |      |     |        |        |         |                   |                                                                                                           |
+|     flow_control_loop_pipe_sequential_init_U                            | 6    | 2    |     |      |      |     |        |        |         |                   |                                                                                                           |
+|   reg_file_10_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_10       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_11_U                                                         | 24   |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_11       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_12_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_12       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_13_U                                                         | 8    |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_13       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_14_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_14       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_15_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_15       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_16_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_16       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_17_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_17       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_18_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_18       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_19_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_19       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_1_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_1        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_20_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_20       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_21_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_21       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_22_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_22       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_23_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_23       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_24_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_24       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_25_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_25       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_26_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_26       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_27_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_27       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_28_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_28       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_29_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_29       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_2_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_2        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_30_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_30       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_31_U                                                         |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_31       | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_3_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_3        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_4_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_4        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_5_U                                                          | 17   |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_5        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_6_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_6        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_7_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_7        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_8_U                                                          |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_8        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_9_U                                                          | 16   |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file_9        | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
+|   reg_file_U                                                            |      |      |     | 2    |      |     |        |        |         |                   |                                                                                                           |
+|     bind_storage ram_t2p                                                |      |      |     |      |      |     | yes    | bram   | 1       | reg_file          | center-reduced-max-sharing/src/correlation.cpp:271                                                        |
++-------------------------------------------------------------------------+------+------+-----+------+------+-----+--------+--------+---------+-------------------+-----------------------------------------------------------------------------------------------------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.80%  | OK     |
+| FD                                                        | 50%       | 0.34%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.05%  | OK     |
+| CARRY8                                                    | 25%       | 0.41%  | OK     |
+| MUXF7                                                     | 15%       | 0.11%  | OK     |
+| DSP                                                       | 80%       | 0.23%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 10.26% | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 5.25%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 4320      | 55     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.300ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.208ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+---------------------------------------------------------------------------+------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                            | ENDPOINT PIN                             | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                           |                                          |              |            |                |          DELAY |        DELAY |
++-------+-------+---------------------------------------------------------------------------+------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.662 | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]/C | reg_file_11_U/ram_reg_bram_0/DINBDIN[14] |           23 |         14 |          7.044 |          4.293 |        2.751 |
+| Path2 | 2.694 | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]/C | reg_file_10_U/ram_reg_bram_0/DINBDIN[14] |           23 |         14 |          7.012 |          4.261 |        2.751 |
+| Path3 | 2.809 | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]/C | reg_file_11_U/ram_reg_bram_0/DINBDIN[13] |           23 |         14 |          6.909 |          4.206 |        2.703 |
+| Path4 | 2.820 | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]/C | reg_file_11_U/ram_reg_bram_0/DINBDIN[12] |           23 |         14 |          6.900 |          4.206 |        2.694 |
+| Path5 | 2.841 | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]/C | reg_file_10_U/ram_reg_bram_0/DINBDIN[13] |           23 |         14 |          6.877 |          4.174 |        2.703 |
++-------+-------+---------------------------------------------------------------------------+------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path1 Cells                                                                                                                                                         | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]                                                                                             | REGISTER.SDR.FDRE      |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0                                                                                       | CLB.LUT.LUT4           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8                                        | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST                                                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST                                                   | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                                          | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1                                                                  | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8                                                      | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1                                                | CLB.LUT.LUT3           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1                                                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5                                                    | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8                           | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0                                                          | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/hdiv_16ns_16ns_16_5_no_dsp_1_U103/corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip_u/ram_reg_bram_0_i_88                                               | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_56__0 | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_2__5  | CLB.LUT.LUT3           |
+    | reg_file_11_U/ram_reg_bram_0                                                                                                                                        | BLOCKRAM.BRAM.RAMB36E2 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path2 Cells                                                                                                                                                         | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]                                                                                             | REGISTER.SDR.FDRE      |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0                                                                                       | CLB.LUT.LUT4           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8                                        | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST                                                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST                                                   | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                                          | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1                                                                  | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8                                                      | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1                                                | CLB.LUT.LUT3           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1                                                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5                                                    | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8                           | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[14]_INST_0                                                          | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/hdiv_16ns_16ns_16_5_no_dsp_1_U103/corr_accel_hdiv_16ns_16ns_16_5_no_dsp_1_ip_u/ram_reg_bram_0_i_88                                               | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_56__0 | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_14__3 | CLB.LUT.LUT3           |
+    | reg_file_10_U/ram_reg_bram_0                                                                                                                                        | BLOCKRAM.BRAM.RAMB36E2 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path3 Cells                                                                                                                                                         | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]                                                                                             | REGISTER.SDR.FDRE      |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0                                                                                       | CLB.LUT.LUT4           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8                                        | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST                                                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST                                                   | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                                          | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1                                                                  | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8                                                      | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1                                                | CLB.LUT.LUT3           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1                                                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5                                                    | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8                           | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0                                                          | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_89    | CLB.LUT.LUT5           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_57__0 | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_3__11 | CLB.LUT.LUT3           |
+    | reg_file_11_U/ram_reg_bram_0                                                                                                                                        | BLOCKRAM.BRAM.RAMB36E2 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path4 Cells                                                                                                                                                         | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]                                                                                             | REGISTER.SDR.FDRE      |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0                                                                                       | CLB.LUT.LUT4           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8                                        | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST                                                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST                                                   | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                                          | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1                                                                  | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8                                                      | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1                                                | CLB.LUT.LUT3           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1                                                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5                                                    | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8                           | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[12]_INST_0                                                          | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_90    | CLB.LUT.LUT5           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_58__0 | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_4__6  | CLB.LUT.LUT3           |
+    | reg_file_11_U/ram_reg_bram_0                                                                                                                                        | BLOCKRAM.BRAM.RAMB36E2 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path5 Cells                                                                                                                                                         | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | grp_compute_fu_291/hadd_16ns_16ns_16_2_full_dsp_1_U102/din1_buf1_reg[1]                                                                                             | REGISTER.SDR.FDRE      |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/di0                                                                                       | CLB.LUT.LUT4           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NUMB_CMP/NOT_FAST.CMP/C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8                                        | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST                                                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_PREADD_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST                                                   | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                                          | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[0].i_det_lut1                                                                  | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4_CARRY8                                                      | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/gen_lut_pairs[2].lutpairmode1.lutXo6_i_1                                                | CLB.LUT.LUT3           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/LSBaddmode1.lut0o6_i_1                                                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5                                                    | CLB.LUT.LUT5           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_lut_pairs[1].lutpairmode1.lutXo6/LUT6                                  | CLB.LUT.LUT6           |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/gen_carry4s[0].gen_carry4.y0.mcy00_CARRY4_CARRY8                           | CLB.CARRY.CARRY8       |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_C_DATA_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_ALU_INST                                       | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                                    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.LOD/m_axis_result_tdata[13]_INST_0                                                          | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_89    | CLB.LUT.LUT5           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_57__0 | CLB.LUT.LUT6           |
+    | grp_compute_fu_291/grp_compute_Pipeline_VITIS_LOOP_227_14_fu_173/fcmp_32ns_32ns_1_2_no_dsp_1_U81/corr_accel_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/ram_reg_bram_0_i_15__3 | CLB.LUT.LUT3           |
+    | reg_file_10_U/ram_reg_bram_0                                                                                                                                        | BLOCKRAM.BRAM.RAMB36E2 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------------+
+| Report Type              | Report Location                                                   |
++--------------------------+-------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/corr_accel_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/corr_accel_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/corr_accel_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/corr_accel_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/corr_accel_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/corr_accel_utilization_hierarchical_synth.rpt |
++--------------------------+-------------------------------------------------------------------+
+
+

@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.2
+Project:             correlation-max-sharing
+Solution:            zcu104
+Device target:       xczu7ev-ffvc1156-2-e
+Report date:         Sat Nov 19 20:45:47 MST 2022
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:           2052
+FF:            1716
+DSP:              4
+BRAM:            64
+URAM:             0
+LATCH:            0
+SRL:             52
+CLB:            524
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      7.345
+CP achieved post-implementation: 8.588
+Timing met

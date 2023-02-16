@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <packageLog>
+        <logs message="WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port &quot;ap_clk&quot; is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew&#xA;Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design" projectName="vscale-max-throughput" solutionName="zcu104" date="2022-11-19T22:02:58.169-0700" type="Warning"/>
+        <logs message="WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port &quot;ap_clk&quot; is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew&#xA;Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design" projectName="vscale-max-throughput" solutionName="zcu104" date="2022-11-19T22:02:09.664-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;s_axi_control_wstrb[2]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;s_axi_control_wstrb[2]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="vscale-max-throughput" solutionName="zcu104" date="2022-11-19T22:01:35.145-0700" type="Warning"/>
+        <logs message="WARNING: [Route 35-198] Port &quot;s_axi_control_wdata[14]&quot; does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal &quot;s_axi_control_wdata[14]&quot;. Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported." projectName="vscale-max-throughput" solutionName="zcu104" date="2022-11-19T22:01:35.141-0700" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'end_time' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:56:02.426-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'start_time' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:56:02.405-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:56:02.341-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1472] Invalid protocol: Region 'xlx_protocol.entry.0' contains a variable-latency function call 'call' operation ('_ln216', center-cgp-example/src/correlation.cpp:216) to 'recv_data_burst'.\&#xA;&#xA;" projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:55.083-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'compute_Pipeline_VITIS_LOOP_176_3' (loop 'VITIS_LOOP_176_3'): Unable to schedule 'load' operation ('reg_file_20_0_load_4', center-cgp-example/src/correlation.cpp:188) on array 'reg_file_20_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'reg_file_20_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:50.582-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable ''." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:47.467-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_1_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.874-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_1_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.861-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_2_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.848-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_2_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.835-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_3_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.824-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_3_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.809-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_4_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.797-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_4_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.784-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_5_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.771-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_5_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.759-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_6_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.745-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_6_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.733-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_7_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.720-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_7_1'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.708-0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'reg_file_8_0'." projectName="center-cgp-example" solutionName="zcu104" date="2022-11-21T06:55:46.695-0700" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,383 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jan 12 10:25:49 2023
+# Process ID: 5545
+# Current directory: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1
+# Command line: vivado -log design_1_c_counter_binary_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_c_counter_binary_0_0.tcl
+# Log file: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/design_1_c_counter_binary_0_0.vds
+# Journal file: /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/vivado.jou
+# Running On: liara, OS: Linux, CPU Frequency: 2945.090 MHz, CPU Physical cores: 8, Host memory: 32551 MB
+#-----------------------------------------------------------
+source design_1_c_counter_binary_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1699.480 ; gain = 84.992 ; free physical = 11600 ; free virtual = 19344
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/derumigny/FPGA/HLS-projects/generic-accel'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_c_counter_binary_0_0
+Command: synth_design -top design_1_c_counter_binary_0_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5798
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 3042.414 ; gain = 239.832 ; free physical = 927 ; free virtual = 8777
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2270.297; parent = 2135.860; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4000.082; parent = 3048.355; children = 951.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_0' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/synth/design_1_c_counter_binary_0_0.vhd:66]
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_WIDTH bound to: 64 - type: integer 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_RESTRICT_COUNT bound to: 0 - type: integer 
+	Parameter C_COUNT_TO bound to: 1 - type: string 
+	Parameter C_COUNT_BY bound to: 1 - type: string 
+	Parameter C_COUNT_MODE bound to: 0 - type: integer 
+	Parameter C_THRESH0_VALUE bound to: 1 - type: string 
+	Parameter C_CE_OVERRIDES_SYNC bound to: 0 - type: integer 
+	Parameter C_HAS_THRESH0 bound to: 0 - type: integer 
+	Parameter C_HAS_LOAD bound to: 0 - type: integer 
+	Parameter C_LOAD_LOW bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_FB_LATENCY bound to: 0 - type: integer 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_counter_binary_v12_0_15' declared at '/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ipshared/e1e1/hdl/c_counter_binary_v12_0_vh_rfs.vhd:2146' bound to instance 'U0' of component 'c_counter_binary_v12_0_15' [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/synth/design_1_c_counter_binary_0_0.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'design_1_c_counter_binary_0_0' (0#1) [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/synth/design_1_c_counter_binary_0_0.vhd:66]
+WARNING: [Synth 8-7129] Port CE in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AINIT in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLR in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ASET in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[63] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[62] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[61] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[60] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[59] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[58] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[57] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[56] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[55] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[54] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[53] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[52] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[51] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[50] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[49] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[48] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[47] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[46] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[45] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[44] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[43] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[42] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[41] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[40] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[39] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[38] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[37] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[36] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[35] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[34] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[33] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[32] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[31] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[30] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[29] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[28] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[27] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[26] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[25] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[24] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[23] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[22] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[21] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[20] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[19] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[18] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[17] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[16] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[15] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[14] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[13] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[12] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[11] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[10] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[9] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[8] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[7] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[6] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[5] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[4] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[3] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[2] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[1] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b[0] in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port add in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_14_lut6_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port load in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[63] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[62] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[61] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[60] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[59] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[58] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[57] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[56] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[55] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[54] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[53] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[52] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[51] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[50] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port l[49] in module c_counter_binary_v12_0_15_legacy is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 3130.320 ; gain = 327.738 ; free physical = 967 ; free virtual = 8829
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4082.051; parent = 3130.324; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 3145.164 ; gain = 342.582 ; free physical = 943 ; free virtual = 8804
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4096.895; parent = 3145.168; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 3145.164 ; gain = 342.582 ; free physical = 938 ; free virtual = 8799
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4096.895; parent = 3145.168; children = 951.727
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3156.133 ; gain = 0.000 ; free physical = 906 ; free virtual = 8768
+INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_ooc.xdc] for cell 'U0'
+create_clock: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3287.977 ; gain = 0.000 ; free physical = 834 ; free virtual = 8771
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3287.977 ; gain = 0.000 ; free physical = 834 ; free virtual = 8771
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3287.977 ; gain = 0.000 ; free physical = 830 ; free virtual = 8768
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 3287.977 ; gain = 485.395 ; free physical = 651 ; free virtual = 8608
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.707; parent = 3287.980; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 3287.977 ; gain = 485.395 ; free physical = 649 ; free virtual = 8607
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.707; parent = 3287.980; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 3287.977 ; gain = 485.395 ; free physical = 627 ; free virtual = 8604
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.707; parent = 3287.980; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 3287.977 ; gain = 485.395 ; free physical = 780 ; free virtual = 8743
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.707; parent = 3287.980; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:50 . Memory (MB): peak = 3287.977 ; gain = 485.395 ; free physical = 692 ; free virtual = 8627
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2360.325; parent = 2225.905; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.707; parent = 3287.980; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 3667.258 ; gain = 864.676 ; free physical = 237 ; free virtual = 6653
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2802.870; parent = 2668.562; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4618.988; parent = 3667.262; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 3667.258 ; gain = 864.676 ; free physical = 240 ; free virtual = 6656
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2803.068; parent = 2668.762; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4618.988; parent = 3667.262; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 3686.289 ; gain = 883.707 ; free physical = 243 ; free virtual = 6640
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2803.349; parent = 2669.042; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4638.020; parent = 3686.293; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 580 ; free virtual = 5978
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.119; parent = 2670.325; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 579 ; free virtual = 5978
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.119; parent = 2670.325; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 582 ; free virtual = 5981
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.167; parent = 2670.400; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 582 ; free virtual = 5981
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.217; parent = 2670.446; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 589 ; free virtual = 5988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.217; parent = 2670.446; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 588 ; free virtual = 5987
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.262; parent = 2670.469; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     1|
+|2     |MUXCY |    63|
+|3     |XORCY |    64|
+|4     |FDRE  |    64|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.227 ; gain = 889.645 ; free physical = 586 ; free virtual = 5985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2806.293; parent = 2670.500; children = 222.896
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4643.957; parent = 3692.230; children = 951.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 3692.227 ; gain = 746.832 ; free physical = 584 ; free virtual = 5983
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:22 . Memory (MB): peak = 3692.234 ; gain = 889.645 ; free physical = 580 ; free virtual = 5979
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3692.234 ; gain = 0.000 ; free physical = 576 ; free virtual = 5975
+INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3730.883 ; gain = 0.000 ; free physical = 744 ; free virtual = 6143
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  (CARRY4) => CARRY8: 8 instances
+
+Synth Design complete, checksum: 453dbde0
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:39 . Memory (MB): peak = 3730.883 ; gain = 1963.168 ; free physical = 920 ; free virtual = 6319
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/design_1_c_counter_binary_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_c_counter_binary_0_0, cache-ID = ba5435f69c866fd6
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/derumigny/FPGA/HLx-Projects/generic-accel-area-out-of-context/generic-accel-area-out-of-context.runs/design_1_c_counter_binary_0_0_synth_1/design_1_c_counter_binary_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_c_counter_binary_0_0_utilization_synth.rpt -pb design_1_c_counter_binary_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 10:28:02 2023...

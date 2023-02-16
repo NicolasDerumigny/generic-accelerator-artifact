@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'compute'" level="0">
+<item name = "Date">Sun Nov 20 12:34:37 2022
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">gemm-max-throughput</item>
+<item name = "Solution">zcu104 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.141 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">134018, 134018, 1.340 ms, 1.340 ms, 134018, 134018, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_compute_Pipeline_VITIS_LOOP_134_2_fu_78">compute_Pipeline_VITIS_LOOP_134_2, 35, 35, 0.350 us, 0.350 us, 35, 35, no</column>
+<column name="grp_compute_Pipeline_VITIS_LOOP_139_3_VITIS_LOOP_141_4_fu_88">compute_Pipeline_VITIS_LOOP_139_3_VITIS_LOOP_141_4, 2055, 2055, 20.550 us, 20.550 us, 2055, 2055, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_133_1">134016, 134016, 2094, -, -, 64, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
